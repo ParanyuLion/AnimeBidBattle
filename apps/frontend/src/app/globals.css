@@ -1,0 +1,84 @@
+:root {
+  --bg: #12131a;
+  --panel: #1c1e2a;
+  --panel-2: #262938;
+  --text: #f1f2f8;
+  --muted: #9a9db3;
+  --accent: #ff6b9d;
+  --accent-2: #6bc5ff;
+  --good: #5be3a0;
+  --bad: #ff6b6b;
+  --warn: #ffd166;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+}
+
+.container { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+
+h1, h2, h3 { margin: 0 0 12px; }
+.muted { color: var(--muted); }
+.center { text-align: center; }
+
+.card {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.grid { display: grid; gap: 16px; grid-template-columns: 2fr 1fr; }
+@media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+
+input {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid #3a3e55;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+input:focus { outline: 2px solid var(--accent-2); }
+
+button {
+  background: var(--accent);
+  color: #1a0b12;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.secondary { background: var(--panel-2); color: var(--text); }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.code { font-size: 2.5rem; letter-spacing: 0.25em; font-weight: 800; color: var(--accent-2); }
+
+.banner { padding: 10px 14px; border-radius: 8px; margin-bottom: 12px; }
+.banner.error { background: #3a1f26; color: var(--bad); }
+.banner.info { background: #1f3040; color: var(--accent-2); }
+
+.player { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; border-bottom: 1px solid #2c2f42; }
+.player.leader { color: var(--good); font-weight: 700; }
+.player.offline { opacity: 0.5; }
+
+.lot { text-align: center; }
+.lot .name { font-size: 2rem; font-weight: 800; }
+.lot .power { font-size: 1.2rem; color: var(--warn); }
+.timer { font-size: 3rem; font-weight: 800; }
+.timer.closing { color: var(--bad); }
+.price { font-size: 2rem; font-weight: 800; color: var(--good); }
+
+.field { display: flex; flex-direction: column; gap: 4px; }
+.field label { font-size: 0.85rem; color: var(--muted); }
+
+.rank { font-size: 1.4rem; font-weight: 800; width: 2.5rem; }
