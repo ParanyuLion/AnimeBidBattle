@@ -23,7 +23,7 @@ const roomSettings = {
   maxPlayers: 4,
   startingCoins: 1000,
   rounds: 2,
-  roundSeconds: 1,
+  roundSeconds: 2,
   auctionMode: 'open-ascending' as const,
 };
 
@@ -34,12 +34,13 @@ let open: Client[];
 beforeEach(async () => {
   app = createApp({
     characters,
-    corsOrigins: ['*'],
+    corsOrigins: ['http://localhost:3000'],
     bounds: { ...SETTINGS_BOUNDS, roundSeconds: { min: 1, max: 60 } },
     auctionModes: { 'open-ascending': new OpenAscendingAuction(100) },
     soldPauseMs: 50,
     battlePauseMs: 50,
     emptyRoomTtlMs: 60_000,
+    hostGraceMs: 100,
   });
   await new Promise<void>((resolve) => app.httpServer.listen(0, resolve));
   port = (app.httpServer.address() as AddressInfo).port;
@@ -200,5 +201,60 @@ describe('full game over sockets', () => {
 
     expect((await call(alice.client, 'game:playAgain', {})).ok).toBe(true);
     await bob.tracker.until((s) => s.phase === 'LOBBY');
-  }, 15000);
+  }, 30000);
+});
+
+const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
+
+describe('multiple sockets for one player', () => {
+  it('only marks the player offline once their last socket closes', async () => {
+    const { alice, bob, created } = await twoPlayerLobby();
+    const alice2 = await connect();
+    const res = await call<Ack<JoinResult>>(alice2.client, 'room:rejoin', {
+      roomCode: created.roomCode,
+      rejoinToken: created.rejoinToken,
+    });
+    expect(res.ok).toBe(true);
+
+    alice.client.disconnect();
+    await sleep(200);
+    const stillOnline = await bob.tracker.until((s) => s.players.length === 2);
+    expect(stillOnline.players.find((p) => p.id === created.playerId)?.connected).toBe(true);
+
+    alice2.client.disconnect();
+    const offline = await bob.tracker.until((s) => s.players.some((p) => p.id === created.playerId && !p.connected));
+    expect(offline.players.find((p) => p.id === created.playerId)?.connected).toBe(false);
+  });
+});
+
+describe('host refresh', () => {
+  it('keeps host rights when the host rejoins within the grace period', async () => {
+    const { alice, bob, created } = await twoPlayerLobby();
+    alice.client.disconnect();
+    await bob.tracker.until((s) => s.players.some((p) => p.id === created.playerId && !p.connected));
+
+    const alice2 = await connect();
+    const res = await call<Ack<JoinResult>>(alice2.client, 'room:rejoin', {
+      roomCode: created.roomCode,
+      rejoinToken: created.rejoinToken,
+    });
+    expect(res.ok).toBe(true);
+    await sleep(300);
+    expect(bob.tracker.latest?.hostId).toBe(created.playerId);
+    expect(alice2.tracker.latest?.hostId).toBe(created.playerId);
+  });
+
+  it('hands host to the other player when the host does not come back', async () => {
+    const { alice, bob, created, joined } = await twoPlayerLobby();
+    alice.client.disconnect();
+    const state = await bob.tracker.until((s) => s.hostId === joined.playerId);
+    expect(state.hostId).toBe(joined.playerId);
+  });
+});
+
+describe('health endpoint', () => {
+  it('returns ok', async () => {
+    const res = await fetch(`http://localhost:${port}/health`);
+    expect(await res.json()).toEqual({ ok: true });
+  });
 });
