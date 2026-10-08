@@ -231,6 +231,21 @@ describe('markConnection', () => {
     markConnection(room, 'p1', false);
     expect(room.hostId).toBe('p1');
   });
+
+  it('re-elects a reconnecting player as host when the offline host has no connected successors', () => {
+    const { room } = lobby();
+    // p1 is host, p2 is player, both connected
+    expect(room.hostId).toBe('p1');
+    // p1 disconnects -> host moves to p2
+    markConnection(room, 'p1', false);
+    expect(room.hostId).toBe('p2');
+    // p2 disconnects -> nobody connected, host stays p2
+    markConnection(room, 'p2', false);
+    expect(room.hostId).toBe('p2');
+    // p1 reconnects -> host moves to p1 (the reconnecting player)
+    markConnection(room, 'p1', true);
+    expect(room.hostId).toBe('p1');
+  });
 });
 
 describe('getRoomView', () => {

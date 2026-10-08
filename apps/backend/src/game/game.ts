@@ -194,8 +194,19 @@ export function markConnection(room: Room, playerId: string, connected: boolean)
   const player = room.players.find((p) => p.id === playerId);
   if (!player) return;
   player.connected = connected;
-  if (!connected && room.hostId === playerId) {
-    const successor = room.players.find((p) => p.connected && p.id !== playerId);
-    if (successor) room.hostId = successor.id;
+
+  // Re-elect host if the current host is not connected and there are connected players
+  const currentHost = room.players.find((p) => p.id === room.hostId);
+  if (currentHost && !currentHost.connected) {
+    const connectedPlayers = room.players.filter((p) => p.connected);
+    if (connectedPlayers.length > 0) {
+      // Prefer the player who just connected (if they're now connected)
+      if (connected) {
+        room.hostId = playerId;
+      } else {
+        // Otherwise use the first connected player
+        room.hostId = connectedPlayers[0]!.id;
+      }
+    }
   }
 }
