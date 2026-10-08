@@ -118,7 +118,11 @@ export function registerHandlers(io: AppServer, socket: AppSocket, service: Room
   });
 
   socket.on('disconnect', () => {
-    const session = socket.data.session;
-    if (session) releaseIfOrphaned(session);
+    try {
+      const session = socket.data.session;
+      if (session) releaseIfOrphaned(session);
+    } catch (err) {
+      console.error('disconnect handler failed', err);
+    }
   });
 }

@@ -11,6 +11,7 @@ import {
   addPlayer,
   advanceRound,
   createRoom,
+  electHostIfNeeded,
   makePlayer,
   markConnection,
   placeBid,
@@ -34,6 +35,8 @@ export interface RoomServiceConfig {
   soldPauseMs: number;
   battlePauseMs: number;
   emptyRoomTtlMs: number;
+  /** How long a disconnected host keeps host rights before they move to another online player. */
+  hostGraceMs: number;
   now: () => number;
   random: () => number;
   onRoomChanged: (room: Room) => void;
@@ -43,6 +46,7 @@ export class RoomService {
   /** One game timer per room: round end, then the pause after SOLD, then the battle pause. */
   private readonly timers = new Map<string, ReturnType<typeof setTimeout>>();
   private readonly ttlTimers = new Map<string, ReturnType<typeof setTimeout>>();
+  private readonly hostTimers = new Map<string, ReturnType<typeof setTimeout>>();
 
   constructor(private readonly config: RoomServiceConfig) {}
 
@@ -70,6 +74,7 @@ export class RoomService {
     const player = room.players.find((p) => p.rejoinToken === rejoinToken);
     if (!player) throw new GameError('INVALID_TOKEN', 'Unknown player for this room');
     markConnection(room, player.id, true);
+    if (room.players.find((p) => p.id === room.hostId)?.connected) this.clearHostTimer(room.code);
     this.clearTtl(room.code);
     this.emit(room);
     return { room, player };
@@ -104,7 +109,14 @@ export class RoomService {
   disconnect(code: string, playerId: string): void {
     const room = this.config.store.get(code);
     if (!room) return;
-    markConnection(room, playerId, false);
+    const player = room.players.find((p) => p.id === playerId);
+    if (player && (player.id === room.hostId || this.hostTimers.has(room.code))) {
+      // Host refresh grace: keep host rights for a while instead of re-electing immediately.
+      player.connected = false;
+      if (!this.hostTimers.has(room.code)) this.startHostTimer(room.code);
+    } else {
+      markConnection(room, playerId, false);
+    }
     this.emit(room);
     if (room.players.every((p) => !p.connected)) this.startTtl(room.code);
   }
@@ -122,7 +134,9 @@ export class RoomService {
   dispose(): void {
     for (const timer of this.timers.values()) clearTimeout(timer);
     for (const timer of this.ttlTimers.values()) clearTimeout(timer);
+    for (const timer of this.hostTimers.values()) clearTimeout(timer);
     this.timers.clear();
+    this.hostTimers.clear();
     this.ttlTimers.clear();
   }
 
@@ -130,9 +144,41 @@ export class RoomService {
     this.config.onRoomChanged(room);
   }
 
+  /** Runs a timer callback without letting an exception escape and kill the process. */
+  private safe(fn: () => void): () => void {
+    return () => {
+      try {
+        fn();
+      } catch (err) {
+        console.error('RoomService timer callback failed', err);
+      }
+    };
+  }
+
+  private startHostTimer(code: string): void {
+    this.clearHostTimer(code);
+    this.hostTimers.set(
+      code,
+      setTimeout(
+        this.safe(() => {
+          this.hostTimers.delete(code);
+          const room = this.config.store.get(code);
+          if (room && electHostIfNeeded(room)) this.emit(room);
+        }),
+        this.config.hostGraceMs,
+      ),
+    );
+  }
+
+  private clearHostTimer(code: string): void {
+    const timer = this.hostTimers.get(code);
+    if (timer) clearTimeout(timer);
+    this.hostTimers.delete(code);
+  }
+
   private setTimer(code: string, ms: number, fn: () => void): void {
     this.clearTimer(code);
-    this.timers.set(code, setTimeout(fn, Math.max(0, ms)));
+    this.timers.set(code, setTimeout(this.safe(fn), Math.max(0, ms)));
   }
 
   private clearTimer(code: string): void {
@@ -145,7 +191,7 @@ export class RoomService {
     this.clearTtl(code);
     this.ttlTimers.set(
       code,
-      setTimeout(() => this.deleteRoom(code), this.config.emptyRoomTtlMs),
+      setTimeout(this.safe(() => this.deleteRoom(code)), this.config.emptyRoomTtlMs),
     );
   }
 
@@ -158,6 +204,7 @@ export class RoomService {
   private deleteRoom(code: string): void {
     this.clearTimer(code);
     this.clearTtl(code);
+    this.clearHostTimer(code);
     this.config.store.delete(code);
   }
 
@@ -174,20 +221,20 @@ export class RoomService {
       return;
     }
     resolveRound(room, this.config.auctionModes);
-    this.emit(room);
     this.setTimer(code, this.config.soldPauseMs, () => this.onAdvance(code));
+    this.emit(room);
   }
 
   private onAdvance(code: string): void {
     const room = this.config.store.get(code);
     if (!room || room.phase !== 'AUCTION') return;
     const phase = advanceRound(room, this.config.auctionModes, this.config.now());
-    this.emit(room);
     if (phase === 'AUCTION') {
       this.scheduleRoundEnd(room);
     } else {
       this.setTimer(code, this.config.battlePauseMs, () => this.onShowResults(code));
     }
+    this.emit(room);
   }
 
   private onShowResults(code: string): void {

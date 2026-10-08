@@ -210,3 +210,13 @@ export function markConnection(room: Room, playerId: string, connected: boolean)
     }
   }
 }
+
+/** Moves host rights to the first connected player when the current host is offline. */
+export function electHostIfNeeded(room: Room): boolean {
+  const currentHost = room.players.find((p) => p.id === room.hostId);
+  if (currentHost?.connected) return false;
+  const next = room.players.find((p) => p.connected);
+  if (!next) return false;
+  room.hostId = next.id;
+  return true;
+}

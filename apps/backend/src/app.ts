@@ -16,6 +16,7 @@ export interface AppConfig {
   soldPauseMs?: number;
   battlePauseMs?: number;
   emptyRoomTtlMs?: number;
+  hostGraceMs?: number;
 }
 
 export function createApp(config: AppConfig) {
@@ -36,6 +37,7 @@ export function createApp(config: AppConfig) {
     soldPauseMs: config.soldPauseMs ?? 3000,
     battlePauseMs: config.battlePauseMs ?? 4000,
     emptyRoomTtlMs: config.emptyRoomTtlMs ?? 10 * 60 * 1000,
+    hostGraceMs: config.hostGraceMs ?? 8000,
     now: () => Date.now(),
     random: Math.random,
     onRoomChanged: (room) => {
