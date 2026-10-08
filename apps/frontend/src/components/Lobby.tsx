@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MIN_PLAYERS_TO_START, SETTINGS_BOUNDS, type RoomSettings, type RoomView, type UpdateSettingsPayload } from '@abb/shared';
 
 interface Props {
@@ -18,7 +18,16 @@ const FIELDS = [
 export function Lobby({ room, actions }: Props) {
   const isHost = room.youId === room.hostId;
   const [draft, setDraft] = useState<Record<string, string>>(() => toDraft(room.settings));
+  const [dirty, setDirty] = useState(false);
   const [copied, setCopied] = useState(false);
+  const { maxPlayers, startingCoins, rounds, roundSeconds } = room.settings;
+
+  // Resync from the server unless the user has pending edits.
+  useEffect(() => {
+    if (!dirty) setDraft(toDraft({ maxPlayers, startingCoins, rounds, roundSeconds }));
+  }, [dirty, maxPlayers, startingCoins, rounds, roundSeconds, room.hostId, isHost]);
+
+  const draftValid = FIELDS.every(({ key }) => draft[key] !== '' && Number.isInteger(Number(draft[key])));
 
   async function copyLink() {
     try {
@@ -34,6 +43,7 @@ export function Lobby({ room, actions }: Props) {
     const patch: UpdateSettingsPayload = {};
     for (const { key } of FIELDS) patch[key] = Number(draft[key]);
     actions.updateSettings(patch);
+    setDirty(false);
   }
 
   return (
@@ -60,7 +70,10 @@ export function Lobby({ room, actions }: Props) {
                   type="number"
                   value={isHost ? draft[key] : String(room.settings[key])}
                   disabled={!isHost}
-                  onChange={(e) => setDraft({ ...draft, [key]: e.target.value })}
+                  onChange={(e) => {
+                    setDraft({ ...draft, [key]: e.target.value });
+                    setDirty(true);
+                  }}
                   style={{ width: '9em' }}
                 />
               </div>
@@ -68,9 +81,10 @@ export function Lobby({ room, actions }: Props) {
           </div>
           {isHost && (
             <div className="row" style={{ marginTop: 12 }}>
-              <button className="secondary" onClick={save}>
+              <button className="secondary" onClick={save} disabled={!draftValid}>
                 Save settings
               </button>
+              {dirty && <span className="muted">Unsaved changes</span>}
             </div>
           )}
         </div>
@@ -94,7 +108,7 @@ export function Lobby({ room, actions }: Props) {
         </div>
 
         {isHost ? (
-          <button onClick={actions.start} disabled={room.players.length < MIN_PLAYERS_TO_START} style={{ width: '100%' }}>
+          <button onClick={actions.start} disabled={room.players.length < MIN_PLAYERS_TO_START || dirty} style={{ width: '100%' }}>
             {room.players.length < MIN_PLAYERS_TO_START ? `Need ${MIN_PLAYERS_TO_START}+ players` : 'Start game'}
           </button>
         ) : (
@@ -105,6 +119,6 @@ export function Lobby({ room, actions }: Props) {
   );
 }
 
-function toDraft(settings: RoomSettings): Record<string, string> {
+function toDraft(settings: Pick<RoomSettings, (typeof FIELDS)[number]['key']>): Record<string, string> {
   return Object.fromEntries(FIELDS.map(({ key }) => [key, String(settings[key])]));
 }
