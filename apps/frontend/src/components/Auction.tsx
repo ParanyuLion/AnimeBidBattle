@@ -44,19 +44,21 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
   return (
     <div className="grid">
       <div className="stack">
-        <section className="panel center">
-          <div className="row" style={{ justifyContent: 'space-between', flexWrap: 'nowrap' }}>
+        <section className="panel center stage">
+          <div className="row stage-head" style={{ justifyContent: 'space-between', flexWrap: 'nowrap' }}>
             <span className="plate">
               Round {auction.roundIndex + 1}/{auction.totalRounds}
             </span>
             <Readout label="Time" value={timeText} tone={closing ? 'warn' : 'cyan'} flicker={closing} />
           </div>
 
-          <div style={{ margin: '16px 0' }}>
+          <div className="stage-card">
             <CharacterCard character={auction.character} />
           </div>
 
-          <LedBar fraction={open ? remainingMs / roundMs : 0} danger={closing} />
+          <div className="stage-led">
+            <LedBar fraction={open ? remainingMs / roundMs : 0} danger={closing} />
+          </div>
 
         </section>
 
