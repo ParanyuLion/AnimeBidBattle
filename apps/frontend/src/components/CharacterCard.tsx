@@ -7,15 +7,16 @@ import { characterImageUrl, initialsOf } from '../lib/character';
 interface Props {
   character: CharacterView;
   size?: 'lg' | 'sm';
+  showPower?: boolean;
 }
 
-export function CharacterCard({ character, size = 'lg' }: Props) {
+export function CharacterCard({ character, size = 'lg', showPower = false }: Props) {
   const [broken, setBroken] = useState(false);
   useEffect(() => {
     setBroken(false);
   }, [character.id]);
 
-  const revealed = character.power !== undefined;
+  const revealed = showPower && character.power !== undefined;
   return (
     <figure className={`char-card ${size}`}>
       <div className="char-art">
@@ -27,7 +28,7 @@ export function CharacterCard({ character, size = 'lg' }: Props) {
           <img
             src={characterImageUrl(character.id)}
             alt={character.name}
-            loading="lazy"
+            loading={size === 'lg' ? 'eager' : 'lazy'}
             draggable={false}
             onError={() => setBroken(true)}
           />

@@ -28,7 +28,7 @@ export function Results({ room, onPlayAgain }: { room: RoomView; onPlayAgain: ()
             {player && player.team.length > 0 ? (
               <div className="cards-row" style={{ marginTop: 12 }}>
                 {player.team.map((character) => (
-                  <CharacterCard key={character.id} character={character} size="sm" />
+                  <CharacterCard key={character.id} character={character} size="sm" showPower />
                 ))}
               </div>
             ) : (

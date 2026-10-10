@@ -72,7 +72,7 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
             }}
           >
             <Readout label="Current bid" value={auction.price > 0 ? String(auction.price) : '--'} tone="good" />
-            <div style={{ minWidth: 0, textAlign: 'right' }}>
+            <div aria-live="polite" style={{ minWidth: 0, textAlign: 'right' }}>
               <div className="muted">{status}</div>
               <div className="muted">Your coins: {coins}</div>
             </div>
@@ -118,7 +118,7 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
               className={`player ${player.id === auction.leaderId ? 'leader' : ''} ${player.connected ? '' : 'offline'}`}
             >
               <span className="who">
-                <span className={`led ${player.connected ? 'on' : ''}`} />
+                <span role="img" className={`led ${player.connected ? 'on' : ''}`} aria-label={player.connected ? 'online' : 'offline'} />
                 <span>
                   {player.nickname}
                   {player.id === room.youId ? ' (you)' : ''}

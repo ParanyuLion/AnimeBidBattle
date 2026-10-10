@@ -102,7 +102,7 @@ export function Lobby({ room, actions }: Props) {
           {room.players.map((player) => (
             <div key={player.id} className={`player ${player.connected ? '' : 'offline'}`}>
               <span className="who">
-                <span className={`led ${player.connected ? 'on' : ''}`} aria-label={player.connected ? 'online' : 'offline'} />
+                <span role="img" className={`led ${player.connected ? 'on' : ''}`} aria-label={player.connected ? 'online' : 'offline'} />
                 <span>
                   {player.nickname}
                   {player.id === room.youId ? ' (you)' : ''}

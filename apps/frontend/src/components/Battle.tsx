@@ -12,6 +12,7 @@ function Total({ value, delayMs }: { value: number; delayMs: number }) {
 
 export function Battle({ room }: { room: RoomView }) {
   const results = room.results ?? [];
+  const step = Math.min(500, 2400 / Math.max(1, results.length - 1));
   return (
     <div className="stack">
       <header className="center">
@@ -21,7 +22,7 @@ export function Battle({ room }: { room: RoomView }) {
       {results.map((result, index) => {
         const player = room.players.find((p) => p.id === result.playerId);
         // the strongest team is revealed last
-        const delayMs = (results.length - 1 - index) * 500;
+        const delayMs = Math.round((results.length - 1 - index) * step);
         return (
           <section key={result.playerId} className="panel">
             <div className="row" style={{ justifyContent: 'space-between' }}>
@@ -31,7 +32,7 @@ export function Battle({ room }: { room: RoomView }) {
             {player && player.team.length > 0 ? (
               <div className="cards-row" style={{ marginTop: 12 }}>
                 {player.team.map((character) => (
-                  <CharacterCard key={character.id} character={character} size="sm" />
+                  <CharacterCard key={character.id} character={character} size="sm" showPower />
                 ))}
               </div>
             ) : (
