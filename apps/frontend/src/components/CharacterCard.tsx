@@ -37,10 +37,12 @@ export function CharacterCard({ character, size = 'lg', showPower = false }: Pro
       <figcaption className="char-plate">
         <span className="char-name">{character.name}</span>
         <span className="char-anime">{character.anime}</span>
-        <span className={`power-slot ${revealed ? 'unsealed' : 'sealed'}`}>
-          <small>Power</small>
-          <b>{revealed ? character.power : '???'}</b>
-        </span>
+        {revealed && (
+          <span className="power-slot unsealed">
+            <small>Power</small>
+            <b>{character.power}</b>
+          </span>
+        )}
       </figcaption>
     </figure>
   );
