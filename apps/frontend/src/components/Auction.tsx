@@ -58,14 +58,25 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
 
           <LedBar fraction={open ? remainingMs / roundMs : 0} danger={closing} />
 
-          <div className="row" style={{ marginTop: 16, justifyContent: 'center' }}>
-            <Readout label="Current bid" value={auction.price > 0 ? String(auction.price) : '--'} tone="good" size="lg" />
-          </div>
-          <p className="muted" style={{ marginTop: 10, marginBottom: 0 }}>{status}</p>
         </section>
 
         <section className="panel bid-dock">
-          <h3>Your bid — {coins} coins</h3>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              gap: 12,
+              flexWrap: 'nowrap',
+              marginBottom: 10,
+            }}
+          >
+            <Readout label="Current bid" value={auction.price > 0 ? String(auction.price) : '--'} tone="good" />
+            <div style={{ minWidth: 0, textAlign: 'right' }}>
+              <div className="muted">{status}</div>
+              <div className="muted">Your coins: {coins}</div>
+            </div>
+          </div>
           <div className="row">
             {quick.map((amount) => (
               <button key={amount} disabled={!canBid} onClick={() => onBid(amount)}>
@@ -73,7 +84,7 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
               </button>
             ))}
           </div>
-          <div className="row" style={{ marginTop: 12, flexWrap: 'nowrap' }}>
+          <div className="row" style={{ marginTop: 8, flexWrap: 'nowrap' }}>
             <input
               aria-label="Custom bid"
               type="number"
@@ -95,7 +106,6 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
               Bid
             </button>
           </div>
-          {isLeader && open && <p className="muted" style={{ marginTop: 10, marginBottom: 0 }}>You are the highest bidder.</p>}
         </section>
       </div>
 

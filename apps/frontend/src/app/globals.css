@@ -229,7 +229,7 @@ input:disabled { opacity: 0.6; }
 .bid-dock { position: sticky; bottom: 0; z-index: 5; padding-bottom: calc(14px + env(safe-area-inset-bottom)); }
 @media (min-width: 900px) { .bid-dock { position: static; } }
 
-.rank { font-family: var(--font-display, system-ui), sans-serif; font-size: 1.4rem; font-weight: 800; width: 2.6rem; flex: none; }
+.rank { font-family: var(--font-display, system-ui), sans-serif; font-size: 1.4rem; font-weight: 800; min-width: 2.6rem; text-align: center; white-space: nowrap; flex: none; }
 .winner-plate { background: linear-gradient(180deg, #f7d774, #b8891d); color: #2a1c00; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
 
 @media (prefers-reduced-motion: reduce) {
