@@ -38,7 +38,6 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
           </div>
           <div className="name">{auction.character.name}</div>
           <div className="muted">{auction.character.anime}</div>
-          <div className="power">Power {auction.character.power}</div>
 
           {open ? (
             <div className={`timer ${closing ? 'closing' : ''}`}>{(remainingMs / 1000).toFixed(1)}s</div>
@@ -110,7 +109,7 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
             me.team.map((character) => (
               <div key={character.id} className="player">
                 <span>{character.name}</span>
-                <span className="muted">{character.power}</span>
+                <span className="muted">?</span>
               </div>
             ))
           ) : (

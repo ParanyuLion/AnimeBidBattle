@@ -20,7 +20,7 @@ export function Results({ room, onPlayAgain }: { room: RoomView; onPlayAgain: ()
               </strong>
               <span className="power">{result.totalPower} power</span>
             </div>
-            <div className="muted">{player?.team.map((c) => `${c.name} (${c.power})`).join(', ') || 'No characters'}</div>
+            <div className="muted">{player?.team.map((c) => `${c.name} (${c.power ?? '?'})`).join(', ') || 'No characters'}</div>
           </div>
         );
       })}

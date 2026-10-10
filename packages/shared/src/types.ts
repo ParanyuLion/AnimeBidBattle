@@ -11,6 +11,14 @@ export interface Character {
   power: number;
 }
 
+/** A character as clients see it. `power` is present only once the Battle phase has started. */
+export interface CharacterView {
+  id: string;
+  name: string;
+  anime: string;
+  power?: number;
+}
+
 export interface RoomSettings {
   maxPlayers: number;
   startingCoins: number;
@@ -28,14 +36,14 @@ export interface PlayerView {
   id: string;
   nickname: string;
   coins: number;
-  team: Character[];
+  team: CharacterView[];
   connected: boolean;
   isHost: boolean;
 }
 
 /** What an auction mode exposes about a round to one viewer. */
 export interface AuctionBidView {
-  character: Character;
+  character: CharacterView;
   price: number;
   leaderId: string | null;
   endsAt: number;

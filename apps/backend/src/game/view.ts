@@ -1,6 +1,13 @@
-import type { RoomView } from '@abb/shared';
+import type { CharacterView, RoomView } from '@abb/shared';
 import type { AuctionModeRegistry } from '../auction';
 import type { Room } from './types';
+
+/** Rebuilds a character field by field so nothing extra (like `power`) can slip through. */
+function toCharacterView(character: CharacterView, revealed: boolean): CharacterView {
+  const view: CharacterView = { id: character.id, name: character.name, anime: character.anime };
+  if (revealed && character.power !== undefined) view.power = character.power;
+  return view;
+}
 
 export function getRoomView(
   room: Room,
@@ -9,6 +16,9 @@ export function getRoomView(
   now: number,
 ): RoomView {
   const mode = modes[room.settings.auctionMode];
+  // Players must guess how strong a character is: power is only revealed for the Battle.
+  const revealed = room.phase === 'BATTLE' || room.phase === 'RESULTS';
+  const auction = room.auction ? mode.getPublicView(room.auction, viewerId) : null;
   return {
     code: room.code,
     phase: room.phase,
@@ -20,17 +30,21 @@ export function getRoomView(
       id: p.id,
       nickname: p.nickname,
       coins: p.coins,
-      team: p.team,
+      team: p.team.map((character) => toCharacterView(character, revealed)),
       connected: p.connected,
       isHost: p.id === room.hostId,
     })),
-    auction: room.auction
+    auction: auction
       ? {
-          ...mode.getPublicView(room.auction, viewerId),
+          character: toCharacterView(auction.character, revealed),
+          price: auction.price,
+          leaderId: auction.leaderId,
+          endsAt: auction.endsAt,
+          status: auction.status,
           roundIndex: room.roundIndex,
           totalRounds: room.deck.length,
         }
       : null,
-    results: room.results,
+    results: revealed ? room.results : null,
   };
 }
