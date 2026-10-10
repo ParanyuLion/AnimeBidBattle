@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import type { AuctionView, RoomView } from '@abb/shared';
 import { useCountdown } from '../hooks/useCountdown';
+import { CharacterCard } from './CharacterCard';
+import { LedBar } from './LedBar';
+import { Readout } from './Readout';
 
 interface Props {
   room: RoomView;
@@ -28,50 +31,61 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
     (amount) => amount >= minBid && amount <= coins,
   );
   const customAmount = Number(custom);
+  const roundMs = room.settings.roundSeconds * 1000;
+
+  const timeText = open ? (remainingMs / 1000).toFixed(1) : auction.status === 'SOLD' ? 'SOLD' : 'NONE';
+  const status = (() => {
+    if (auction.status === 'SOLD' && leader) return `Sold to ${leader.nickname}`;
+    if (auction.status === 'UNSOLD') return 'Nobody bid — unsold';
+    if (leader) return `Leader: ${leader.nickname}${isLeader ? ' (you)' : ''}${closing ? ' — going once!' : ''}`;
+    return 'No bids yet';
+  })();
 
   return (
     <div className="grid">
-      <div>
-        <div className="card lot">
-          <div className="muted">
-            Round {auction.roundIndex + 1} / {auction.totalRounds}
+      <div className="stack">
+        <section className="panel center">
+          <div className="row" style={{ justifyContent: 'space-between', flexWrap: 'nowrap' }}>
+            <span className="plate">
+              Round {auction.roundIndex + 1}/{auction.totalRounds}
+            </span>
+            <Readout label="Time" value={timeText} tone={closing ? 'warn' : 'cyan'} flicker={closing} />
           </div>
-          <div className="name">{auction.character.name}</div>
-          <div className="muted">{auction.character.anime}</div>
 
-          {open ? (
-            <div className={`timer ${closing ? 'closing' : ''}`}>{(remainingMs / 1000).toFixed(1)}s</div>
-          ) : (
-            <div className="timer">{auction.status === 'SOLD' ? 'SOLD!' : 'No bids'}</div>
-          )}
-
-          <div className="price">{auction.price > 0 ? `${auction.price} coins` : 'No bids yet'}</div>
-          <div className="muted">
-            {auction.status === 'SOLD' && leader && `Sold to ${leader.nickname}`}
-            {auction.status === 'UNSOLD' && 'Nobody bid — this character is unsold'}
-            {open && leader && `Leader: ${leader.nickname}${isLeader ? ' (you)' : ''}`}
-            {closing && ' — going once!'}
+          <div style={{ margin: '16px 0' }}>
+            <CharacterCard character={auction.character} />
           </div>
-        </div>
 
-        <div className="card">
-          <h3>Your bid — you have {coins} coins</h3>
+          <LedBar fraction={open ? remainingMs / roundMs : 0} danger={closing} />
+
+          <div className="row" style={{ marginTop: 16, justifyContent: 'center' }}>
+            <Readout label="Current bid" value={auction.price > 0 ? String(auction.price) : '--'} tone="good" size="lg" />
+          </div>
+          <p className="muted" style={{ marginTop: 10, marginBottom: 0 }}>{status}</p>
+        </section>
+
+        <section className="panel bid-dock">
+          <h3>Your bid — {coins} coins</h3>
           <div className="row">
             {quick.map((amount) => (
               <button key={amount} disabled={!canBid} onClick={() => onBid(amount)}>
-                Bid {amount}
+                {amount}
               </button>
             ))}
+          </div>
+          <div className="row" style={{ marginTop: 12, flexWrap: 'nowrap' }}>
             <input
+              aria-label="Custom bid"
               type="number"
+              inputMode="numeric"
               min={minBid}
               value={custom}
               placeholder={`min ${minBid}`}
               onChange={(e) => setCustom(e.target.value)}
-              style={{ width: '8em' }}
+              style={{ flex: 1 }}
             />
             <button
-              className="secondary"
+              className="primary big"
               disabled={!canBid || !Number.isInteger(customAmount) || customAmount < minBid || customAmount > coins}
               onClick={() => {
                 onBid(customAmount);
@@ -81,41 +95,44 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
               Bid
             </button>
           </div>
-          {isLeader && open && <p className="muted">You are the highest bidder.</p>}
-        </div>
+          {isLeader && open && <p className="muted" style={{ marginTop: 10, marginBottom: 0 }}>You are the highest bidder.</p>}
+        </section>
       </div>
 
-      <div>
-        <div className="card">
+      <div className="stack">
+        <section className="panel">
           <h3>Players</h3>
           {room.players.map((player) => (
             <div
               key={player.id}
               className={`player ${player.id === auction.leaderId ? 'leader' : ''} ${player.connected ? '' : 'offline'}`}
             >
-              <span>
-                {player.nickname}
-                {player.id === room.youId ? ' (you)' : ''}
+              <span className="who">
+                <span className={`led ${player.connected ? 'on' : ''}`} />
+                <span>
+                  {player.nickname}
+                  {player.id === room.youId ? ' (you)' : ''}
+                </span>
               </span>
               <span>
                 {player.coins}¢ · {player.team.length} 🎴
               </span>
             </div>
           ))}
-        </div>
-        <div className="card">
+        </section>
+
+        <section className="panel">
           <h3>Your team</h3>
           {me && me.team.length > 0 ? (
-            me.team.map((character) => (
-              <div key={character.id} className="player">
-                <span>{character.name}</span>
-                <span className="muted">?</span>
-              </div>
-            ))
+            <div className="cards-row">
+              {me.team.map((character) => (
+                <CharacterCard key={character.id} character={character} size="sm" />
+              ))}
+            </div>
           ) : (
             <p className="muted">No characters yet.</p>
           )}
-        </div>
+        </section>
       </div>
     </div>
   );
