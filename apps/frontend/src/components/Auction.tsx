@@ -33,6 +33,7 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
   const customAmount = Number(custom);
   const roundMs = room.settings.roundSeconds * 1000;
 
+  const currentBid = auction.price > 0 ? String(auction.price) : '--';
   const timeText = open ? (remainingMs / 1000).toFixed(1) : auction.status === 'SOLD' ? 'SOLD' : 'NONE';
   const status = (() => {
     if (auction.status === 'SOLD' && leader) return `Sold to ${leader.nickname}`;
@@ -56,6 +57,11 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
             <CharacterCard character={auction.character} />
           </div>
 
+          <div className="stage-bid">
+            <Readout label="Current bid" value={currentBid} tone="good" size="xl" pulseKey={currentBid} />
+            <div className="stage-status muted" aria-live="polite">{status}</div>
+          </div>
+
           <div className="stage-led">
             <LedBar fraction={open ? remainingMs / roundMs : 0} danger={closing} />
           </div>
@@ -64,6 +70,7 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
 
         <section className="panel bid-dock">
           <div
+            className="dock-bid"
             style={{
               display: 'flex',
               justifyContent: 'space-between',
@@ -73,13 +80,13 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
               marginBottom: 10,
             }}
           >
-            <Readout label="Current bid" value={auction.price > 0 ? String(auction.price) : '--'} tone="good" />
+            <Readout label="Current bid" value={currentBid} tone="good" />
             <div aria-live="polite" style={{ minWidth: 0, textAlign: 'right' }}>
               <div className="muted">{status}</div>
               <div className="muted">Your coins: {coins}</div>
             </div>
           </div>
-          <div className="row">
+          <div className="row quick-keys">
             {quick.map((amount) => (
               <button key={amount} disabled={!canBid} onClick={() => onBid(amount)}>
                 {amount}

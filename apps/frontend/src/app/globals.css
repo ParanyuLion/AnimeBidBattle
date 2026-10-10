@@ -180,6 +180,10 @@ input:disabled { opacity: 0.6; }
 .readout-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
 .readout-value { font-size: 1.5rem; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; color: var(--cyan); text-shadow: 0 0 10px currentColor; }
 .readout.size-lg .readout-value { font-size: clamp(2rem, 11vw, 3.2rem); }
+.readout.size-xl { padding: 16px 26px; align-items: flex-start; }
+.readout.size-xl .readout-value { font-size: clamp(3rem, 6vw, 5.2rem); line-height: 1; }
+.readout-value.pulse { animation: bump 0.5s ease-out; }
+@keyframes bump { 0% { transform: scale(1.14); filter: brightness(1.8); } 100% { transform: none; filter: none; } }
 .readout.tone-good .readout-value { color: var(--good); }
 .readout.tone-gold .readout-value { color: var(--gold); }
 .readout.tone-warn .readout-value { color: var(--pink); }
@@ -232,12 +236,19 @@ input:disabled { opacity: 0.6; }
 
 /* Auction stage: on desktop the card sits beside the timer instead of above it. */
 .stage-card { margin: 16px 0; }
+.stage-bid { display: none; }
 @media (min-width: 900px) {
-  .stage { display: grid; grid-template-columns: var(--card-w) 1fr; gap: 12px 24px; align-items: start; text-align: left; }
+  :root { --card-w: clamp(170px, calc((100vh - 370px) / 1.5 + 16px), 300px); }
+  .stage { display: grid; grid-template-columns: var(--card-w) 1fr; grid-template-rows: auto 1fr auto; gap: 12px 24px; align-items: start; text-align: left; }
   .stage-head { grid-column: 2; grid-row: 1; }
-  .stage-card { grid-column: 1; grid-row: 1 / span 2; margin: 0; }
-  .stage-led { grid-column: 2; grid-row: 2; align-self: end; }
+  .stage-card { grid-column: 1; grid-row: 1 / span 3; margin: 0; }
+  .stage-bid { display: block; grid-column: 2; grid-row: 2; align-self: center; }
+  .stage-bid .readout { width: 100%; }
+  .stage-led { grid-column: 2; grid-row: 3; align-self: end; }
+  .dock-bid { display: none !important; } /* !important: the row sets display:flex inline */
 }
+.stage-status { margin-top: 10px; font-size: 1.05rem; }
+.bid-dock .quick-keys button { min-height: 52px; min-width: 64px; font-size: 1.05rem; }
 
 .rank { font-family: var(--font-display, system-ui), var(--font-thai, system-ui), sans-serif; font-size: 1.4rem; font-weight: 800; min-width: 2.6rem; text-align: center; white-space: nowrap; flex: none; }
 .winner-plate { background: linear-gradient(180deg, #f7d774, #b8891d); color: #2a1c00; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
