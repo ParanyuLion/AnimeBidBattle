@@ -11,7 +11,7 @@ interface Props {
 const FIELDS = [
   { key: 'maxPlayers', label: 'Max players' },
   { key: 'startingCoins', label: 'Starting coins' },
-  { key: 'rounds', label: 'Rounds (characters)' },
+  { key: 'rounds', label: 'Rounds' },
   { key: 'roundSeconds', label: 'Seconds per round' },
 ] as const;
 
@@ -46,70 +46,76 @@ export function Lobby({ room, actions }: Props) {
     setDirty(false);
   }
 
+  const needsPlayers = room.players.length < MIN_PLAYERS_TO_START;
+
   return (
     <div className="grid">
-      <div>
-        <div className="card center">
-          <div className="muted">Room code</div>
-          <div className="code">{room.code}</div>
-          <button className="secondary" onClick={copyLink}>
-            {copied ? 'Link copied!' : 'Copy invite link'}
-          </button>
-        </div>
+      <div className="stack">
+        <section className="panel center">
+          <div className="muted" style={{ marginBottom: 8 }}>Room code</div>
+          <div className="plate code-plate">{room.code}</div>
+          <div style={{ marginTop: 14 }}>
+            <button className="secondary" onClick={copyLink}>
+              {copied ? 'Link copied!' : 'Copy invite link'}
+            </button>
+          </div>
+        </section>
 
-        <div className="card">
+        <section className="panel">
           <h2>Settings</h2>
-          <div className="row">
+          <div className="row" style={{ alignItems: 'flex-end' }}>
             {FIELDS.map(({ key, label }) => (
-              <div className="field" key={key}>
+              <div className="field" key={key} style={{ flex: '1 1 140px' }}>
                 <label htmlFor={key}>
                   {label} ({SETTINGS_BOUNDS[key].min}–{SETTINGS_BOUNDS[key].max})
                 </label>
                 <input
                   id={key}
                   type="number"
+                  inputMode="numeric"
                   value={isHost ? draft[key] : String(room.settings[key])}
                   disabled={!isHost}
                   onChange={(e) => {
                     setDraft({ ...draft, [key]: e.target.value });
                     setDirty(true);
                   }}
-                  style={{ width: '9em' }}
                 />
               </div>
             ))}
           </div>
           {isHost && (
-            <div className="row" style={{ marginTop: 12 }}>
+            <div className="row" style={{ marginTop: 14 }}>
               <button className="secondary" onClick={save} disabled={!draftValid}>
                 Save settings
               </button>
               {dirty && <span className="muted">Unsaved changes</span>}
             </div>
           )}
-        </div>
+        </section>
       </div>
 
-      <div>
-        <div className="card">
+      <div className="stack">
+        <section className="panel">
           <h2>
             Players ({room.players.length}/{room.settings.maxPlayers})
           </h2>
           {room.players.map((player) => (
             <div key={player.id} className={`player ${player.connected ? '' : 'offline'}`}>
-              <span>
-                {player.nickname}
-                {player.id === room.youId ? ' (you)' : ''}
-                {player.isHost ? ' 👑' : ''}
+              <span className="who">
+                <span className={`led ${player.connected ? 'on' : ''}`} aria-label={player.connected ? 'online' : 'offline'} />
+                <span>
+                  {player.nickname}
+                  {player.id === room.youId ? ' (you)' : ''}
+                  {player.isHost ? ' 👑' : ''}
+                </span>
               </span>
-              <span className="muted">{player.connected ? 'online' : 'offline'}</span>
             </div>
           ))}
-        </div>
+        </section>
 
         {isHost ? (
-          <button onClick={actions.start} disabled={room.players.length < MIN_PLAYERS_TO_START || dirty} style={{ width: '100%' }}>
-            {room.players.length < MIN_PLAYERS_TO_START ? `Need ${MIN_PLAYERS_TO_START}+ players` : 'Start game'}
+          <button className="primary big" onClick={actions.start} disabled={needsPlayers || dirty}>
+            {needsPlayers ? `Need ${MIN_PLAYERS_TO_START}+ players` : 'Start game'}
           </button>
         ) : (
           <p className="muted center">Waiting for the host to start…</p>

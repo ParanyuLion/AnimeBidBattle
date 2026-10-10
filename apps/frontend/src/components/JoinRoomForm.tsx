@@ -6,7 +6,7 @@ export function JoinRoomForm({ title, onSubmit }: { title: string; onSubmit: (ni
   const [nickname, setNickname] = useState('');
   return (
     <form
-      className="card"
+      className="panel"
       onSubmit={(event) => {
         event.preventDefault();
         if (nickname.trim()) onSubmit(nickname.trim());
@@ -15,13 +15,15 @@ export function JoinRoomForm({ title, onSubmit }: { title: string; onSubmit: (ni
       <h2>{title}</h2>
       <div className="row">
         <input
+          aria-label="Your nickname"
           value={nickname}
           maxLength={20}
           placeholder="Your nickname"
+          autoComplete="off"
           onChange={(event) => setNickname(event.target.value)}
           autoFocus
         />
-        <button type="submit" disabled={!nickname.trim()}>
+        <button className="primary" type="submit" disabled={!nickname.trim()}>
           Join
         </button>
       </div>

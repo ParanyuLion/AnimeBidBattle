@@ -37,41 +37,46 @@ export default function HomePage() {
   }
 
   return (
-    <div>
-      <h1 className="center">Anime Bid Battle</h1>
-      <p className="muted center">Bid on anime characters. Build the strongest team.</p>
+    <div className="stack">
+      <header className="center">
+        <h1>Anime Bid Battle</h1>
+        <p className="muted">Bid on anime characters. Guess their strength. Build the strongest team.</p>
+      </header>
       <ErrorBanner error={error} onDismiss={() => setError(null)} />
 
-      <div className="card">
+      <section className="panel">
         <div className="field">
-          <label htmlFor="nickname">Nickname</label>
-          <input id="nickname" value={nickname} maxLength={20} onChange={(e) => setNickname(e.target.value)} />
+          <label htmlFor="nickname">Your nickname</label>
+          <input id="nickname" value={nickname} maxLength={20} autoComplete="off" onChange={(e) => setNickname(e.target.value)} />
         </div>
-      </div>
+      </section>
 
-      <div className="grid">
-        <div className="card">
+      <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
+        <section className="panel">
           <h2>Create a room</h2>
           <p className="muted">You become the host and choose the settings.</p>
-          <button onClick={create} disabled={!name}>
+          <button className="primary big" onClick={create} disabled={!name}>
             Create room
           </button>
-        </div>
-        <div className="card">
+        </section>
+        <section className="panel">
           <h2>Join a room</h2>
           <div className="row">
             <input
+              aria-label="Room code"
               value={roomCode}
               maxLength={5}
               placeholder="ROOM CODE"
+              autoCapitalize="characters"
+              autoComplete="off"
               onChange={(e) => setRoomCode(e.target.value.toUpperCase())}
               style={{ width: '9em' }}
             />
-            <button onClick={join} disabled={!name || roomCode.trim().length !== 5}>
+            <button className="primary" onClick={join} disabled={!name || roomCode.trim().length !== 5}>
               Join
             </button>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
