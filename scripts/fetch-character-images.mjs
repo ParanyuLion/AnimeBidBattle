@@ -1,5 +1,5 @@
-#!/usr/bin/env node
 // Finds an AniList image for every character in data/characters.json.
+// Run it with `node` (no shebang on purpose: a shebang line breaks Vitest's loader when Git checks the file out with CRLF).
 //   node scripts/fetch-character-images.mjs              dry-run: prints a manifest, downloads nothing
 //   node scripts/fetch-character-images.mjs --download   saves apps/frontend/public/characters/<id>.jpg
 import { existsSync } from 'node:fs';
