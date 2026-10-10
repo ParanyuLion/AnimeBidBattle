@@ -31,6 +31,21 @@ npm test            # unit + socket integration tests
 npm run typecheck
 ```
 
+## Hidden power
+
+Players are not told how strong a character is. The backend never sends a character's `power` to clients during the lobby or the auction; it is revealed for everyone at the Battle phase (`apps/backend/src/game/view.ts`).
+
+## Character images
+
+Images are static files at `apps/frontend/public/characters/<id>.jpg` (named by character id from `data/characters.json`). A missing file shows a placeholder card. To (re)fetch them from AniList:
+
+```bash
+node scripts/fetch-character-images.mjs              # dry-run: prints what would be downloaded
+node scripts/fetch-character-images.mjs --download   # saves the images and SOURCES.md
+```
+
+Character artwork belongs to its respective rights holders; this is a non-commercial game for friends.
+
 ## Deployment (two services)
 
 The game server needs a long-lived Node process for WebSockets and in-memory rooms, so it cannot run on Vercel's serverless functions. Deploy:
