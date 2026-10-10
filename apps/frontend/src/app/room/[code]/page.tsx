@@ -34,7 +34,7 @@ export default function RoomPage() {
     );
   }
 
-  if (!room) return <p className="muted center">Connecting…</p>;
+  if (!room) return <div className="banner info" role="status">Connecting to the game server… the first visit can take up to a minute.</div>;
 
   return (
     <div>

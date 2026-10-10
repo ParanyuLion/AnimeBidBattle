@@ -13,9 +13,20 @@ export default function HomePage() {
   const [roomCode, setRoomCode] = useState('');
   const [error, setError] = useState<ErrorPayload | null>(null);
 
+  const [connected, setConnected] = useState(false);
+
   useEffect(() => {
     const socket = getSocket();
+    const onConnect = () => setConnected(true);
+    const onDisconnect = () => setConnected(false);
+    socket.on('connect', onConnect);
+    socket.on('disconnect', onDisconnect);
+    setConnected(socket.connected);
     if (!socket.connected) socket.connect();
+    return () => {
+      socket.off('connect', onConnect);
+      socket.off('disconnect', onDisconnect);
+    };
   }, []);
 
   const name = nickname.trim();
@@ -43,6 +54,11 @@ export default function HomePage() {
         <p className="muted">Bid on anime characters. Guess their strength. Build the strongest team.</p>
       </header>
       <ErrorBanner error={error} onDismiss={() => setError(null)} />
+      {!connected && (
+        <div className="banner info" role="status">
+          Waking up the game server… the first visit can take up to a minute.
+        </div>
+      )}
 
       <section className="panel">
         <div className="field">
@@ -55,7 +71,7 @@ export default function HomePage() {
         <section className="panel">
           <h2>Create a room</h2>
           <p className="muted">You become the host and choose the settings.</p>
-          <button className="primary big" onClick={create} disabled={!name}>
+          <button className="primary big" onClick={create} disabled={!name || !connected}>
             Create room
           </button>
         </section>
@@ -72,7 +88,7 @@ export default function HomePage() {
               onChange={(e) => setRoomCode(e.target.value.toUpperCase())}
               style={{ width: '9em' }}
             />
-            <button className="primary" onClick={join} disabled={!name || roomCode.trim().length !== 5}>
+            <button className="primary" onClick={join} disabled={!name || !connected || roomCode.trim().length !== 5}>
               Join
             </button>
           </div>
