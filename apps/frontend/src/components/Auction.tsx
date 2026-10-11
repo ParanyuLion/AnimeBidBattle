@@ -143,7 +143,7 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
         <section className="panel">
           <h3>Your team</h3>
           {me && me.team.length > 0 ? (
-            <div className="cards-row">
+            <div className="cards-row scroll">
               {me.team.map((character) => (
                 <CharacterCard key={character.id} character={character} size="sm" />
               ))}
