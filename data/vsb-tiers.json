@@ -1,0 +1,3335 @@
+[
+  {
+    "id": "naruto-uzumaki",
+    "name": "Naruto Uzumaki",
+    "anime": "Naruto",
+    "power": 26,
+    "title": "Naruto Uzumaki (Part I)",
+    "origin": "Naruto (Verse)|Naruto",
+    "tiers": [
+      "8-B",
+      "7-B",
+      "8-B",
+      "7-B",
+      "8-A",
+      "7-B",
+      "7-A",
+      "High 7-A",
+      "8-A",
+      "7-B",
+      "7-A",
+      "High 7-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "sasuke-uchiha",
+    "name": "Sasuke Uchiha",
+    "anime": "Naruto",
+    "power": 62,
+    "title": "Sasuke Uchiha (New Era)",
+    "origin": "Naruto (Verse)|Naruto",
+    "tiers": [
+      "5-B",
+      "5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kakashi-hatake",
+    "name": "Kakashi Hatake",
+    "anime": "Naruto",
+    "power": 55,
+    "title": "Kakashi Hatake",
+    "origin": "Naruto (Verse)|Naruto",
+    "tiers": [
+      "7-B",
+      "7-A",
+      "7-B",
+      "6-B",
+      "6-B",
+      "6-B",
+      "5-B",
+      "Low 5-B",
+      "5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "monkey-d-luffy",
+    "name": "Monkey D. Luffy",
+    "anime": "One Piece",
+    "power": 42,
+    "title": "Monkey D. Luffy (Post-Timeskip)",
+    "origin": "One Piece",
+    "tiers": [
+      "6-C",
+      "High 6-C",
+      "6-B",
+      "6-C",
+      "High 6-C",
+      "6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "roronoa-zoro",
+    "name": "Roronoa Zoro",
+    "anime": "One Piece",
+    "power": 39,
+    "title": "Roronoa Zoro (Post-Timeskip)",
+    "origin": "One Piece",
+    "tiers": [
+      "High 6-C",
+      "6-B",
+      "6-B",
+      "5-C",
+      "5-C",
+      "5-C",
+      "5-C",
+      "Low 5-B",
+      "5-C",
+      "Low 5-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "sanji",
+    "name": "Sanji",
+    "anime": "One Piece",
+    "power": 35,
+    "title": "Sanji (Post-Timeskip)",
+    "origin": "One Piece",
+    "tiers": [
+      "6-C",
+      "High 6-C",
+      "6-B",
+      "5-C",
+      "5-C",
+      "Low 5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "son-goku",
+    "name": "Son Goku",
+    "anime": "Dragon Ball",
+    "power": 98,
+    "title": "Son Goku (Dragon Ball GT)",
+    "origin": "Dragon Ball (Toei)|Dragon Ball GT",
+    "tiers": [
+      "2-C",
+      "2-C",
+      "2-C",
+      "2-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "vegeta",
+    "name": "Vegeta",
+    "anime": "Dragon Ball",
+    "power": 93,
+    "title": "Vegeta (DBS Anime)",
+    "origin": "Dragon Ball|Dragon Ball Super",
+    "tiers": [
+      "2-C",
+      "2-C",
+      "2-C",
+      "2-C",
+      "2-C",
+      "2-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "son-gohan",
+    "name": "Son Gohan",
+    "anime": "Dragon Ball",
+    "power": 90,
+    "title": "Son Gohan (DBS Anime)",
+    "origin": "Dragon Ball|Dragon Ball Super",
+    "tiers": [
+      "4-A",
+      "2-C",
+      "2-C",
+      "2-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ichigo-kurosaki",
+    "name": "Ichigo Kurosaki",
+    "anime": "Bleach",
+    "power": 65,
+    "title": "Ichigo Kurosaki (Pre-Timeskip)",
+    "origin": "Bleach",
+    "tiers": [
+      "7-B",
+      "7-B",
+      "6-B",
+      "6-B",
+      "High 6-B",
+      "High 6-B",
+      "6-A",
+      "6-A",
+      "High 6-A",
+      "3-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "rukia-kuchiki",
+    "name": "Rukia Kuchiki",
+    "anime": "Bleach",
+    "power": 29,
+    "title": "Rukia Kuchiki",
+    "origin": "Bleach",
+    "tiers": [
+      "7-B",
+      "6-B",
+      "7-B",
+      "6-B",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "eren-yeager",
+    "name": "Eren Yeager",
+    "anime": "Attack on Titan",
+    "power": 25,
+    "title": "Eren Yeager",
+    "origin": "Attack on Titan",
+    "tiers": [
+      "9-A",
+      "8-B",
+      "8-A",
+      "8-B",
+      "8-B",
+      "8-A",
+      "8-B",
+      "8-A",
+      "8-B",
+      "8-A",
+      "High 8-C",
+      "8-B",
+      "8-A",
+      "8-B",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "levi-ackerman",
+    "name": "Levi Ackerman",
+    "anime": "Attack on Titan",
+    "power": 23,
+    "title": "Levi Ackerman",
+    "origin": "Attack on Titan",
+    "tiers": [
+      "9-A",
+      "8-C",
+      "8-B",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "mikasa-ackerman",
+    "name": "Mikasa Ackerman",
+    "anime": "Attack on Titan",
+    "power": 20,
+    "title": "Mikasa Ackerman",
+    "origin": "Attack on Titan",
+    "tiers": [
+      "9-A",
+      "8-C",
+      "8-B",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "tanjiro-kamado",
+    "name": "Tanjiro Kamado",
+    "anime": "Demon Slayer",
+    "power": 21,
+    "title": "Tanjiro Kamado",
+    "origin": "Demon Slayer: Kimetsu No Yaiba",
+    "tiers": [
+      "9-A",
+      "8-C",
+      "8-C",
+      "High 8-C",
+      "7-C",
+      "High 8-C",
+      "7-C",
+      "7-C",
+      "7-C",
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "nezuko-kamado",
+    "name": "Nezuko Kamado",
+    "anime": "Demon Slayer",
+    "power": 18,
+    "title": "Nezuko Kamado",
+    "origin": "Demon Slayer: Kimetsu No Yaiba",
+    "tiers": [
+      "9-A",
+      "High 8-C",
+      "High 8-C",
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "zenitsu-agatsuma",
+    "name": "Zenitsu Agatsuma",
+    "anime": "Demon Slayer",
+    "power": 19,
+    "title": "Zenitsu Agatsuma",
+    "origin": "Demon Slayer: Kimetsu No Yaiba",
+    "tiers": [
+      "9-A",
+      "High 8-C",
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "izuku-midoriya",
+    "name": "Izuku Midoriya",
+    "anime": "My Hero Academia",
+    "power": 34,
+    "title": "Izuku Midoriya (Deku) (Pre-Final Act)",
+    "origin": "My Hero Academia",
+    "tiers": [
+      "8-A",
+      "High 6-B",
+      "8-A",
+      "Low 7-B",
+      "High 6-B",
+      "8-A",
+      "High 7-C",
+      "Low 7-B",
+      "High 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "katsuki-bakugo",
+    "name": "Katsuki Bakugo",
+    "anime": "My Hero Academia",
+    "power": 31,
+    "title": "Katsuki Bakugo (Dynamight) (Final Act)",
+    "origin": "My Hero Academia",
+    "tiers": [
+      "Low 7-B",
+      "High 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "shoto-todoroki",
+    "name": "Shoto Todoroki",
+    "anime": "My Hero Academia",
+    "power": 32,
+    "title": "Shoto Todoroki (Shoto)",
+    "origin": "My Hero Academia",
+    "tiers": [
+      "8-A",
+      "High 7-C",
+      "8-A",
+      "High 7-C",
+      "8-A",
+      "High 7-C",
+      "8-A",
+      "High 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "satoru-gojo",
+    "name": "Satoru Gojo",
+    "anime": "Jujutsu Kaisen",
+    "power": 68,
+    "title": "Satoru Gojo",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "High 7-C",
+      "High 7-C",
+      "Low 7-B",
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "yuji-itadori",
+    "name": "Yuji Itadori",
+    "anime": "Jujutsu Kaisen",
+    "power": 22,
+    "title": "Yuji Itadori",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "8-C",
+      "8-B",
+      "8-B",
+      "High 7-C",
+      "High 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "megumi-fushiguro",
+    "name": "Megumi Fushiguro",
+    "anime": "Jujutsu Kaisen",
+    "power": 21,
+    "title": "Megumi Fushiguro",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "Unknown",
+      "High 7-C",
+      "8-C",
+      "8-B",
+      "High 7-C",
+      "8-C",
+      "8-B",
+      "High 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "light-yagami",
+    "name": "Light Yagami",
+    "anime": "Death Note",
+    "power": 10,
+    "title": "Light Yagami",
+    "origin": "Death Note (Verse)|Death Note",
+    "tiers": [
+      "9-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "l-lawliet",
+    "name": "L",
+    "anime": "Death Note",
+    "power": 11,
+    "title": "L (Death Note)",
+    "origin": "Death Note (Verse)|Death Note",
+    "tiers": [
+      "9-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "edward-elric",
+    "name": "Edward Elric",
+    "anime": "Fullmetal Alchemist",
+    "power": 14,
+    "title": "Edward Elric",
+    "origin": "Fullmetal Alchemist",
+    "tiers": [
+      "8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "alphonse-elric",
+    "name": "Alphonse Elric",
+    "anime": "Fullmetal Alchemist",
+    "power": 17,
+    "title": "Alphonse Elric",
+    "origin": "Fullmetal Alchemist",
+    "tiers": [
+      "8-C",
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "saitama",
+    "name": "Saitama",
+    "anime": "One Punch Man",
+    "power": 96,
+    "title": "Saitama",
+    "origin": "One-Punch Man",
+    "tiers": [
+      "9-B",
+      "9-B",
+      "6-A",
+      "4-A",
+      "3-C",
+      "4-A",
+      "3-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "genos",
+    "name": "Genos",
+    "anime": "One Punch Man",
+    "power": 36,
+    "title": "Genos (Demon Cyborg)",
+    "origin": "One-Punch Man",
+    "tiers": [
+      "7-C",
+      "High 7-C",
+      "High 7-C",
+      "7-A",
+      "7-A",
+      "6-B",
+      "7-A",
+      "6-B",
+      "5-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "killua-zoldyck",
+    "name": "Killua Zoldyck",
+    "anime": "Hunter x Hunter",
+    "power": 24,
+    "title": "Killua Zoldyck",
+    "origin": "Hunter X Hunter",
+    "tiers": [
+      "9-B",
+      "9-A",
+      "8-B",
+      "8-B",
+      "8-A",
+      "8-A",
+      "Low 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "gon-freecss",
+    "name": "Gon Freecss",
+    "anime": "Hunter x Hunter",
+    "power": 22,
+    "title": "Gon Freecss",
+    "origin": "Hunter X Hunter",
+    "tiers": [
+      "9-B",
+      "9-A",
+      "8-B",
+      "8-A",
+      "8-B",
+      "8-A",
+      "8-A",
+      "Low 7-C",
+      "High 7-C",
+      "Low 7-B",
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "lelouch-lamperouge",
+    "name": "Lelouch Lamperouge",
+    "anime": "Code Geass",
+    "power": 16,
+    "title": "Lelouch vi Britannia",
+    "origin": "Code Geass",
+    "tiers": [
+      "10-B",
+      "9-C",
+      "8-C",
+      "High 8-C",
+      "8-A",
+      "8-A",
+      "9-A",
+      "8-A",
+      "Unknown"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "sukuna",
+    "name": "Sukuna",
+    "anime": "Jujutsu Kaisen",
+    "power": 0,
+    "title": "Ryomen Sukuna",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "8-B",
+      "High 7-C",
+      "7-B",
+      "High 7-C",
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kento-nanami",
+    "name": "Kento Nanami",
+    "anime": "Jujutsu Kaisen",
+    "power": 0,
+    "title": "Kento Nanami",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "8-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "maki-zenin",
+    "name": "Maki Zenin",
+    "anime": "Jujutsu Kaisen",
+    "power": 0,
+    "title": "Maki Zenin",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "8-C",
+      "8-B",
+      "High 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "yuta-okkotsu",
+    "name": "Yuta Okkotsu",
+    "anime": "Jujutsu Kaisen",
+    "power": 0,
+    "title": "Yuta Okkotsu",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "High 7-C",
+      "High 7-C",
+      "High 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "nobara-kugisaki",
+    "name": "Nobara Kugisaki",
+    "anime": "Jujutsu Kaisen",
+    "power": 0,
+    "title": "Nobara Kugisaki",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "9-C",
+      "9-C",
+      "9-B",
+      "8-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "toge-inumaki",
+    "name": "Toge Inumaki",
+    "anime": "Jujutsu Kaisen",
+    "power": 0,
+    "title": "Toge Inumaki",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "8-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "suguru-geto",
+    "name": "Suguru Geto",
+    "anime": "Jujutsu Kaisen",
+    "power": 0,
+    "title": "Suguru Geto",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "8-A",
+      "High 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "toji-fushiguro",
+    "name": "Toji Fushiguro",
+    "anime": "Jujutsu Kaisen",
+    "power": 0,
+    "title": "Toji Fushiguro",
+    "origin": "Jujutsu Kaisen",
+    "tiers": [
+      "High 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "armin-arlert",
+    "name": "Armin Arlert",
+    "anime": "Attack on Titan",
+    "power": 0,
+    "title": "Armin Arlert",
+    "origin": "Attack on Titan",
+    "tiers": [
+      "9-A",
+      "8-B",
+      "8-A",
+      "8-B",
+      "High 7-C",
+      "8-B",
+      "High 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "erwin-smith",
+    "name": "Erwin Smith",
+    "anime": "Attack on Titan",
+    "power": 0,
+    "title": null,
+    "origin": "",
+    "tiers": [],
+    "verified": false,
+    "tried": []
+  },
+  {
+    "id": "hange-zoe",
+    "name": "Hange Zoe",
+    "anime": "Attack on Titan",
+    "power": 0,
+    "title": null,
+    "origin": "",
+    "tiers": [],
+    "verified": false,
+    "tried": []
+  },
+  {
+    "id": "reiner-braun",
+    "name": "Reiner Braun",
+    "anime": "Attack on Titan",
+    "power": 0,
+    "title": "Reiner Braun",
+    "origin": "Attack on Titan",
+    "tiers": [
+      "9-A",
+      "8-C",
+      "8-B",
+      "8-A",
+      "8-B",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "annie-leonhart",
+    "name": "Annie Leonhart",
+    "anime": "Attack on Titan",
+    "power": 0,
+    "title": "Annie Leonhart",
+    "origin": "Attack on Titan",
+    "tiers": [
+      "9-A",
+      "8-C",
+      "8-B",
+      "8-A",
+      "8-B",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "zeke-yeager",
+    "name": "Zeke Yeager",
+    "anime": "Attack on Titan",
+    "power": 0,
+    "title": "Zeke Yeager",
+    "origin": "Attack on Titan",
+    "tiers": [
+      "9-A",
+      "8-B",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "nico-robin",
+    "name": "Nico Robin",
+    "anime": "One Piece",
+    "power": 0,
+    "title": "Nico Robin",
+    "origin": "One Piece",
+    "tiers": [
+      "High 7-C",
+      "High 7-A",
+      "6-C",
+      "6-C",
+      "6-B",
+      "5-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "trafalgar-law",
+    "name": "Trafalgar Law",
+    "anime": "One Piece",
+    "power": 0,
+    "title": "Trafalgar Law",
+    "origin": "One Piece",
+    "tiers": [
+      "6-C",
+      "6-C",
+      "5-C",
+      "Low 5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "portgas-d-ace",
+    "name": "Portgas D. Ace",
+    "anime": "One Piece",
+    "power": 0,
+    "title": "Portgas D. Ace",
+    "origin": "One Piece",
+    "tiers": [
+      "9-B",
+      "5-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "shanks",
+    "name": "Shanks",
+    "anime": "One Piece",
+    "power": 0,
+    "title": "Shanks",
+    "origin": "One Piece",
+    "tiers": [
+      "Low 5-B",
+      "5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "edward-newgate",
+    "name": "Edward Newgate",
+    "anime": "One Piece",
+    "power": 0,
+    "title": "Edward Newgate (Whitebeard)",
+    "origin": "One Piece",
+    "tiers": [
+      "Low 5-B",
+      "5-B",
+      "Low 5-B",
+      "5-B",
+      "Low 5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "donquixote-doflamingo",
+    "name": "Donquixote Doflamingo",
+    "anime": "One Piece",
+    "power": 0,
+    "title": "Donquixote Doflamingo",
+    "origin": "One Piece",
+    "tiers": [
+      "6-C",
+      "6-B",
+      "6-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "boa-hancock",
+    "name": "Boa Hancock",
+    "anime": "One Piece",
+    "power": 0,
+    "title": "Boa Hancock",
+    "origin": "One Piece",
+    "tiers": [
+      "5-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "itachi-uchiha",
+    "name": "Itachi Uchiha",
+    "anime": "Naruto",
+    "power": 0,
+    "title": "Itachi Uchiha",
+    "origin": "Naruto (Verse)|Naruto",
+    "tiers": [
+      "6-B",
+      "7-A",
+      "6-B",
+      "6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "jiraiya",
+    "name": "Jiraiya",
+    "anime": "Naruto",
+    "power": 0,
+    "title": "Jiraiya (Naruto)",
+    "origin": "Naruto (Verse)|Naruto",
+    "tiers": [
+      "7-B",
+      "6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "minato-namikaze",
+    "name": "Minato Namikaze",
+    "anime": "Naruto",
+    "power": 0,
+    "title": "Minato Namikaze",
+    "origin": "Naruto (Verse)|Naruto",
+    "tiers": [
+      "6-B",
+      "6-B",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "pain",
+    "name": "Pain",
+    "anime": "Naruto",
+    "power": 0,
+    "title": "Nagato (Pain)",
+    "origin": "Naruto (Verse)|Naruto",
+    "tiers": [
+      "7-B",
+      "6-B",
+      "6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "madara-uchiha",
+    "name": "Madara Uchiha",
+    "anime": "Naruto",
+    "power": 0,
+    "title": "Madara Uchiha",
+    "origin": "Naruto (Verse)|Naruto",
+    "tiers": [
+      "6-B",
+      "High 6-A",
+      "6-B",
+      "High 6-B",
+      "High 6-A",
+      "6-B",
+      "High 6-A",
+      "Low 5-B",
+      "5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "gaara",
+    "name": "Gaara",
+    "anime": "Naruto",
+    "power": 0,
+    "title": "Gaara",
+    "origin": "Naruto (Verse)|Naruto",
+    "tiers": [
+      "8-B",
+      "8-A",
+      "8-B",
+      "7-A",
+      "8-B",
+      "7-A",
+      "8-B",
+      "6-B",
+      "8-B",
+      "6-B",
+      "8-B",
+      "6-B",
+      "8-B",
+      "6-B",
+      "5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "rock-lee",
+    "name": "Rock Lee",
+    "anime": "Naruto",
+    "power": 0,
+    "title": "Rock Lee",
+    "origin": "Naruto (Verse)",
+    "tiers": [
+      "8-B",
+      "8-A",
+      "8-A",
+      "7-B",
+      "7-A",
+      "6-B",
+      "7-B",
+      "7-A",
+      "6-B",
+      "7-B",
+      "7-A",
+      "6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "piccolo",
+    "name": "Piccolo",
+    "anime": "Dragon Ball",
+    "power": 0,
+    "title": "Piccolo (Dragon Ball Z)",
+    "origin": "Dragon Ball|Dragon Ball Z",
+    "tiers": [
+      "5-A",
+      "5-A",
+      "High 5-A",
+      "Low 4-C",
+      "High 4-C",
+      "High 4-C",
+      "High 4-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "trunks",
+    "name": "Trunks",
+    "anime": "Dragon Ball",
+    "power": 0,
+    "title": "Trunks (Manga)",
+    "origin": "Dragon Ball",
+    "tiers": [
+      "4-C",
+      "High 4-C",
+      "2-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "frieza",
+    "name": "Frieza",
+    "anime": "Dragon Ball",
+    "power": 0,
+    "title": "Frieza (Dragon Ball Z)",
+    "origin": "Dragon Ball|Dragon Ball Z",
+    "tiers": [
+      "Low 4-C",
+      "High 4-C",
+      "High 4-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "cell",
+    "name": "Cell",
+    "anime": "Dragon Ball",
+    "power": 0,
+    "title": "Cell (Toei)",
+    "origin": "Dragon Ball (Toei)",
+    "tiers": [
+      "3-C",
+      "3-C",
+      "High 3-A",
+      "High 3-A",
+      "High 3-A",
+      "2-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "beerus",
+    "name": "Beerus",
+    "anime": "Dragon Ball",
+    "power": 0,
+    "title": "Beerus (Anime)",
+    "origin": "Dragon Ball|Dragon Ball Super",
+    "tiers": [
+      "2-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "sosuke-aizen",
+    "name": "Sosuke Aizen",
+    "anime": "Bleach",
+    "power": 0,
+    "title": "Sosuke Aizen",
+    "origin": "Bleach",
+    "tiers": [
+      "High 6-A",
+      "4-A",
+      "3-C",
+      "3-C",
+      "3-C",
+      "3-C",
+      "3-B",
+      "3-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kenpachi-zaraki",
+    "name": "Kenpachi Zaraki",
+    "anime": "Bleach",
+    "power": 0,
+    "title": "Kenpachi Zaraki",
+    "origin": "Bleach",
+    "tiers": [
+      "6-B",
+      "6-A",
+      "High 6-A",
+      "High 6-A",
+      "High 6-A",
+      "High 6-A",
+      "High 6-A",
+      "4-A",
+      "5-C",
+      "4-A",
+      "3-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kisuke-urahara",
+    "name": "Kisuke Urahara",
+    "anime": "Bleach",
+    "power": 0,
+    "title": "Kisuke Urahara",
+    "origin": "Bleach",
+    "tiers": [
+      "6-B",
+      "High 6-A",
+      "4-A",
+      "High 6-A",
+      "4-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "yoruichi-shihouin",
+    "name": "Yoruichi Shihouin",
+    "anime": "Bleach",
+    "power": 0,
+    "title": "Yoruichi Shihoin",
+    "origin": "Bleach",
+    "tiers": [
+      "6-B",
+      "6-B",
+      "6-B",
+      "High 6-A",
+      "4-A",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ulquiorra-cifer",
+    "name": "Ulquiorra Cifer",
+    "anime": "Bleach",
+    "power": 0,
+    "title": "Ulquiorra Cifer",
+    "origin": "Bleach",
+    "tiers": [
+      "6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "byakuya-kuchiki",
+    "name": "Byakuya Kuchiki",
+    "anime": "Bleach",
+    "power": 0,
+    "title": "Byakuya Kuchiki",
+    "origin": "Bleach",
+    "tiers": [
+      "6-B",
+      "High 6-A",
+      "High 6-A",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "toshiro-hitsugaya",
+    "name": "Toshiro Hitsugaya",
+    "anime": "Bleach",
+    "power": 0,
+    "title": "Tōshirō Hitsugaya",
+    "origin": "Bleach",
+    "tiers": [
+      "6-B",
+      "6-B",
+      "High 6-B",
+      "6-A",
+      "6-B",
+      "High 6-B",
+      "6-A",
+      "6-B",
+      "High 6-B",
+      "High 6-B",
+      "6-A",
+      "High 6-A",
+      "5-C",
+      "4-A"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "grimmjow-jaegerjaquez",
+    "name": "Grimmjow Jaegerjaquez",
+    "anime": "Bleach",
+    "power": 0,
+    "title": "Grimmjow Jaegerjaquez",
+    "origin": "Bleach",
+    "tiers": [
+      "High 6-B",
+      "6-A",
+      "High 6-A",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kurapika",
+    "name": "Kurapika",
+    "anime": "Hunter x Hunter",
+    "power": 0,
+    "title": "Kurapika",
+    "origin": "Hunter X Hunter",
+    "tiers": [
+      "9-B",
+      "8-B",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "hisoka-morow",
+    "name": "Hisoka Morow",
+    "anime": "Hunter x Hunter",
+    "power": 0,
+    "title": "Hisoka Morow",
+    "origin": "Hunter X Hunter",
+    "tiers": [
+      "8-A",
+      "Low 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "chrollo-lucilfer",
+    "name": "Chrollo Lucilfer",
+    "anime": "Hunter x Hunter",
+    "power": 0,
+    "title": "Chrollo Lucilfer",
+    "origin": "Hunter X Hunter",
+    "tiers": [
+      "8-A",
+      "Low 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "meruem",
+    "name": "Meruem",
+    "anime": "Hunter x Hunter",
+    "power": 0,
+    "title": "Meruem",
+    "origin": "Hunter X Hunter",
+    "tiers": [
+      "High 7-C",
+      "Low 7-B",
+      "7-A",
+      "6-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "isaac-netero",
+    "name": "Isaac Netero",
+    "anime": "Hunter x Hunter",
+    "power": 0,
+    "title": "Isaac Netero",
+    "origin": "Hunter X Hunter",
+    "tiers": [
+      "8-A",
+      "Low 7-C",
+      "High 7-C",
+      "Low 7-B",
+      "8-A",
+      "Low 7-C",
+      "High 7-C",
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "roy-mustang",
+    "name": "Roy Mustang",
+    "anime": "Fullmetal Alchemist",
+    "power": 0,
+    "title": "Roy Mustang",
+    "origin": "Fullmetal Alchemist",
+    "tiers": [
+      "8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ling-yao",
+    "name": "Ling Yao",
+    "anime": "Fullmetal Alchemist",
+    "power": 0,
+    "title": "Ling Yao",
+    "origin": "Fullmetal Alchemist",
+    "tiers": [
+      "8-C",
+      "8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "inosuke-hashibira",
+    "name": "Inosuke Hashibira",
+    "anime": "Demon Slayer",
+    "power": 0,
+    "title": "Inosuke Hashibira",
+    "origin": "Demon Slayer: Kimetsu No Yaiba",
+    "tiers": [
+      "9-A",
+      "High 8-C",
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "giyu-tomioka",
+    "name": "Giyu Tomioka",
+    "anime": "Demon Slayer",
+    "power": 0,
+    "title": "Giyu Tomioka",
+    "origin": "Demon Slayer: Kimetsu No Yaiba",
+    "tiers": [
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kyojuro-rengoku",
+    "name": "Kyojuro Rengoku",
+    "anime": "Demon Slayer",
+    "power": 0,
+    "title": "Kyojuro Rengoku",
+    "origin": "Demon Slayer: Kimetsu No Yaiba",
+    "tiers": [
+      "8-C",
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "shinobu-kocho",
+    "name": "Shinobu Kocho",
+    "anime": "Demon Slayer",
+    "power": 0,
+    "title": "Shinobu Kocho",
+    "origin": "Demon Slayer: Kimetsu No Yaiba",
+    "tiers": [
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "muichiro-tokito",
+    "name": "Muichiro Tokito",
+    "anime": "Demon Slayer",
+    "power": 0,
+    "title": "Muichiro Tokito",
+    "origin": "Demon Slayer: Kimetsu No Yaiba",
+    "tiers": [
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "akaza",
+    "name": "Akaza",
+    "anime": "Demon Slayer",
+    "power": 0,
+    "title": "Akaza (Kimetsu no Yaiba)",
+    "origin": "Demon Slayer: Kimetsu No Yaiba",
+    "tiers": [
+      "9-C",
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "muzan-kibutsuji",
+    "name": "Muzan Kibutsuji",
+    "anime": "Demon Slayer",
+    "power": 0,
+    "title": "Muzan Kibutsuji",
+    "origin": "Demon Slayer: Kimetsu No Yaiba",
+    "tiers": [
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "all-might",
+    "name": "All Might",
+    "anime": "My Hero Academia",
+    "power": 0,
+    "title": "Toshinori Yagi (All Might)",
+    "origin": "My Hero Academia",
+    "tiers": [
+      "High 6-A",
+      "High 6-B",
+      "High 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "tomura-shigaraki",
+    "name": "Tomura Shigaraki",
+    "anime": "My Hero Academia",
+    "power": 0,
+    "title": "Tomura Shigaraki (Pre-Surgery)",
+    "origin": "My Hero Academia",
+    "tiers": [
+      "8-A",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "dabi",
+    "name": "Dabi",
+    "anime": "My Hero Academia",
+    "power": 0,
+    "title": "Dabi",
+    "origin": "My Hero Academia",
+    "tiers": [
+      "Unknown",
+      "High 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "shota-aizawa",
+    "name": "Shota Aizawa",
+    "anime": "My Hero Academia",
+    "power": 0,
+    "title": "Shota Aizawa (Eraser Head)",
+    "origin": "My Hero Academia",
+    "tiers": [
+      "8-A",
+      "8-A",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "hawks",
+    "name": "Hawks",
+    "anime": "My Hero Academia",
+    "power": 0,
+    "title": "Keigo Takami (Hawks)",
+    "origin": "My Hero Academia",
+    "tiers": [
+      "High 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "mirio-togata",
+    "name": "Mirio Togata",
+    "anime": "My Hero Academia",
+    "power": 0,
+    "title": "Mirio Togata (Lemillion)",
+    "origin": "My Hero Academia",
+    "tiers": [
+      "8-A",
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "tatsumaki",
+    "name": "Tatsumaki",
+    "anime": "One Punch Man",
+    "power": 0,
+    "title": "Tatsumaki (Tornado of Terror)",
+    "origin": "One-Punch Man",
+    "tiers": [
+      "5-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "garou",
+    "name": "Garou",
+    "anime": "One Punch Man",
+    "power": 0,
+    "title": "Garou",
+    "origin": "One-Punch Man",
+    "tiers": [
+      "7-A",
+      "7-A",
+      "6-B",
+      "6-B",
+      "6-A",
+      "5-C",
+      "Low 5-B",
+      "Low 5-B",
+      "5-B",
+      "4-A",
+      "4-A",
+      "3-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "fubuki",
+    "name": "Fubuki",
+    "anime": "One Punch Man",
+    "power": 0,
+    "title": "Fubuki (Blizzard of Hell)",
+    "origin": "One-Punch Man",
+    "tiers": [
+      "7-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "shigeo-kageyama",
+    "name": "Shigeo Kageyama",
+    "anime": "Mob Psycho 100",
+    "power": 0,
+    "title": "Shigeo Kageyama",
+    "origin": "Mob Psycho 100",
+    "tiers": [
+      "High 8-C",
+      "6-C",
+      "6-B",
+      "High 6-A",
+      "6-B",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "arataka-reigen",
+    "name": "Arataka Reigen",
+    "anime": "Mob Psycho 100",
+    "power": 0,
+    "title": "Reigen Arataka",
+    "origin": "Mob Psycho 100",
+    "tiers": [
+      "9-B",
+      "6-B",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "jotaro-kujo",
+    "name": "Jotaro Kujo",
+    "anime": "JoJo's Bizarre Adventure",
+    "power": 0,
+    "title": "Jotaro Kujo",
+    "origin": "JoJos Bizarre Adventure|JoJos Bizarre Adventure: Stardust Crusaders",
+    "tiers": [
+      "9-B",
+      "High 8-C",
+      "9-B",
+      "High 8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "joseph-joestar",
+    "name": "Joseph Joestar",
+    "anime": "JoJo's Bizarre Adventure",
+    "power": 0,
+    "title": "Joseph Joestar",
+    "origin": "JoJos Bizarre Adventure|JoJos Bizarre Adventure: Battle Tendency",
+    "tiers": [
+      "8-C",
+      "High 8-C",
+      "8-B",
+      "8-C",
+      "8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "dio-brando",
+    "name": "Dio Brando",
+    "anime": "JoJo's Bizarre Adventure",
+    "power": 0,
+    "title": "Dio Brando",
+    "origin": "JoJos Bizarre Adventure",
+    "tiers": [
+      "High 8-C",
+      "High 8-C",
+      "High 8-C",
+      "High 8-C",
+      "High 8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "giorno-giovanna",
+    "name": "Giorno Giovanna",
+    "anime": "JoJo's Bizarre Adventure",
+    "power": 0,
+    "title": "Giorno Giovanna",
+    "origin": "JoJos Bizarre Adventure|JoJos Bizarre Adventure Part V: Vento Aureo",
+    "tiers": [
+      "9-C",
+      "8-C",
+      "9-C",
+      "High 8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "josuke-higashikata",
+    "name": "Josuke Higashikata",
+    "anime": "JoJo's Bizarre Adventure",
+    "power": 0,
+    "title": "Josuke Higashikata",
+    "origin": "JoJos Bizarre Adventure|JoJos Bizarre Adventure: Diamond is Unbreakable",
+    "tiers": [
+      "9-B",
+      "9-A",
+      "High 8-C",
+      "9-B",
+      "8-C",
+      "High 8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "yoshikage-kira",
+    "name": "Yoshikage Kira",
+    "anime": "JoJo's Bizarre Adventure",
+    "power": 0,
+    "title": "Yoshikage Kira",
+    "origin": "JoJos Bizarre Adventure|JoJos Bizarre Adventure: Diamond is Unbreakable",
+    "tiers": [
+      "10-A",
+      "8-C",
+      "High 8-C",
+      "10-A",
+      "8-C",
+      "High 8-C",
+      "High 3-A",
+      "10-A",
+      "9-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "jolyne-kujo",
+    "name": "Jolyne Kujo",
+    "anime": "JoJo's Bizarre Adventure",
+    "power": 0,
+    "title": "Jolyne Cujoh",
+    "origin": "JoJos Bizarre Adventure|JoJos Bizarre Adventure: Stone Ocean",
+    "tiers": [
+      "9-C",
+      "9-B",
+      "9-C",
+      "8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "gyro-zeppeli",
+    "name": "Gyro Zeppeli",
+    "anime": "JoJo's Bizarre Adventure",
+    "power": 0,
+    "title": "Gyro Zeppeli",
+    "origin": "JoJos Bizarre Adventure|JoJos Bizarre Adventure Part VII: Steel Ball Run",
+    "tiers": [
+      "9-B",
+      "8-C",
+      "Unknown",
+      "Unknown"
+    ],
+    "verified": true
+  },
+  {
+    "id": "denji",
+    "name": "Denji",
+    "anime": "Chainsaw Man",
+    "power": 0,
+    "title": "Denji (Chainsaw Man)",
+    "origin": "Chainsaw Man",
+    "tiers": [
+      "9-A",
+      "8-C",
+      "9-A",
+      "8-A",
+      "9-A",
+      "8-A",
+      "9-A",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "makima",
+    "name": "Makima",
+    "anime": "Chainsaw Man",
+    "power": 0,
+    "title": "Makima",
+    "origin": "Chainsaw Man",
+    "tiers": [
+      "8-A",
+      "Low 7-C",
+      "7-C",
+      "High 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "power",
+    "name": "Power",
+    "anime": "Chainsaw Man",
+    "power": 0,
+    "title": "Power (Chainsaw Man)",
+    "origin": "Chainsaw Man",
+    "tiers": [
+      "9-A",
+      "9-A",
+      "8-B",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "aki-hayakawa",
+    "name": "Aki Hayakawa",
+    "anime": "Chainsaw Man",
+    "power": 0,
+    "title": "Aki Hayakawa",
+    "origin": "Chainsaw Man",
+    "tiers": [
+      "9-A",
+      "9-A",
+      "8-C",
+      "High 8-C",
+      "9-A",
+      "High 8-C",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "reze",
+    "name": "Reze",
+    "anime": "Chainsaw Man",
+    "power": 0,
+    "title": "Reze",
+    "origin": "Chainsaw Man",
+    "tiers": [
+      "9-A",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ryuk",
+    "name": "Ryuk",
+    "anime": "Death Note",
+    "power": 0,
+    "title": "Ryuk",
+    "origin": "Death Note (Verse)|Death Note",
+    "tiers": [
+      "Unknown"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kallen-stadtfeld",
+    "name": "Kallen Stadtfeld",
+    "anime": "Code Geass",
+    "power": 0,
+    "title": "Kallen Kōzuki",
+    "origin": "Code Geass",
+    "tiers": [
+      "9-C",
+      "8-A",
+      "8-A",
+      "8-A"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "c-c",
+    "name": "C.C.",
+    "anime": "Code Geass",
+    "power": 0,
+    "title": "C.C.",
+    "origin": "Code Geass",
+    "tiers": [
+      "10-A",
+      "9-C",
+      "8-A",
+      "8-A"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "artoria-pendragon",
+    "name": "Artoria Pendragon",
+    "anime": "Fate",
+    "power": 0,
+    "title": "Artoria Pendragon (Saber)",
+    "origin": "Fate/stay night",
+    "tiers": [
+      "High 6-C",
+      "Low 6-B",
+      "High 6-C",
+      "Low 6-B",
+      "High 6-C",
+      "Low 6-B",
+      "1-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "gilgamesh",
+    "name": "Gilgamesh",
+    "anime": "Fate",
+    "power": 0,
+    "title": "Gilgamesh (Archer)",
+    "origin": "Fate/stay night",
+    "tiers": [
+      "High 6-C",
+      "High 6-C",
+      "Low 6-B",
+      "Low 6-B",
+      "1-C",
+      "1-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kiritsugu-emiya",
+    "name": "Kiritsugu Emiya",
+    "anime": "Fate",
+    "power": 0,
+    "title": "Kiritsugu Emiya",
+    "origin": "Fate/Zero",
+    "tiers": [
+      "9-A",
+      "High 8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "rin-tohsaka",
+    "name": "Rin Tohsaka",
+    "anime": "Fate",
+    "power": 0,
+    "title": "Rin Tohsaka",
+    "origin": "Fate/stay night",
+    "tiers": [
+      "9-A",
+      "High 6-C",
+      "Low 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "shirou-emiya",
+    "name": "Shirou Emiya",
+    "anime": "Fate",
+    "power": 0,
+    "title": "Shirou Emiya",
+    "origin": "Fate/stay night",
+    "tiers": [
+      "9-A",
+      "High 6-C",
+      "Low 6-B",
+      "9-A",
+      "High 6-C",
+      "High 6-C",
+      "Low 6-B",
+      "9-A",
+      "High 6-C",
+      "Low 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "archer",
+    "name": "Archer",
+    "anime": "Fate",
+    "power": 0,
+    "title": "EMIYA (Archer)",
+    "origin": "Fate/stay night",
+    "tiers": [
+      "High 6-C",
+      "Low 6-B",
+      "High 6-C",
+      "Low 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "iskandar",
+    "name": "Iskandar",
+    "anime": "Fate",
+    "power": 0,
+    "title": "Iskandar (Fate)",
+    "origin": "Fate/Zero",
+    "tiers": [
+      "High 6-C",
+      "Low 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kirei-kotomine",
+    "name": "Kirei Kotomine",
+    "anime": "Fate",
+    "power": 0,
+    "title": "Kirei Kotomine",
+    "origin": "Fate/stay night",
+    "tiers": [
+      "9-A",
+      "High 6-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "asta",
+    "name": "Asta",
+    "anime": "Black Clover",
+    "power": 0,
+    "title": "Asta (Pre-Timeskip)",
+    "origin": "Black Clover",
+    "tiers": [
+      "7-B",
+      "High 7-A",
+      "6-C",
+      "6-C",
+      "6-C",
+      "6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "yami-sukehiro",
+    "name": "Yami Sukehiro",
+    "anime": "Black Clover",
+    "power": 0,
+    "title": "Yami Sukehiro",
+    "origin": "Black Clover",
+    "tiers": [],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "yuno",
+    "name": "Yuno",
+    "anime": "Black Clover",
+    "power": 0,
+    "title": "Yuno Grinberryall (Pre-Timeskip)",
+    "origin": "Black Clover",
+    "tiers": [
+      "7-B",
+      "6-C",
+      "6-C",
+      "6-C",
+      "6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "noelle-silva",
+    "name": "Noelle Silva",
+    "anime": "Black Clover",
+    "power": 0,
+    "title": "Noelle Silva",
+    "origin": "Black Clover",
+    "tiers": [
+      "Unknown",
+      "6-C",
+      "6-B",
+      "High 6-A",
+      "6-B",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "meliodas",
+    "name": "Meliodas",
+    "anime": "The Seven Deadly Sins",
+    "power": 0,
+    "title": "Meliodas",
+    "origin": "The Seven Deadly Sins",
+    "tiers": [
+      "4-B",
+      "4-B",
+      "High 7-A",
+      "6-C",
+      "6-C",
+      "High 6-C",
+      "4-B",
+      "4-B",
+      "4-B",
+      "4-B",
+      "4-B",
+      "4-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "ban",
+    "name": "Ban",
+    "anime": "The Seven Deadly Sins",
+    "power": 0,
+    "title": "Ban (Nanatsu no Taizai)",
+    "origin": "The Seven Deadly Sins",
+    "tiers": [
+      "High 7-A",
+      "4-B",
+      "4-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "escanor",
+    "name": "Escanor",
+    "anime": "The Seven Deadly Sins",
+    "power": 0,
+    "title": "Escanor",
+    "origin": "The Seven Deadly Sins",
+    "tiers": [
+      "10-B",
+      "4-B",
+      "4-B",
+      "4-B",
+      "4-B",
+      "4-B",
+      "4-B",
+      "4-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "natsu-dragneel",
+    "name": "Natsu Dragneel",
+    "anime": "Fairy Tail",
+    "power": 0,
+    "title": "Natsu Dragneel (X784 to X791)",
+    "origin": "Fairy Tail",
+    "tiers": [
+      "High 7-A",
+      "6-C",
+      "6-C",
+      "6-C",
+      "High 6-C",
+      "High 6-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "erza-scarlet",
+    "name": "Erza Scarlet",
+    "anime": "Fairy Tail",
+    "power": 0,
+    "title": "Erza Scarlet (X784 to X792)",
+    "origin": "Fairy Tail",
+    "tiers": [
+      "High 7-A",
+      "6-C",
+      "6-C",
+      "6-C",
+      "High 6-A",
+      "5-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "gray-fullbuster",
+    "name": "Gray Fullbuster",
+    "anime": "Fairy Tail",
+    "power": 0,
+    "title": "Gray Fullbuster (X784 to X792)",
+    "origin": "Fairy Tail",
+    "tiers": [
+      "High 7-A",
+      "6-C",
+      "6-C",
+      "High 6-C",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "momonga",
+    "name": "Momonga",
+    "anime": "Overlord",
+    "power": 0,
+    "title": "Ainz Ooal Gown",
+    "origin": "Overlord",
+    "tiers": [
+      "9-A",
+      "Low 7-C",
+      "Unknown"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "albedo",
+    "name": "Albedo",
+    "anime": "Overlord",
+    "power": 0,
+    "title": "Albedo (Overlord)",
+    "origin": "Overlord (Verse)|Overlord",
+    "tiers": [
+      "Low 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "rimuru-tempest",
+    "name": "Rimuru Tempest",
+    "anime": "That Time I Got Reincarnated as a Slime",
+    "power": 0,
+    "title": "Rimuru Tempest (Web Novel)",
+    "origin": "That Time I Got Reincarnated as a Slime",
+    "tiers": [
+      "7-B",
+      "6-A",
+      "3-A",
+      "3-A",
+      "Low 2-C",
+      "3-A",
+      "3-A",
+      "Low 2-C",
+      "Low 2-C"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "milim-nava",
+    "name": "Milim Nava",
+    "anime": "That Time I Got Reincarnated as a Slime",
+    "power": 0,
+    "title": "Milim Nava (Light Novel)",
+    "origin": "That Time I Got Reincarnated as a Slime",
+    "tiers": [
+      "1-C"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "subaru-natsuki",
+    "name": "Subaru Natsuki",
+    "anime": "Re:Zero",
+    "power": 0,
+    "title": "Subaru Natsuki",
+    "origin": "Re:Zero kara Hajimeru Isekai Seikatsu",
+    "tiers": [
+      "9-B",
+      "9-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "rem",
+    "name": "Rem",
+    "anime": "Re:Zero",
+    "power": 0,
+    "title": "Rem",
+    "origin": "Re:Zero kara Hajimeru Isekai Seikatsu",
+    "tiers": [
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "megumin",
+    "name": "Megumin",
+    "anime": "Konosuba",
+    "power": 0,
+    "title": "Megumin",
+    "origin": "Kono Subarashii Sekai ni Shukufuku Wo!",
+    "tiers": [
+      "10-A",
+      "8-A",
+      "10-A",
+      "Low 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kazuma-satou",
+    "name": "Kazuma Satou",
+    "anime": "Konosuba",
+    "power": 0,
+    "title": "Kazuma Satou",
+    "origin": "Akatsukiverse|Kono Subarashii Sekai ni Shukufuku Wo!",
+    "tiers": [
+      "10-A",
+      "High 8-C",
+      "10-A",
+      "High 8-C",
+      "10-A",
+      "9-B",
+      "High 8-C",
+      "High 8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "aqua",
+    "name": "Aqua",
+    "anime": "Konosuba",
+    "power": 0,
+    "title": "Aqua (Konosuba)",
+    "origin": "Kono Subarashii Sekai ni Shukufuku Wo!",
+    "tiers": [
+      "9-B",
+      "High 8-C",
+      "8-B",
+      "6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "rudeus-greyrat",
+    "name": "Rudeus Greyrat",
+    "anime": "Mushoku Tensei",
+    "power": 0,
+    "title": "Rudeus Greyrat (Light Novel)",
+    "origin": "Mushoku Tensei ～Isekai Ittara Honki Dasu～",
+    "tiers": [
+      "9-C",
+      "6-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "roxy-migurdia",
+    "name": "Roxy Migurdia",
+    "anime": "Mushoku Tensei",
+    "power": 0,
+    "title": "Roxy Lalonde",
+    "origin": "",
+    "tiers": [],
+    "verified": false,
+    "tried": [
+      "Roxy Lalonde"
+    ]
+  },
+  {
+    "id": "eris-boreas-greyrat",
+    "name": "Eris Boreas Greyrat",
+    "anime": "Mushoku Tensei",
+    "power": 0,
+    "title": "Eris",
+    "origin": "Mushoku Tensei",
+    "tiers": [],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "kirito",
+    "name": "Kirito",
+    "anime": "Sword Art Online",
+    "power": 0,
+    "title": "Kirito (Post-Aincrad)",
+    "origin": "Sword Art Online",
+    "tiers": [
+      "10-A",
+      "8-C",
+      "9-C",
+      "9-A",
+      "9-C",
+      "8-C",
+      "8-C",
+      "8-C",
+      "8-C",
+      "8-A",
+      "7-B",
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "asuna-yuuki",
+    "name": "Asuna Yuuki",
+    "anime": "Sword Art Online",
+    "power": 0,
+    "title": "Asuna (Post-Aincrad)",
+    "origin": "Sword Art Online",
+    "tiers": [
+      "10-A",
+      "8-C",
+      "9-C",
+      "9-A",
+      "8-C",
+      "7-B",
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "frieren",
+    "name": "Frieren",
+    "anime": "Frieren",
+    "power": 0,
+    "title": "Frieren",
+    "origin": "Frieren: Beyond Journeys End",
+    "tiers": [
+      "10-B",
+      "Low 7-C",
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "fern",
+    "name": "Fern",
+    "anime": "Frieren",
+    "power": 0,
+    "title": "Fern (Frieren: Beyond Journey's End)",
+    "origin": "Frieren: Beyond Journeys End",
+    "tiers": [
+      "10-B",
+      "Low 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "stark",
+    "name": "Stark",
+    "anime": "Frieren",
+    "power": 0,
+    "title": "Stark",
+    "origin": "Frieren: Beyond Journeys End",
+    "tiers": [
+      "Low 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "himmel",
+    "name": "Himmel",
+    "anime": "Frieren",
+    "power": 0,
+    "title": null,
+    "origin": "",
+    "tiers": [],
+    "verified": false,
+    "tried": []
+  },
+  {
+    "id": "thorfinn",
+    "name": "Thorfinn",
+    "anime": "Vinland Saga",
+    "power": 0,
+    "title": "Thorfinn",
+    "origin": "Vinland Saga",
+    "tiers": [
+      "9-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "askeladd",
+    "name": "Askeladd",
+    "anime": "Vinland Saga",
+    "power": 0,
+    "title": "Askeladd",
+    "origin": "Vinland Saga",
+    "tiers": [
+      "9-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "thorkell",
+    "name": "Thorkell",
+    "anime": "Vinland Saga",
+    "power": 0,
+    "title": "Thorkell",
+    "origin": "Vinland Saga",
+    "tiers": [
+      "9-B",
+      "9-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "guts",
+    "name": "Guts",
+    "anime": "Berserk",
+    "power": 0,
+    "title": "Guts",
+    "origin": "Berserk (Verse)|Berserk",
+    "tiers": [
+      "9-B",
+      "9-B",
+      "8-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "griffith",
+    "name": "Griffith",
+    "anime": "Berserk",
+    "power": 0,
+    "title": "Griffith",
+    "origin": "Berserk (Verse)|Berserk",
+    "tiers": [
+      "9-B",
+      "High 7-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ken-kaneki",
+    "name": "Ken Kaneki",
+    "anime": "Tokyo Ghoul",
+    "power": 0,
+    "title": "Ken Kaneki",
+    "origin": "Tokyo Ghoul",
+    "tiers": [
+      "8-A",
+      "Low 7-C",
+      "Low 7-C",
+      "7-C",
+      "High 7-C",
+      "8-A",
+      "8-A",
+      "Low 7-C",
+      "7-C",
+      "High 7-C",
+      "7-C",
+      "High 7-C",
+      "High 7-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "touka-kirishima",
+    "name": "Touka Kirishima",
+    "anime": "Tokyo Ghoul",
+    "power": 0,
+    "title": "Touka Kirishima",
+    "origin": "Tokyo Ghoul",
+    "tiers": [
+      "8-A",
+      "Low 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "juuzou-suzuya",
+    "name": "Juuzou Suzuya",
+    "anime": "Tokyo Ghoul",
+    "power": 0,
+    "title": "Juuzou Suzuya",
+    "origin": "Tokyo Ghoul",
+    "tiers": [
+      "Low 7-C",
+      "Low 7-C",
+      "7-C",
+      "High 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "manjiro-sano",
+    "name": "Manjiro Sano",
+    "anime": "Tokyo Revengers",
+    "power": 0,
+    "title": "Manjiro Sano",
+    "origin": "Tokyo Revengers",
+    "tiers": [
+      "9-B",
+      "9-B",
+      "9-B",
+      "9-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ken-ryuguji",
+    "name": "Ken Ryuguji",
+    "anime": "Tokyo Revengers",
+    "power": 0,
+    "title": "Ken Ryuguji",
+    "origin": "Tokyo Revengers",
+    "tiers": [
+      "9-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "keisuke-baji",
+    "name": "Keisuke Baji",
+    "anime": "Tokyo Revengers",
+    "power": 0,
+    "title": "Keisuke Baji",
+    "origin": "Tokyo Revengers",
+    "tiers": [
+      "9-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "alucard",
+    "name": "Alucard",
+    "anime": "Hellsing",
+    "power": 0,
+    "title": "Alucard (Hellsing)",
+    "origin": "Hellsing",
+    "tiers": [
+      "8-B",
+      "8-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kamina",
+    "name": "Kamina",
+    "anime": "Gurren Lagann",
+    "power": 0,
+    "title": "Kamina",
+    "origin": "Gurren Lagann (Verse)|Tengen Toppa Gurren Lagann",
+    "tiers": [
+      "9-B",
+      "High 7-C",
+      "High 7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "simon",
+    "name": "Simon",
+    "anime": "Gurren Lagann",
+    "power": 0,
+    "title": "Simon the Digger",
+    "origin": "Gurren Lagann (Verse)|Tengen Toppa Gurren Lagann",
+    "tiers": [
+      "Unknown",
+      "High 7-C",
+      "Unknown",
+      "High 6-A",
+      "9-B",
+      "High 6-A",
+      "High 1-C",
+      "High 1-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "yoko-littner",
+    "name": "Yoko Littner",
+    "anime": "Gurren Lagann",
+    "power": 0,
+    "title": "Yoko Littner",
+    "origin": "Gurren Lagann (Verse)|Tengen Toppa Gurren Lagann",
+    "tiers": [
+      "9-B",
+      "High 7-C",
+      "9-B",
+      "High 7-C",
+      "High 6-A",
+      "5-A",
+      "High 1-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ryuko-matoi",
+    "name": "Ryuko Matoi",
+    "anime": "Kill la Kill",
+    "power": 0,
+    "title": "Ryūko Matoi",
+    "origin": "Kill la Kill",
+    "tiers": [
+      "High 8-C",
+      "Low 2-C",
+      "High 7-C",
+      "Low 7-B",
+      "Low 2-C",
+      "Low 7-B",
+      "7-B",
+      "Low 2-C",
+      "Low 2-C",
+      "Low 2-C",
+      "Low 2-C",
+      "Low 2-C",
+      "Low 2-C",
+      "Low 2-C",
+      "Low 2-C"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "satsuki-kiryuin",
+    "name": "Satsuki Kiryuin",
+    "anime": "Kill la Kill",
+    "power": 0,
+    "title": "Clone Satsuki",
+    "origin": "Kill la Kill",
+    "tiers": [
+      "6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "akame",
+    "name": "Akame",
+    "anime": "Akame ga Kill",
+    "power": 0,
+    "title": "Akame (Akame ga Kill!)",
+    "origin": "Akame ga Kill!",
+    "tiers": [
+      "High 7-C",
+      "High 7-C",
+      "High 7-C",
+      "7-A",
+      "High 6-C",
+      "High 6-C",
+      "6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "esdeath",
+    "name": "Esdeath",
+    "anime": "Akame ga Kill",
+    "power": 0,
+    "title": "Esdeath",
+    "origin": "Akame ga Kill!",
+    "tiers": [
+      "High 6-C",
+      "6-A",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "shinra-kusakabe",
+    "name": "Shinra Kusakabe",
+    "anime": "Fire Force",
+    "power": 0,
+    "title": "Shinra Kusakabe",
+    "origin": "Fire Force",
+    "tiers": [
+      "7-C",
+      "7-A",
+      "7-A",
+      "7-A",
+      "5-B",
+      "2-C"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "benimaru-shinmon",
+    "name": "Benimaru Shinmon",
+    "anime": "Fire Force",
+    "power": 0,
+    "title": "Benimaru Shinmon",
+    "origin": "Fire Force",
+    "tiers": [
+      "7-A",
+      "5-B",
+      "5-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "arthur-boyle",
+    "name": "Arthur Boyle",
+    "anime": "Fire Force",
+    "power": 0,
+    "title": "Arthur Boyle",
+    "origin": "Fire Force",
+    "tiers": [
+      "7-C",
+      "5-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "gintoki-sakata",
+    "name": "Gintoki Sakata",
+    "anime": "Gintama",
+    "power": 0,
+    "title": "Gintoki Sakata",
+    "origin": "Gintama",
+    "tiers": [
+      "8-B",
+      "7-C",
+      "7-B",
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kagura",
+    "name": "Kagura",
+    "anime": "Gintama",
+    "power": 0,
+    "title": "Kagura (Gintama)",
+    "origin": "Gintama",
+    "tiers": [
+      "8-B",
+      "Low 7-C",
+      "Low 7-C",
+      "7-B",
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "toshiro-hijikata",
+    "name": "Toshiro Hijikata",
+    "anime": "Gintama",
+    "power": 0,
+    "title": "Toushirou Hijikata",
+    "origin": "Gintama",
+    "tiers": [
+      "Low 7-C",
+      "7-B",
+      "7-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "kotaro-katsura",
+    "name": "Kotaro Katsura",
+    "anime": "Gintama",
+    "power": 0,
+    "title": "Kotarou Katsura",
+    "origin": "Gintama",
+    "tiers": [
+      "7-C",
+      "7-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "rei-ayanami",
+    "name": "Rei Ayanami",
+    "anime": "Neon Genesis Evangelion",
+    "power": 0,
+    "title": "Rei Ayanami",
+    "origin": "Neon Genesis Evangelion",
+    "tiers": [
+      "10-A",
+      "7-A",
+      "High 7-A",
+      "Low 5-B",
+      "Low 5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "asuka-langley-soryu",
+    "name": "Asuka Langley Soryu",
+    "anime": "Neon Genesis Evangelion",
+    "power": 0,
+    "title": "Asuka Langley Sohryu",
+    "origin": "Neon Genesis Evangelion",
+    "tiers": [
+      "10-A",
+      "7-A",
+      "High 7-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "shinji-ikari",
+    "name": "Shinji Ikari",
+    "anime": "Neon Genesis Evangelion",
+    "power": 0,
+    "title": "Shinji Ikari",
+    "origin": "Neon Genesis Evangelion",
+    "tiers": [
+      "10-A",
+      "7-A",
+      "High 7-A",
+      "High 7-A",
+      "Low 5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "spike-spiegel",
+    "name": "Spike Spiegel",
+    "anime": "Cowboy Bebop",
+    "power": 0,
+    "title": "Spike Spiegel",
+    "origin": "Watanabe Universe|Cowboy Bebop",
+    "tiers": [
+      "9-B",
+      "9-A",
+      "9-A",
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "vash-the-stampede",
+    "name": "Vash the Stampede",
+    "anime": "Trigun",
+    "power": 0,
+    "title": "Vash the Stampede",
+    "origin": "Trigun",
+    "tiers": [],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "revy",
+    "name": "Revy",
+    "anime": "Black Lagoon",
+    "power": 0,
+    "title": null,
+    "origin": "",
+    "tiers": [],
+    "verified": false,
+    "tried": []
+  },
+  {
+    "id": "yusuke-urameshi",
+    "name": "Yusuke Urameshi",
+    "anime": "Yu Yu Hakusho",
+    "power": 0,
+    "title": "Yusuke Urameshi",
+    "origin": "Yu Yu Hakusho",
+    "tiers": [
+      "9-B",
+      "High 8-C",
+      "High 7-C",
+      "High 7-C",
+      "High 6-A",
+      "5-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kusuo-saiki",
+    "name": "Kusuo Saiki",
+    "anime": "Saiki K.",
+    "power": 0,
+    "title": "Kusuo Saiki",
+    "origin": "Saiki Kusuo no Psi Nan",
+    "tiers": [
+      "Low 5-B",
+      "Low 5-B",
+      "5-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "koro-sensei",
+    "name": "Koro-sensei",
+    "anime": "Assassination Classroom",
+    "power": 0,
+    "title": "Korosensei",
+    "origin": "Assassination Classroom",
+    "tiers": [
+      "9-A",
+      "Unknown",
+      "9-A",
+      "High 8-C",
+      "Low 5-B",
+      "High 8-C"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "sebastian-michaelis",
+    "name": "Sebastian Michaelis",
+    "anime": "Black Butler",
+    "power": 0,
+    "title": "Sebastian Michaelis",
+    "origin": "Black Butler",
+    "tiers": [
+      "9-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "senku-ishigami",
+    "name": "Senku Ishigami",
+    "anime": "Dr. Stone",
+    "power": 0,
+    "title": "Senku Ishigami",
+    "origin": "Dr. Stone",
+    "tiers": [
+      "10-B",
+      "9-B",
+      "8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "kiyotaka-ayanokouji",
+    "name": "Kiyotaka Ayanokouji",
+    "anime": "Classroom of the Elite",
+    "power": 0,
+    "title": "Ayanokouji Kiyotaka",
+    "origin": "Classroom of the Elite",
+    "tiers": [
+      "9-B",
+      "9-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "yor-forger",
+    "name": "Yor Forger",
+    "anime": "SPY x FAMILY",
+    "power": 0,
+    "title": "Yor Forger",
+    "origin": "SPY x FAMILY",
+    "tiers": [
+      "9-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "loid-forger",
+    "name": "Loid Forger",
+    "anime": "SPY x FAMILY",
+    "power": 0,
+    "title": "Loid Forger",
+    "origin": "SPY x FAMILY",
+    "tiers": [
+      "9-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "anya-forger",
+    "name": "Anya Forger",
+    "anime": "SPY x FAMILY",
+    "power": 0,
+    "title": "Anya Forger",
+    "origin": "SPY x FAMILY",
+    "tiers": [
+      "9-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "sung-jin-woo",
+    "name": "Sung Jin-Woo",
+    "anime": "Solo Leveling",
+    "power": 0,
+    "title": "Sung Jin-Woo (Novel)",
+    "origin": "Solo Leveling",
+    "tiers": [
+      "10-B",
+      "9-A",
+      "Low 7-B",
+      "Low 7-B",
+      "Low 6-B",
+      "Low 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "david-martinez",
+    "name": "David Martinez",
+    "anime": "Cyberpunk: Edgerunners",
+    "power": 0,
+    "title": "David Martinez",
+    "origin": "Cyberpunk (Games)|Cyberpunk: Edgerunners",
+    "tiers": [
+      "10-B",
+      "9-C",
+      "9-B",
+      "High 8-C",
+      "8-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "yato",
+    "name": "Yato",
+    "anime": "Noragami",
+    "power": 0,
+    "title": "Yato (Noragami)",
+    "origin": "Noragami",
+    "tiers": [
+      "9-A",
+      "7-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "rin-okumura",
+    "name": "Rin Okumura",
+    "anime": "Blue Exorcist",
+    "power": 0,
+    "title": "Rin (Toriko)",
+    "origin": "",
+    "tiers": [],
+    "verified": false,
+    "tried": [
+      "Rin (Toriko)",
+      "Rin Asano",
+      "Rin (Senran Kagura)",
+      "Rin (Eastern Mind)"
+    ]
+  },
+  {
+    "id": "death-the-kid",
+    "name": "Death the Kid",
+    "anime": "Soul Eater",
+    "power": 0,
+    "title": "Death the Kid",
+    "origin": "Ohkubo Verse|Soul Eater",
+    "tiers": [
+      "9-A",
+      "7-A",
+      "Low 7-B",
+      "7-A",
+      "Low 7-B",
+      "7-A",
+      "6-A",
+      "5-B",
+      "2-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "hyakkimaru",
+    "name": "Hyakkimaru",
+    "anime": "Dororo",
+    "power": 0,
+    "title": "Hyakkimaru",
+    "origin": "Tezuka-Verse|Dororo",
+    "tiers": [
+      "8-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "musashi-miyamoto",
+    "name": "Musashi Miyamoto",
+    "anime": "Vagabond",
+    "power": 0,
+    "title": "Musashi Miyamoto (Vagabond)",
+    "origin": "Vagabond (1998 Manga)|Vagabond",
+    "tiers": [
+      "9-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "cid-kagenou",
+    "name": "Cid Kagenou",
+    "anime": "The Eminence in Shadow",
+    "power": 0,
+    "title": "Cid Kagenou",
+    "origin": "The Eminence in Shadow",
+    "tiers": [
+      "9-B",
+      "6-C",
+      "High 6-C",
+      "High 6-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "gabimaru",
+    "name": "Gabimaru",
+    "anime": "Hell's Paradise",
+    "power": 0,
+    "title": "Gabimaru the Hollow",
+    "origin": "Hell's Paradise",
+    "tiers": [
+      "9-A",
+      "9-A"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "mash-burnedead",
+    "name": "Mash Burnedead",
+    "anime": "Mashle",
+    "power": 0,
+    "title": "Mash Burnedead",
+    "origin": "Mashle: Magic and Muscles",
+    "tiers": [
+      "6-B",
+      "High 6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "goblin-slayer",
+    "name": "Goblin Slayer",
+    "anime": "Goblin Slayer",
+    "power": 0,
+    "title": "Goblin Slayer (Character)",
+    "origin": "Goblin Slayer (Series)|Goblin Slayer",
+    "tiers": [
+      "9-B",
+      "High 8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "akira-fudo",
+    "name": "Akira Fudo",
+    "anime": "Devilman Crybaby",
+    "power": 0,
+    "title": "Devilman (Devilman Crybaby)",
+    "origin": "Devilman Crybaby",
+    "tiers": [
+      "9-B",
+      "8-A",
+      "5-B"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "fushi",
+    "name": "Fushi",
+    "anime": "To Your Eternity",
+    "power": 0,
+    "title": "Fushi",
+    "origin": "To Your Eternity",
+    "tiers": [
+      "10-C",
+      "8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "johan-liebert",
+    "name": "Johan Liebert",
+    "anime": "Monster",
+    "power": 0,
+    "title": "Johan Liebert",
+    "origin": "Monster (Verse)|Monster",
+    "tiers": [
+      "10-C",
+      "10-B",
+      "9-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "tanya-degurechaff",
+    "name": "Tanya Degurechaff",
+    "anime": "Saga of Tanya the Evil",
+    "power": 0,
+    "title": "Tanya von Degurechaff",
+    "origin": "Saga of Tanya the Evil",
+    "tiers": [
+      "9-A",
+      "7-C"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "momo-ayase",
+    "name": "Momo Ayase",
+    "anime": "DAN DA DAN",
+    "power": 0,
+    "title": "Momo Ayase",
+    "origin": "Dandadan",
+    "tiers": [
+      "10-B",
+      "9-A",
+      "8-C",
+      "8-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ken-takakura",
+    "name": "Ken Takakura",
+    "anime": "DAN DA DAN",
+    "power": 0,
+    "title": "Okarun",
+    "origin": "DAN DA DAN",
+    "tiers": [
+      "9-A",
+      "9-A",
+      "8-C"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "madoka-kaname",
+    "name": "Madoka Kaname",
+    "anime": "Puella Magi Madoka Magica",
+    "power": 0,
+    "title": "Madoka Kaname (Level 9999)",
+    "origin": "Puella Magi Madoka Magica|Puella Magi Homura Tamura",
+    "tiers": [
+      "Unknown",
+      "6-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "homura-akemi",
+    "name": "Homura Akemi",
+    "anime": "Puella Magi Madoka Magica",
+    "power": 0,
+    "title": "Homura Akemi",
+    "origin": "Puella Magi Madoka Magica",
+    "tiers": [
+      "Low 7-C",
+      "7-A",
+      "Unknown",
+      "7-B",
+      "2-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "mikoto-misaka",
+    "name": "Mikoto Misaka",
+    "anime": "A Certain Magical Index",
+    "power": 0,
+    "title": "Misaka Mikoto",
+    "origin": "A Certain Magical Index",
+    "tiers": [
+      "9-A",
+      "High 6-C",
+      "9-A",
+      "6-B",
+      "9-A",
+      "8-C",
+      "6-B",
+      "High 6-A"
+    ],
+    "verified": true,
+    "pinned": true
+  },
+  {
+    "id": "kurumi-tokisaki",
+    "name": "Kurumi Tokisaki",
+    "anime": "Date A Live",
+    "power": 0,
+    "title": "Kurumi Tokisaki",
+    "origin": "Date A Live",
+    "tiers": [
+      "Low 7-C",
+      "High 7-A",
+      "Low 7-C",
+      "High 7-A"
+    ],
+    "verified": true
+  },
+  {
+    "id": "ippo-makunouchi",
+    "name": "Ippo Makunouchi",
+    "anime": "Hajime no Ippo",
+    "power": 0,
+    "title": "Ippo Makunouchi",
+    "origin": "Hajime no Ippo",
+    "tiers": [
+      "9-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "baki-hanma",
+    "name": "Baki Hanma",
+    "anime": "Baki",
+    "power": 0,
+    "title": "Baki Hanma",
+    "origin": "Grappler Baki",
+    "tiers": [
+      "9-C",
+      "9-B",
+      "9-A",
+      "9-A",
+      "7-C",
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "yujiro-hanma",
+    "name": "Yujiro Hanma",
+    "anime": "Baki",
+    "power": 0,
+    "title": "Yujiro Hanma",
+    "origin": "Grappler Baki",
+    "tiers": [
+      "7-C"
+    ],
+    "verified": true
+  },
+  {
+    "id": "doraemon",
+    "name": "Doraemon",
+    "anime": "Doraemon",
+    "power": 0,
+    "title": "Doraemon",
+    "origin": "Doraemon (Verse)|Doraemon",
+    "tiers": [
+      "9-B"
+    ],
+    "verified": true
+  },
+  {
+    "id": "pikachu",
+    "name": "Pikachu",
+    "anime": "Pokemon",
+    "power": 0,
+    "title": "Pikachu (Anime)",
+    "origin": "Pokemon",
+    "tiers": [
+      "High 6-A",
+      "High 6-A",
+      "High 3-A",
+      "High 3-A",
+      "Low 1-C"
+    ],
+    "verified": true,
+    "pinned": true
+  }
+]

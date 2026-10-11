@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_FILE = path.join(ROOT, 'data', 'characters.json');
+const ALIAS_FILE = path.join(ROOT, 'data', 'image-aliases.json'); // id -> AniList spelling, for names our data romanizes differently
 const OUT_DIR = path.join(ROOT, 'apps', 'frontend', 'public', 'characters');
 const ENDPOINT = 'https://graphql.anilist.co';
 const MIN_BYTES = 5 * 1024;
@@ -137,11 +138,13 @@ function sourcesMarkdown(rows) {
 async function main() {
   const shouldDownload = process.argv.includes('--download');
   const characters = JSON.parse(await readFile(DATA_FILE, 'utf8'));
+  const aliases = existsSync(ALIAS_FILE) ? JSON.parse(await readFile(ALIAS_FILE, 'utf8')) : {};
   const rows = [];
 
-  for (const character of characters) {
+  for (const original of characters) {
+    const character = aliases[original.id] ? { ...original, name: aliases[original.id] } : original;
     const destination = path.join(OUT_DIR, `${character.id}.jpg`);
-    const row = { id: character.id, name: character.name, anime: character.anime, destination, exists: existsSync(destination) };
+    const row = { id: character.id, name: original.name, anime: character.anime, destination, exists: existsSync(destination) };
     try {
       const picked = pickMatch(character, await searchAniList(character.name));
       if (picked) {
