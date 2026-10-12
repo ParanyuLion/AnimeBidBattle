@@ -82,7 +82,7 @@ describe('getRoomView power redaction', () => {
 
   it('hides a stale results value that was set before Battle', () => {
     const room = inRound1();
-    room.results = [{ playerId: 'p1', nickname: 'Alice', basePower: 11111, comboBonus: 0, combos: [], totalPower: 11111, rank: 1 }];
+    room.results = [{ playerId: 'p1', nickname: 'Alice', basePower: 11111, comboBonus: 0, combos: [], bonuses: {}, totalPower: 11111, rank: 1 }];
     const view = getRoomView(room, 'p1', modes, 0);
     expect(view.results).toBeNull();
     expect(JSON.stringify(view)).not.toContain('11111');

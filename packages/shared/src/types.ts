@@ -84,6 +84,8 @@ export interface BattleResult {
   /** Extra power from series combos (0 when the setting is off). */
   comboBonus: number;
   combos: ComboView[];
+  /** Combo power added to each character, by character id (only characters that got a bonus). */
+  bonuses: Record<string, number>;
   /** basePower + comboBonus; what the ranking uses. */
   totalPower: number;
   rank: number;

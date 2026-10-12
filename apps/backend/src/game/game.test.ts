@@ -211,8 +211,8 @@ describe('resolveRound and advanceRound', () => {
     expect(room.phase).toBe('BATTLE');
     expect(room.auction).toBeNull();
     expect(room.results).toEqual([
-      { playerId: 'p2', nickname: 'Bob', basePower: 30, comboBonus: 0, combos: [], totalPower: 30, rank: 1 },
-      { playerId: 'p1', nickname: 'Alice', basePower: 10, comboBonus: 0, combos: [], totalPower: 10, rank: 2 },
+      { playerId: 'p2', nickname: 'Bob', basePower: 30, comboBonus: 0, combos: [], bonuses: {}, totalPower: 30, rank: 1 },
+      { playerId: 'p1', nickname: 'Alice', basePower: 10, comboBonus: 0, combos: [], bonuses: {}, totalPower: 10, rank: 2 },
     ]);
     showResults(room);
     expect(room.phase).toBe('RESULTS');

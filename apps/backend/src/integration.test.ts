@@ -196,8 +196,8 @@ describe('full game over sockets', () => {
 
     const finalState = await alice.tracker.until((s) => s.phase === 'RESULTS');
     expect(finalState.results).toEqual([
-      { playerId: created.playerId, nickname: 'Alice', basePower: 40, comboBonus: 0, combos: [], totalPower: 40, rank: 1 },
-      { playerId: joined.playerId, nickname: 'Bob', basePower: 0, comboBonus: 0, combos: [], totalPower: 0, rank: 2 },
+      { playerId: created.playerId, nickname: 'Alice', basePower: 40, comboBonus: 0, combos: [], bonuses: {}, totalPower: 40, rank: 1 },
+      { playerId: joined.playerId, nickname: 'Bob', basePower: 0, comboBonus: 0, combos: [], bonuses: {}, totalPower: 0, rank: 2 },
     ]);
     expect(finalState.players.find((p) => p.id === created.playerId)?.coins).toBe(800);
 

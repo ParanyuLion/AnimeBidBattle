@@ -39,7 +39,7 @@ export function Battle({ room }: { room: RoomView }) {
             {player && player.team.length > 0 ? (
               <div className="cards-row" style={{ marginTop: 12 }}>
                 {player.team.map((character) => (
-                  <CharacterCard key={character.id} character={character} size="sm" showPower />
+                  <CharacterCard key={character.id} character={character} size="sm" showPower bonus={result.bonuses?.[character.id]} />
                 ))}
               </div>
             ) : (

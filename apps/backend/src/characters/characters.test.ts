@@ -50,6 +50,7 @@ describe('teamBreakdown (series combo)', () => {
       comboBonus: 0,
       totalPower: 100,
       combos: [],
+      bonuses: {},
     });
   });
 
@@ -63,6 +64,7 @@ describe('teamBreakdown (series combo)', () => {
     expect(two.combos).toEqual([{ anime: 'One Piece', count: 2, percent: 10 }]);
     const three = teamBreakdown([op('a', 50), op('b', 50), op('c', 50)], true);
     expect(three).toMatchObject({ comboBonus: 30, totalPower: 180 }); // 150 * 20%
+    expect(three.bonuses).toEqual({ a: 10, b: 10, c: 10 });
   });
 
   it('caps the bonus at 50% and combines several anime', () => {
@@ -73,7 +75,15 @@ describe('teamBreakdown (series combo)', () => {
     expect(both.comboBonus).toBe(2 + 4);
   });
 
+  it('lists the bonus per character and the per-character bonuses add up to the team bonus', () => {
+    const team = [op('a', 47), op('b', 33), op('c', 20), jjk('d', 90)];
+    const result = teamBreakdown(team, true); // 3 One Piece => +20% each; the lone jjk gets nothing
+    expect(result.bonuses).toEqual({ a: 9, b: 7, c: 4 }); // 9.4, 6.6, 4.0 rounded
+    expect(Object.values(result.bonuses).reduce((a, b) => a + b, 0)).toBe(result.comboBonus);
+    expect(result.bonuses.d).toBeUndefined();
+  });
+
   it('is 0 for an empty team', () => {
-    expect(teamBreakdown([], true)).toEqual({ basePower: 0, comboBonus: 0, totalPower: 0, combos: [] });
+    expect(teamBreakdown([], true)).toEqual({ basePower: 0, comboBonus: 0, totalPower: 0, combos: [], bonuses: {} });
   });
 });

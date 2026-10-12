@@ -8,9 +8,11 @@ interface Props {
   character: CharacterView;
   size?: 'lg' | 'sm';
   showPower?: boolean;
+  /** Series-combo power added to this character (shown in green after its power). */
+  bonus?: number;
 }
 
-export function CharacterCard({ character, size = 'lg', showPower = false }: Props) {
+export function CharacterCard({ character, size = 'lg', showPower = false, bonus = 0 }: Props) {
   const [broken, setBroken] = useState(false);
   useEffect(() => {
     setBroken(false);
@@ -40,7 +42,10 @@ export function CharacterCard({ character, size = 'lg', showPower = false }: Pro
         {revealed && (
           <span className="power-slot unsealed">
             <small>Power</small>
-            <b>{character.power}</b>
+            <span className="power-value">
+              <b>{character.power}</b>
+              {bonus > 0 && <span className="power-bonus" aria-label={`plus ${bonus} from series combo`}>+{bonus}</span>}
+            </span>
           </span>
         )}
       </figcaption>

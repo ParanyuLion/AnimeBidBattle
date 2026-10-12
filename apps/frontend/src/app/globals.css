@@ -306,3 +306,7 @@ input:disabled { opacity: 0.6; }
 .team-pop-list img { width: 28px; height: 42px; object-fit: cover; border-radius: 4px; flex: 0 0 auto; background: #05060b; }
 .team-pop-list span { display: flex; flex-direction: column; min-width: 0; }
 .team-pop-list small { font-size: 0.74rem; }
+
+/* Series combo bonus shown after a character's power, e.g. 80 +8 */
+.power-value { display: inline-flex; align-items: baseline; gap: 5px; }
+.power-bonus { color: var(--good); font-weight: 800; font-size: 0.85em; text-shadow: 0 0 8px rgba(74, 222, 128, 0.6); }
