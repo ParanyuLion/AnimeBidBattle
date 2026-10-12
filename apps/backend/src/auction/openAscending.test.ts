@@ -26,6 +26,29 @@ describe('OpenAscendingAuction', () => {
     expect(state).toMatchObject({ price: 0, leaderId: null, endsAt: 11000, status: 'OPEN' });
   });
 
+  it('logs accepted bids in order and ignores rejected ones', () => {
+    const first = accepted(mode.placeBid(started(), { playerId: 'p1', coins: 100, amount: 10 }, 100));
+    expect(rejectedCode(mode.placeBid(first, { playerId: 'p2', coins: 100, amount: 10 }, 150))).toBe('BID_TOO_LOW');
+    const second = accepted(mode.placeBid(first, { playerId: 'p2', coins: 100, amount: 15 }, 200));
+    expect(second.bids).toEqual([
+      { playerId: 'p1', amount: 10 },
+      { playerId: 'p2', amount: 15 },
+    ]);
+    expect(first.bids).toHaveLength(1);
+    expect(started().bids).toEqual([]);
+  });
+
+  it('shows only the latest bids in the public view', () => {
+    let state = started();
+    for (let i = 1; i <= 40; i++) {
+      state = accepted(mode.placeBid(state, { playerId: i % 2 ? 'p1' : 'p2', coins: 1000, amount: i }, 100));
+    }
+    const view = mode.getPublicView(state, 'p1');
+    expect(view.bids).toHaveLength(30);
+    expect(view.bids.at(-1)).toEqual({ playerId: 'p2', amount: 40 });
+    expect(view.bids[0]).toEqual({ playerId: 'p1', amount: 11 });
+  });
+
   it('accepts a first bid of 1 and rejects 0', () => {
     expect(accepted(mode.placeBid(started(), { playerId: 'p1', coins: 100, amount: 1 }, 100)).price).toBe(1);
     expect(rejectedCode(mode.placeBid(started(), { playerId: 'p1', coins: 100, amount: 0 }, 100))).toBe('BID_TOO_LOW');

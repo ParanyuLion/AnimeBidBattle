@@ -41,6 +41,12 @@ export interface PlayerView {
   isHost: boolean;
 }
 
+/** One accepted bid, oldest first in `AuctionBidView.bids`. */
+export interface BidLogEntry {
+  playerId: string;
+  amount: number;
+}
+
 /** What an auction mode exposes about a round to one viewer. */
 export interface AuctionBidView {
   character: CharacterView;
@@ -48,7 +54,11 @@ export interface AuctionBidView {
   leaderId: string | null;
   endsAt: number;
   status: AuctionStatus;
+  /** The most recent accepted bids of this round (at most `BID_LOG_LIMIT`). */
+  bids: BidLogEntry[];
 }
+
+export const BID_LOG_LIMIT = 30;
 
 export interface AuctionView extends AuctionBidView {
   roundIndex: number;

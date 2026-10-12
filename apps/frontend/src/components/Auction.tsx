@@ -30,6 +30,11 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
   const quick = [...new Set([minBid, auction.price + 5, auction.price + 10])].filter(
     (amount) => amount >= minBid && amount <= coins,
   );
+  const nameOf = (playerId: string) => {
+    const player = room.players.find((p) => p.id === playerId);
+    return player ? `${player.nickname}${player.id === room.youId ? ' (you)' : ''}` : 'Someone';
+  };
+  const bidLog = [...auction.bids].reverse();
   const customAmount = Number(custom);
   const roundMs = room.settings.roundSeconds * 1000;
 
@@ -43,8 +48,8 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
   })();
 
   return (
-    <div className="grid">
-      <div className="stack">
+    <div className="grid auction-grid">
+      <div className="stack stage-col">
         <section className="panel center stage">
           <div className="row stage-head" style={{ justifyContent: 'space-between', flexWrap: 'nowrap' }}>
             <span className="plate">
@@ -118,7 +123,25 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
         </section>
       </div>
 
-      <div className="stack">
+      <section className="panel bid-log-panel">
+        <h3>Bid log</h3>
+        <div className="bid-log-body">
+          {bidLog.length > 0 ? (
+            <ol className="bid-log" aria-label="Bids this round, newest first">
+              {bidLog.map((bid, index) => (
+                <li key={bidLog.length - index} className={bid.playerId === room.youId ? 'mine' : ''}>
+                  <span>{nameOf(bid.playerId)}</span>
+                  <b>{bid.amount}¢</b>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p className="muted">No bids yet.</p>
+          )}
+        </div>
+      </section>
+
+      <div className="stack side-col">
         <section className="panel">
           <h3>Players</h3>
           {room.players.map((player) => (

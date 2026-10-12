@@ -1,5 +1,6 @@
 import type {
   AuctionBidView,
+  BidLogEntry,
   AuctionModeName,
   AuctionStatus,
   Character,
@@ -13,6 +14,8 @@ export interface AuctionState {
   leaderId: string | null;
   endsAt: number;
   status: AuctionStatus;
+  /** Every accepted bid of the round, oldest first. */
+  bids: BidLogEntry[];
 }
 
 export interface BidInput {

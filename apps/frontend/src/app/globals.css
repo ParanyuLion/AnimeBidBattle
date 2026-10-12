@@ -230,6 +230,21 @@ input:disabled { opacity: 0.6; }
 .char-card.sm .power-slot small { display: none; }
 .char-card.sm .char-fallback { font-size: 1.6rem; }
 .cards-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+/* Bid log: newest bid first. On desktop it is a full-height column on the left and scrolls inside itself. */
+.bid-log { list-style: none; margin: 0; padding: 0; max-height: 220px; overflow-y: auto; display: flex; flex-direction: column; gap: 4px; scrollbar-width: thin; }
+.bid-log li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 10px; border-radius: 8px; background: rgba(255, 255, 255, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06); }
+.bid-log li:first-child { background: rgba(34, 211, 238, 0.14); box-shadow: inset 0 0 0 1px rgba(34, 211, 238, 0.45); }
+.bid-log li.mine span { color: var(--cyan); }
+.bid-log b { font-variant-numeric: tabular-nums; }
+.shell:has(.auction-grid) { max-width: 1320px; }
+@media (min-width: 900px) {
+  .auction-grid { grid-template-columns: 250px minmax(0, 2fr) minmax(0, 1fr); grid-template-areas: 'log stage side'; align-items: stretch; }
+  .auction-grid > .bid-log-panel { grid-area: log; display: flex; flex-direction: column; }
+  .auction-grid > .stage-col { grid-area: stage; }
+  .auction-grid > .side-col { grid-area: side; }
+  .bid-log-body { flex: 1; position: relative; min-height: 0; }
+  .bid-log { position: absolute; inset: 0; max-height: none; }
+}
 /* Your team during the auction: one row that scrolls sideways instead of growing taller. */
 .cards-row.scroll { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; overscroll-behavior-x: contain; padding: 4px 4px 10px; scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: var(--violet, #8b5cf6) rgba(255, 255, 255, 0.06); }
 .cards-row.scroll > .char-card { flex: 0 0 112px; width: 112px; margin: 0; scroll-snap-align: start; }

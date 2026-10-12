@@ -41,6 +41,7 @@ export function getRoomView(
           leaderId: auction.leaderId,
           endsAt: auction.endsAt,
           status: auction.status,
+          bids: auction.bids.map((bid) => ({ playerId: bid.playerId, amount: bid.amount })),
           roundIndex: room.roundIndex,
           totalRounds: room.deck.length,
         }

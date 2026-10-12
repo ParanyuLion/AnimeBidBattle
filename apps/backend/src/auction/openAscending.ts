@@ -1,4 +1,4 @@
-import type { AuctionBidView, Character } from '@abb/shared';
+import { BID_LOG_LIMIT, type AuctionBidView, type Character } from '@abb/shared';
 import type { AuctionMode, AuctionState, BidInput, BidResult } from './types';
 
 export const START_PRICE = 1;
@@ -16,6 +16,7 @@ export class OpenAscendingAuction implements AuctionMode {
       leaderId: null,
       endsAt: now + roundSeconds * 1000,
       status: 'OPEN',
+      bids: [],
     };
   }
 
@@ -39,6 +40,7 @@ export class OpenAscendingAuction implements AuctionMode {
         ...state,
         price: bid.amount,
         leaderId: bid.playerId,
+        bids: [...state.bids, { playerId: bid.playerId, amount: bid.amount }],
         endsAt: Math.max(state.endsAt, now + this.snipeWindowMs),
       },
     };
@@ -56,6 +58,7 @@ export class OpenAscendingAuction implements AuctionMode {
       leaderId: state.leaderId,
       endsAt: state.endsAt,
       status: state.status,
+      bids: state.bids.slice(-BID_LOG_LIMIT),
     };
   }
 }
