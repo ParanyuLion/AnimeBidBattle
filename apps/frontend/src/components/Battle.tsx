@@ -3,6 +3,7 @@
 import type { RoomView } from '@abb/shared';
 import { useCountUp } from '../hooks/useCountUp';
 import { CharacterCard } from './CharacterCard';
+import { ComboChips } from './ComboChips';
 import { Readout } from './Readout';
 
 function Total({ value, delayMs }: { value: number; delayMs: number }) {
@@ -29,6 +30,12 @@ export function Battle({ room }: { room: RoomView }) {
               <strong>{result.nickname}</strong>
               <Total value={result.totalPower} delayMs={delayMs} />
             </div>
+            {result.comboBonus > 0 && (
+              <div className="muted" style={{ marginTop: 8 }}>
+                Base {result.basePower} + combo {result.comboBonus}
+              </div>
+            )}
+            <ComboChips combos={result.combos} />
             {player && player.team.length > 0 ? (
               <div className="cards-row" style={{ marginTop: 12 }}>
                 {player.team.map((character) => (

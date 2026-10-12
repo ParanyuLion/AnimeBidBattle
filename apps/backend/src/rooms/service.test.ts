@@ -16,6 +16,7 @@ const settings: RoomSettings = {
   rounds: 2,
   roundSeconds: 10,
   powerVariance: 0,
+  seriesCombo: false,
   auctionMode: 'open-ascending',
 };
 

@@ -8,7 +8,7 @@ import {
   type SettingsBounds,
 } from '@abb/shared';
 import type { AuctionModeRegistry } from '../auction';
-import { teamPower } from '../characters/power';
+import { teamBreakdown } from '../characters/power';
 import type { Player, Room } from './types';
 
 export function makePlayer(id: string, nickname: string, rejoinToken: string): Player {
@@ -40,6 +40,9 @@ export function validateSettings(
     if (!Number.isInteger(value) || value < min || value > max) {
       throw new GameError('INVALID_SETTINGS', `${key} must be an integer between ${min} and ${max}`);
     }
+  }
+  if (typeof settings.seriesCombo !== 'boolean') {
+    throw new GameError('INVALID_SETTINGS', 'seriesCombo must be true or false');
   }
   if (settings.rounds > characterCount) {
     throw new GameError('INVALID_SETTINGS', `rounds cannot exceed ${characterCount} available characters`);
@@ -154,9 +157,9 @@ export function resolveRound(room: Room, modes: AuctionModeRegistry): void {
   }
 }
 
-export function rankPlayers(players: readonly Player[]): BattleResult[] {
+export function rankPlayers(players: readonly Player[], seriesCombo = false): BattleResult[] {
   const totals = players
-    .map((p) => ({ playerId: p.id, nickname: p.nickname, totalPower: teamPower(p.team) }))
+    .map((p) => ({ playerId: p.id, nickname: p.nickname, ...teamBreakdown(p.team, seriesCombo) }))
     .sort((a, b) => b.totalPower - a.totalPower);
   return totals.map((t) => ({
     ...t,
@@ -176,7 +179,7 @@ export function advanceRound(room: Room, modes: AuctionModeRegistry, now: number
     return room.phase;
   }
   room.auction = null;
-  room.results = rankPlayers(room.players);
+  room.results = rankPlayers(room.players, room.settings.seriesCombo);
   room.phase = 'BATTLE';
   return room.phase;
 }

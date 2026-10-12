@@ -1,8 +1,9 @@
 'use client';
 
-import type { AuctionView, RoomView } from '@abb/shared';
+import { comboPercent, type AuctionView, type ComboView, type RoomView } from '@abb/shared';
 import { useCountdown } from '../hooks/useCountdown';
 import { CharacterCard } from './CharacterCard';
+import { ComboChips } from './ComboChips';
 import { LedBar } from './LedBar';
 import { Readout } from './Readout';
 
@@ -33,6 +34,15 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
     return player ? `${player.nickname}${player.id === room.youId ? ' (you)' : ''}` : 'Someone';
   };
   const bidLog = [...auction.bids].reverse();
+  const teamCombos: ComboView[] = (() => {
+    if (!room.settings.seriesCombo || !me) return [];
+    const counts = new Map<string, number>();
+    for (const character of me.team) counts.set(character.anime, (counts.get(character.anime) ?? 0) + 1);
+    return [...counts]
+      .filter(([, count]) => comboPercent(count) > 0)
+      .map(([anime, count]) => ({ anime, count, percent: comboPercent(count) }))
+      .sort((a, b) => b.count - a.count || a.anime.localeCompare(b.anime));
+  })();
   const roundMs = room.settings.roundSeconds * 1000;
 
   const currentBid = auction.price > 0 ? String(auction.price) : '--';
@@ -140,6 +150,10 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
 
         <section className="panel">
           <h3>Your team</h3>
+          {room.settings.seriesCombo && (
+            <p className="muted" style={{ marginTop: 0 }}>Series combo is on: same-anime characters add power.</p>
+          )}
+          <ComboChips combos={teamCombos} />
           {me && me.team.length > 0 ? (
             <div className="cards-row scroll">
               {me.team.map((character) => (

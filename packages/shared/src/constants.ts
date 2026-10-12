@@ -6,6 +6,7 @@ export const DEFAULT_SETTINGS: RoomSettings = {
   rounds: 10,
   roundSeconds: 15,
   powerVariance: 0,
+  seriesCombo: false,
   auctionMode: 'open-ascending',
 };
 
@@ -20,3 +21,14 @@ export const SETTINGS_BOUNDS: SettingsBounds = {
 export const MIN_PLAYERS_TO_START = 2;
 export const ROOM_CODE_LENGTH = 5;
 export const NICKNAME_MAX = 20;
+
+/** Series combo: every extra character from the same anime adds this much percent to that anime's power... */
+export const COMBO_PERCENT_PER_EXTRA = 10;
+/** ...up to this cap. */
+export const COMBO_MAX_PERCENT = 50;
+
+/** Bonus percent for `count` characters of one anime on a team (0 for a single character). */
+export function comboPercent(count: number): number {
+  if (count < 2) return 0;
+  return Math.min(COMBO_MAX_PERCENT, (count - 1) * COMBO_PERCENT_PER_EXTRA);
+}

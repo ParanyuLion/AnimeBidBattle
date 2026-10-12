@@ -95,6 +95,9 @@ describe('updateSettings', () => {
     expect(codeOf(() => updateSettings(room, 'p1', { roundSeconds: 1 }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
     expect(codeOf(() => updateSettings(room, 'p1', { powerVariance: 31 }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
     expect(codeOf(() => updateSettings(room, 'p1', { powerVariance: -1 }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
+    expect(codeOf(() => updateSettings(room, 'p1', { seriesCombo: 'yes' as unknown as boolean }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
+    updateSettings(room, 'p1', { seriesCombo: true }, SETTINGS_BOUNDS, 3);
+    expect(room.settings.seriesCombo).toBe(true);
     expect(codeOf(() => updateSettings(room, 'p1', { rounds: 4 }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
     addPlayer(room, makePlayer('p3', 'Cara', 't3'));
     expect(codeOf(() => updateSettings(room, 'p1', { maxPlayers: 2 }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
@@ -208,8 +211,8 @@ describe('resolveRound and advanceRound', () => {
     expect(room.phase).toBe('BATTLE');
     expect(room.auction).toBeNull();
     expect(room.results).toEqual([
-      { playerId: 'p2', nickname: 'Bob', totalPower: 30, rank: 1 },
-      { playerId: 'p1', nickname: 'Alice', totalPower: 10, rank: 2 },
+      { playerId: 'p2', nickname: 'Bob', basePower: 30, comboBonus: 0, combos: [], totalPower: 30, rank: 1 },
+      { playerId: 'p1', nickname: 'Alice', basePower: 10, comboBonus: 0, combos: [], totalPower: 10, rank: 2 },
     ]);
     showResults(room);
     expect(room.phase).toBe('RESULTS');
@@ -220,6 +223,26 @@ describe('rankPlayers', () => {
   it('gives tied players the same rank', () => {
     const players = [makePlayer('p1', 'Alice', 't1'), makePlayer('p2', 'Bob', 't2')];
     expect(rankPlayers(players).map((r) => r.rank)).toEqual([1, 1]);
+  });
+
+  it('ranks by total power including series combos only when the setting is on', () => {
+    const alice = makePlayer('p1', 'Alice', 't1');
+    const bob = makePlayer('p2', 'Bob', 't2');
+    alice.team = [
+      { id: 'a1', name: 'A1', anime: 'X', power: 50 },
+      { id: 'a2', name: 'A2', anime: 'X', power: 50 },
+      { id: 'a3', name: 'A3', anime: 'X', power: 50 },
+    ];
+    bob.team = [
+      { id: 'b1', name: 'B1', anime: 'P', power: 90 },
+      { id: 'b2', name: 'B2', anime: 'Q', power: 90 },
+      { id: 'b3', name: 'B3', anime: 'R', power: 90 },
+    ];
+    const off = rankPlayers([alice, bob], false);
+    expect(off.find((r) => r.playerId === 'p2')).toMatchObject({ rank: 1, totalPower: 270, comboBonus: 0 });
+    const on = rankPlayers([alice, bob], true);
+    expect(on.find((r) => r.playerId === 'p1')).toMatchObject({ basePower: 150, comboBonus: 30, totalPower: 180 });
+    expect(on.find((r) => r.playerId === 'p2')?.rank).toBe(1);
   });
 });
 

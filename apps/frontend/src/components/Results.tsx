@@ -1,5 +1,6 @@
 import type { RoomView } from '@abb/shared';
 import { CharacterCard } from './CharacterCard';
+import { ComboChips } from './ComboChips';
 
 export function Results({ room, onPlayAgain }: { room: RoomView; onPlayAgain: () => void }) {
   const results = room.results ?? [];
@@ -25,6 +26,12 @@ export function Results({ room, onPlayAgain }: { room: RoomView; onPlayAgain: ()
               </strong>
               <span className="plate">{result.totalPower} power</span>
             </div>
+            {result.comboBonus > 0 && (
+              <div className="muted" style={{ marginTop: 8 }}>
+                Base {result.basePower} + combo {result.comboBonus}
+              </div>
+            )}
+            <ComboChips combos={result.combos} />
             {player && player.team.length > 0 ? (
               <div className="cards-row" style={{ marginTop: 12 }}>
                 {player.team.map((character) => (

@@ -26,6 +26,8 @@ export interface RoomSettings {
   roundSeconds: number;
   /** Each character's power is shifted by a random integer in [-N, +N] when a game starts (0 = off). */
   powerVariance: number;
+  /** Characters from the same anime on one team get a power bonus that grows with how many there are. */
+  seriesCombo: boolean;
   auctionMode: AuctionModeName;
 }
 
@@ -67,9 +69,22 @@ export interface AuctionView extends AuctionBidView {
   totalRounds: number;
 }
 
+/** A same-anime group on one team that earned a combo bonus. */
+export interface ComboView {
+  anime: string;
+  count: number;
+  percent: number;
+}
+
 export interface BattleResult {
   playerId: string;
   nickname: string;
+  /** Sum of the team's character power, before combos. */
+  basePower: number;
+  /** Extra power from series combos (0 when the setting is off). */
+  comboBonus: number;
+  combos: ComboView[];
+  /** basePower + comboBonus; what the ranking uses. */
   totalPower: number;
   rank: number;
 }

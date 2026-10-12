@@ -17,6 +17,7 @@ export const settingsSchema = z.object({
   rounds: z.number().int(),
   roundSeconds: z.number().int(),
   powerVariance: z.number().int(),
+  seriesCombo: z.boolean(),
   auctionMode: z.enum(AUCTION_MODE_NAMES),
 });
 

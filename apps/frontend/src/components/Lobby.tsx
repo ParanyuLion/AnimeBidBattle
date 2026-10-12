@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { MIN_PLAYERS_TO_START, SETTINGS_BOUNDS, type RoomSettings, type RoomView, type UpdateSettingsPayload } from '@abb/shared';
+import { COMBO_MAX_PERCENT, COMBO_PERCENT_PER_EXTRA, MIN_PLAYERS_TO_START, SETTINGS_BOUNDS, type RoomSettings, type RoomView, type UpdateSettingsPayload } from '@abb/shared';
 
 interface Props {
   room: RoomView;
@@ -19,14 +19,18 @@ const FIELDS = [
 export function Lobby({ room, actions }: Props) {
   const isHost = room.youId === room.hostId;
   const [draft, setDraft] = useState<Record<string, string>>(() => toDraft(room.settings));
+  const [comboDraft, setComboDraft] = useState(room.settings.seriesCombo);
   const [dirty, setDirty] = useState(false);
   const [copied, setCopied] = useState(false);
-  const { maxPlayers, startingCoins, rounds, roundSeconds, powerVariance } = room.settings;
+  const { maxPlayers, startingCoins, rounds, roundSeconds, powerVariance, seriesCombo } = room.settings;
 
   // Resync from the server unless the user has pending edits.
   useEffect(() => {
-    if (!dirty) setDraft(toDraft({ maxPlayers, startingCoins, rounds, roundSeconds, powerVariance }));
-  }, [dirty, maxPlayers, startingCoins, rounds, roundSeconds, powerVariance, room.hostId, isHost]);
+    if (!dirty) {
+      setDraft(toDraft({ maxPlayers, startingCoins, rounds, roundSeconds, powerVariance }));
+      setComboDraft(seriesCombo);
+    }
+  }, [dirty, maxPlayers, startingCoins, rounds, roundSeconds, powerVariance, seriesCombo, room.hostId, isHost]);
 
   const draftValid = FIELDS.every(({ key }) => draft[key] !== '' && Number.isInteger(Number(draft[key])));
 
@@ -43,6 +47,7 @@ export function Lobby({ room, actions }: Props) {
   function save() {
     const patch: UpdateSettingsPayload = {};
     for (const { key } of FIELDS) patch[key] = Number(draft[key]);
+    patch.seriesCombo = comboDraft;
     actions.updateSettings(patch);
     setDirty(false);
   }
@@ -84,6 +89,25 @@ export function Lobby({ room, actions }: Props) {
               </div>
             ))}
           </div>
+          <label className="check-row" htmlFor="seriesCombo">
+            <input
+              id="seriesCombo"
+              type="checkbox"
+              checked={isHost ? comboDraft : seriesCombo}
+              disabled={!isHost}
+              onChange={(e) => {
+                setComboDraft(e.target.checked);
+                setDirty(true);
+              }}
+            />
+            <span>
+              <strong>Series combo</strong>
+              <span className="muted">
+                {' '}
+                Characters from the same anime on one team get +{COMBO_PERCENT_PER_EXTRA}% power for each extra one (max +{COMBO_MAX_PERCENT}%).
+              </span>
+            </span>
+          </label>
           {isHost && (
             <div className="row" style={{ marginTop: 14 }}>
               <button className="secondary" onClick={save} disabled={!draftValid}>
