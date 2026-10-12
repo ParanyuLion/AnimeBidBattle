@@ -1,11 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { comboPercent, type AuctionView, type ComboView, type RoomView } from '@abb/shared';
+import type { AuctionView, ComboView, RoomView } from '@abb/shared';
 import { useCountdown } from '../hooks/useCountdown';
 import { playBid, playTick, playTimeUp } from '../lib/sound';
 import { CharacterCard } from './CharacterCard';
 import { ComboChips } from './ComboChips';
+import { TeamPopover } from './TeamPopover';
+import { teamCombosOf } from '../lib/combos';
 import { LedBar } from './LedBar';
 import { Readout } from './Readout';
 
@@ -76,15 +78,7 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
     return player ? `${player.nickname}${player.id === room.youId ? ' (you)' : ''}` : 'Someone';
   };
   const bidLog = [...auction.bids].reverse();
-  const teamCombos: ComboView[] = (() => {
-    if (!room.settings.seriesCombo || !me) return [];
-    const counts = new Map<string, number>();
-    for (const character of me.team) counts.set(character.anime, (counts.get(character.anime) ?? 0) + 1);
-    return [...counts]
-      .filter(([, count]) => comboPercent(count) > 0)
-      .map(([anime, count]) => ({ anime, count, percent: comboPercent(count) }))
-      .sort((a, b) => b.count - a.count || a.anime.localeCompare(b.anime));
-  })();
+  const teamCombos: ComboView[] = room.settings.seriesCombo && me ? teamCombosOf(me.team) : [];
   const roundMs = room.settings.roundSeconds * 1000;
 
   const currentBid = auction.price > 0 ? String(auction.price) : '--';
@@ -179,20 +173,22 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
         <section className="panel">
           <h3>Players</h3>
           {room.players.map((player) => (
-            <div
-              key={player.id}
-              className={`player ${player.id === auction.leaderId ? 'leader' : ''} ${player.connected ? '' : 'offline'}`}
-            >
-              <span className="who">
-                <span role="img" className={`led ${player.connected ? 'on' : ''}`} aria-label={player.connected ? 'online' : 'offline'} />
-                <span>
-                  {player.nickname}
-                  {player.id === room.youId ? ' (you)' : ''}
+            <div className="player-wrap" key={player.id} tabIndex={0} aria-label={`${player.nickname}'s team`}>
+              <div
+                className={`player ${player.id === auction.leaderId ? 'leader' : ''} ${player.connected ? '' : 'offline'}`}
+              >
+                <span className="who">
+                  <span role="img" className={`led ${player.connected ? 'on' : ''}`} aria-label={player.connected ? 'online' : 'offline'} />
+                  <span>
+                    {player.nickname}
+                    {player.id === room.youId ? ' (you)' : ''}
+                  </span>
                 </span>
-              </span>
-              <span>
-                {player.coins}¢ · {player.team.length} 🎴
-              </span>
+                <span>
+                  {player.coins}¢ · {player.team.length} 🎴
+                </span>
+              </div>
+              <TeamPopover player={player} showCombos={room.settings.seriesCombo} />
             </div>
           ))}
         </section>
