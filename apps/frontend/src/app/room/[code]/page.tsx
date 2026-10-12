@@ -10,7 +10,7 @@ import { ErrorBanner } from '../../../components/ErrorBanner';
 import { JoinRoomForm } from '../../../components/JoinRoomForm';
 import { Lobby } from '../../../components/Lobby';
 import { Results } from '../../../components/Results';
-import { SoundControls } from '../../../components/SoundControls';
+import { AudioDock } from '../../../components/AudioDock';
 
 export default function RoomPage() {
   const params = useParams<{ code: string }>();
@@ -41,7 +41,7 @@ export default function RoomPage() {
 
   return (
     <div>
-      <SoundControls raised={room.phase === 'AUCTION'} />
+      <AudioDock music={room.music} clockOffset={clockOffset} raised={room.phase === 'AUCTION'} />
       {!connected && <div className="banner info">Connection lost — reconnecting…</div>}
       <ErrorBanner error={error} onDismiss={clearError} />
       {room.phase === 'LOBBY' && <Lobby room={room} actions={actions} />}

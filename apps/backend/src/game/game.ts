@@ -3,6 +3,7 @@ import {
   MIN_PLAYERS_TO_START,
   type BattleResult,
   type Character,
+  type MusicSync,
   type Phase,
   type RoomSettings,
   type SettingsBounds,
@@ -15,11 +16,17 @@ export function makePlayer(id: string, nickname: string, rejoinToken: string): P
   return { id, nickname, rejoinToken, coins: 0, team: [], connected: true };
 }
 
-export function createRoom(code: string, host: Player, settings: RoomSettings): Room {
+export function createRoom(
+  code: string,
+  host: Player,
+  settings: RoomSettings,
+  music: MusicSync = { seed: 0, startedAt: 0 },
+): Room {
   return {
     code,
     hostId: host.id,
     settings,
+    music,
     players: [host],
     phase: 'LOBBY',
     deck: [],

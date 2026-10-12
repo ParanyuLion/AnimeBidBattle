@@ -35,6 +35,10 @@ npm run typecheck
 
 Players are not told how strong a character is. The backend never sends a character's `power` to clients during the lobby or the auction; it is revealed for everyone at the Battle phase (`apps/backend/src/game/view.ts`).
 
+## Background music
+
+The room plays the tracks listed in `apps/frontend/public/music/playlist.json` in a loop, starting from a random one (volume, mute and skip are separate from the sound effects). Put each audio file next to the playlist and list it as `{ "title": "...", "file": "name.mp3" }`. A file that is missing or fails to load is skipped. Only add music you have the right to use: anything in `public/` is served to everyone who opens the site.
+
 ## Character images
 
 Images are static files at `apps/frontend/public/characters/<id>.jpg` (named by character id from `data/characters.json`). A missing file shows a placeholder card. To (re)fetch them from AniList:

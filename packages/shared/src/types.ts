@@ -89,6 +89,12 @@ export interface BattleResult {
   rank: number;
 }
 
+/** Everyone in a room hears the same music at the same moment: the track order starts at `seed` and runs from `startedAt` (server time, ms). */
+export interface MusicSync {
+  seed: number;
+  startedAt: number;
+}
+
 export interface RoomView {
   code: string;
   phase: Phase;
@@ -96,6 +102,7 @@ export interface RoomView {
   hostId: string;
   youId: string;
   serverNow: number;
+  music: MusicSync;
   players: PlayerView[];
   auction: AuctionView | null;
   results: BattleResult[] | null;

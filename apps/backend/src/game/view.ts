@@ -26,6 +26,7 @@ export function getRoomView(
     hostId: room.hostId,
     youId: viewerId,
     serverNow: now,
+    music: { seed: room.music.seed, startedAt: room.music.startedAt },
     players: room.players.map((p) => ({
       id: p.id,
       nickname: p.nickname,

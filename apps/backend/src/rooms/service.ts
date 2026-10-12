@@ -55,7 +55,8 @@ export class RoomService {
     validateSettings(settings, this.config.bounds, this.config.characters.length);
     const player = makePlayer(newId(), nickname, newToken());
     const code = generateRoomCode((c) => this.config.store.has(c), this.config.random);
-    const room = createRoom(code, player, settings);
+    const music = { seed: Math.floor(this.config.random() * 1_000_000_000), startedAt: this.config.now() };
+    const room = createRoom(code, player, settings, music);
     this.config.store.set(room);
     this.emit(room);
     return { room, player };

@@ -3,9 +3,8 @@
 import { useEffect, useState } from 'react';
 import { getVolume, isMuted, playBid, setMuted, setVolume, unlockAudio } from '../lib/sound';
 
-/** Mute button and volume slider, pinned to the bottom-right corner of the screen. */
-/** `raised` lifts it above the sticky bid dock on phones. */
-export function SoundControls({ raised = false }: { raised?: boolean }) {
+/** Mute button and volume slider for the sound effects. */
+export function SoundControls() {
   const [muted, setMutedState] = useState(false);
   const [volume, setVolumeState] = useState(0.8);
 
@@ -28,7 +27,7 @@ export function SoundControls({ raised = false }: { raised?: boolean }) {
   const silent = muted || volume === 0;
 
   return (
-    <div className={`sound-controls ${raised ? 'raised' : ''}`} role="group" aria-label="Sound">
+    <div className="audio-row" role="group" aria-label="Sound effects">
       <button
         type="button"
         className="sound-toggle"

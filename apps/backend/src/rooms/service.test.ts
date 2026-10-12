@@ -63,6 +63,20 @@ function startedGame() {
   return { room, alice, bob };
 }
 
+describe('shared music clock', () => {
+  it('is set when the room is created and the same for every player, from then on', () => {
+    vi.setSystemTime(5000);
+    const { room, player: alice } = service.createRoom('Alice', settings);
+    expect(room.music).toEqual({ seed: 0, startedAt: 5000 }); // random() is 0 in this fixture
+    const { player: bob } = service.joinRoom(room.code, 'Bob');
+    vi.setSystemTime(9000);
+    const aliceView = service.viewFor(room, alice.id);
+    const bobView = service.viewFor(room, bob.id);
+    expect(aliceView.music).toEqual({ seed: 0, startedAt: 5000 });
+    expect(bobView.music).toEqual(aliceView.music);
+  });
+});
+
 describe('generateRoomCode', () => {
   it('returns a 5-character code that is not taken', () => {
     const taken = new Set<string>();

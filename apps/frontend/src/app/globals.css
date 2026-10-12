@@ -287,7 +287,9 @@ input:disabled { opacity: 0.6; }
 .enter-hint { margin: 0 0 8px; font-size: 0.8rem; }
 @media (max-width: 899px) { .enter-hint { display: none; } }
 /* Sound controls: pinned to the bottom-right corner. On phones they sit above the sticky bid dock. */
-.sound-controls { position: fixed; right: 14px; bottom: 14px; z-index: 20; display: flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 999px; background: rgba(20, 22, 34, 0.9); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 14px rgba(0, 0, 0, 0.6); backdrop-filter: blur(6px); }
+.audio-dock { position: fixed; right: 14px; bottom: 14px; z-index: 20; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; padding: 8px 12px; border-radius: 18px; background: rgba(20, 22, 34, 0.9); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 4px 14px rgba(0, 0, 0, 0.6); backdrop-filter: blur(6px); }
+.audio-row { display: flex; align-items: center; gap: 8px; }
 .sound-toggle { min-height: 0; padding: 4px 8px; font-size: 1.1rem; line-height: 1; }
 .volume-slider { width: 96px; min-height: 0; padding: 0; margin: 0; accent-color: var(--cyan); }
-@media (max-width: 899px) { .sound-controls.raised { bottom: calc(210px + env(safe-area-inset-bottom)); } .volume-slider { width: 72px; } }
+.now-playing { max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.75rem; color: var(--muted); }
+@media (max-width: 899px) { .audio-dock.raised { bottom: calc(210px + env(safe-area-inset-bottom)); } .volume-slider { width: 72px; } .now-playing { display: none; } }
