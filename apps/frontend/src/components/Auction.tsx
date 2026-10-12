@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { comboPercent, type AuctionView, type ComboView, type RoomView } from '@abb/shared';
 import { useCountdown } from '../hooks/useCountdown';
+import { playBid, playTick, playTimeUp } from '../lib/sound';
 import { CharacterCard } from './CharacterCard';
 import { ComboChips } from './ComboChips';
 import { LedBar } from './LedBar';
@@ -27,6 +28,31 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
   const canBid = open && !isLeader && coins >= minBid;
   const leader = room.players.find((p) => p.id === auction.leaderId);
 
+  // Tick once per second over the last 5 seconds (a bid that extends the timer restarts the ticks).
+  const lastTick = useRef<number | null>(null);
+  const secondsLeft = Math.ceil(remainingMs / 1000);
+  useEffect(() => {
+    if (!open || secondsLeft < 1 || secondsLeft > 5) {
+      lastTick.current = null;
+      return;
+    }
+    if (lastTick.current === secondsLeft) return;
+    lastTick.current = secondsLeft;
+    playTick(secondsLeft);
+  }, [open, secondsLeft]);
+
+  // A heavy hit when the round closes (sold or not).
+  const previousStatus = useRef(auction.status);
+  useEffect(() => {
+    if (previousStatus.current === 'OPEN' && auction.status !== 'OPEN') playTimeUp(auction.status === 'SOLD');
+    previousStatus.current = auction.status;
+  }, [auction.status]);
+
+  function bid(amount: number) {
+    playBid();
+    onBid(amount);
+  }
+
   // Enter bids the minimum (+1 over the current price, or 1 if nobody has bid).
   useEffect(() => {
     if (!canBid) return;
@@ -35,11 +61,11 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
       const target = event.target as HTMLElement | null;
       if (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
       event.preventDefault(); // also stops Enter from re-clicking a focused quick-bid button
-      onBid(minBid);
+      bid(minBid);
     }
     window.addEventListener('keydown', onKeyDown, true);
     return () => window.removeEventListener('keydown', onKeyDown, true);
-  }, [canBid, minBid, onBid]);
+  }, [canBid, minBid, onBid]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const quick = [
     ...[1, 5, 10, 25, 50, 100].map((step) => ({ label: `+${step}`, amount: auction.price + step })),
@@ -120,7 +146,7 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
               <button
                 key={label}
                 disabled={!canBid || amount < minBid || amount > coins}
-                onClick={() => onBid(amount)}
+                onClick={() => bid(amount)}
                 aria-label={`${label}, bid ${amount}`}
                 title={`Bid ${amount}`}
               >

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { useGameSounds } from '../../../hooks/useGameSounds';
 import { useRoom } from '../../../hooks/useRoom';
 import { Auction } from '../../../components/Auction';
 import { Battle } from '../../../components/Battle';
@@ -9,11 +10,13 @@ import { ErrorBanner } from '../../../components/ErrorBanner';
 import { JoinRoomForm } from '../../../components/JoinRoomForm';
 import { Lobby } from '../../../components/Lobby';
 import { Results } from '../../../components/Results';
+import { SoundControls } from '../../../components/SoundControls';
 
 export default function RoomPage() {
   const params = useParams<{ code: string }>();
   const code = params.code.toUpperCase();
   const { room, status, connected, error, clearError, clockOffset, actions } = useRoom(code);
+  useGameSounds(room);
 
   if (status === 'not-found') {
     return (
@@ -38,6 +41,7 @@ export default function RoomPage() {
 
   return (
     <div>
+      <SoundControls raised={room.phase === 'AUCTION'} />
       {!connected && <div className="banner info">Connection lost — reconnecting…</div>}
       <ErrorBanner error={error} onDismiss={clearError} />
       {room.phase === 'LOBBY' && <Lobby room={room} actions={actions} />}
