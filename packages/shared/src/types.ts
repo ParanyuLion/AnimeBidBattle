@@ -24,11 +24,13 @@ export interface RoomSettings {
   startingCoins: number;
   rounds: number;
   roundSeconds: number;
+  /** Each character's power is shifted by a random integer in [-N, +N] when a game starts (0 = off). */
+  powerVariance: number;
   auctionMode: AuctionModeName;
 }
 
 export type SettingsBounds = Record<
-  'maxPlayers' | 'startingCoins' | 'rounds' | 'roundSeconds',
+  'maxPlayers' | 'startingCoins' | 'rounds' | 'roundSeconds' | 'powerVariance',
   { min: number; max: number }
 >;
 

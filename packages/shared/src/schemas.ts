@@ -16,6 +16,7 @@ export const settingsSchema = z.object({
   startingCoins: z.number().int(),
   rounds: z.number().int(),
   roundSeconds: z.number().int(),
+  powerVariance: z.number().int(),
   auctionMode: z.enum(AUCTION_MODE_NAMES),
 });
 

@@ -93,6 +93,8 @@ describe('updateSettings', () => {
   it('rejects out-of-bounds values, too many rounds, and maxPlayers below current players', () => {
     const { room } = lobby();
     expect(codeOf(() => updateSettings(room, 'p1', { roundSeconds: 1 }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
+    expect(codeOf(() => updateSettings(room, 'p1', { powerVariance: 31 }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
+    expect(codeOf(() => updateSettings(room, 'p1', { powerVariance: -1 }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
     expect(codeOf(() => updateSettings(room, 'p1', { rounds: 4 }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
     addPlayer(room, makePlayer('p3', 'Cara', 't3'));
     expect(codeOf(() => updateSettings(room, 'p1', { maxPlayers: 2 }, SETTINGS_BOUNDS, 3))).toBe('INVALID_SETTINGS');
@@ -107,6 +109,33 @@ describe('startGame', () => {
     expect(room.deck.map((c) => c.id)).toEqual(['a', 'b']);
     expect(room.auction).toMatchObject({ status: 'OPEN', endsAt: 11000 });
     expect(room.auction?.character.id).toBe('a');
+  });
+
+  it('keeps power unchanged when powerVariance is 0', () => {
+    const { room } = started();
+    expect(room.deck.map((c) => c.power)).toEqual([10, 30]);
+  });
+
+  it('shifts each dealt character by a random integer within the variance, never below 0', () => {
+    const { room } = lobby();
+    room.settings = { ...room.settings, powerVariance: 10 };
+    const low = () => 0; // every roll is the minimum shift, -10
+    startGame(room, 'p1', characters, modes, low, 0);
+    for (const dealt of room.deck) {
+      const original = characters.find((c) => c.id === dealt.id)!;
+      expect(dealt.power).toBe(Math.max(0, original.power - 10));
+    }
+
+    const again = lobby().room;
+    again.settings = { ...again.settings, powerVariance: 10 };
+    let calls = 0;
+    const seeded = () => ((calls++ * 0.37) % 1);
+    startGame(again, 'p1', characters, modes, seeded, 0);
+    for (const dealt of again.deck) {
+      const original = characters.find((c) => c.id === dealt.id)!;
+      expect(Math.abs(dealt.power - original.power)).toBeLessThanOrEqual(10);
+    }
+    expect(characters.map((c) => c.power)).toEqual([10, 30, 20]); // source data untouched
   });
 
   it('requires the host, two players, and the lobby phase', () => {

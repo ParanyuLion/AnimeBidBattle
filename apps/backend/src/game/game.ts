@@ -34,7 +34,7 @@ export function validateSettings(
   bounds: SettingsBounds,
   characterCount: number,
 ): void {
-  for (const key of ['maxPlayers', 'startingCoins', 'rounds', 'roundSeconds'] as const) {
+  for (const key of ['maxPlayers', 'startingCoins', 'rounds', 'roundSeconds', 'powerVariance'] as const) {
     const value = settings[key];
     const { min, max } = bounds[key];
     if (!Number.isInteger(value) || value < min || value > max) {
@@ -84,6 +84,13 @@ export function shuffle<T>(items: readonly T[], random: () => number): T[] {
   return result;
 }
 
+/** Shifts power by a random integer in [-variance, +variance]; never below 0. */
+function withVariance(character: Character, variance: number, random: () => number): Character {
+  if (variance === 0) return character;
+  const shift = Math.floor(random() * (2 * variance + 1)) - variance;
+  return { ...character, power: Math.max(0, character.power + shift) };
+}
+
 export function startGame(
   room: Room,
   actorId: string,
@@ -104,7 +111,10 @@ export function startGame(
     player.coins = room.settings.startingCoins;
     player.team = [];
   }
-  room.deck = shuffle(characters, random).slice(0, room.settings.rounds);
+  const variance = room.settings.powerVariance;
+  room.deck = shuffle(characters, random)
+    .slice(0, room.settings.rounds)
+    .map((character) => withVariance(character, variance, random));
   room.roundIndex = 0;
   room.results = null;
   room.phase = 'AUCTION';

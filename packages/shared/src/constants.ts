@@ -5,6 +5,7 @@ export const DEFAULT_SETTINGS: RoomSettings = {
   startingCoins: 1000,
   rounds: 10,
   roundSeconds: 15,
+  powerVariance: 0,
   auctionMode: 'open-ascending',
 };
 
@@ -13,6 +14,7 @@ export const SETTINGS_BOUNDS: SettingsBounds = {
   startingCoins: { min: 100, max: 10000 },
   rounds: { min: 1, max: 30 },
   roundSeconds: { min: 10, max: 60 },
+  powerVariance: { min: 0, max: 30 },
 };
 
 export const MIN_PLAYERS_TO_START = 2;

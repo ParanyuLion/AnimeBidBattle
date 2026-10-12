@@ -24,6 +24,7 @@ const roomSettings = {
   startingCoins: 1000,
   rounds: 2,
   roundSeconds: 2,
+  powerVariance: 0,
   auctionMode: 'open-ascending' as const,
 };
 

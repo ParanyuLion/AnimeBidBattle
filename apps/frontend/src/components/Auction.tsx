@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import type { AuctionView, RoomView } from '@abb/shared';
 import { useCountdown } from '../hooks/useCountdown';
 import { CharacterCard } from './CharacterCard';
@@ -17,7 +16,6 @@ interface Props {
 export function Auction({ room, auction, clockOffset, onBid }: Props) {
   const me = room.players.find((p) => p.id === room.youId);
   const remainingMs = useCountdown(auction.endsAt, clockOffset);
-  const [custom, setCustom] = useState('');
 
   const open = auction.status === 'OPEN';
   const closing = open && remainingMs < 5000;
@@ -35,7 +33,6 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
     return player ? `${player.nickname}${player.id === room.youId ? ' (you)' : ''}` : 'Someone';
   };
   const bidLog = [...auction.bids].reverse();
-  const customAmount = Number(custom);
   const roundMs = room.settings.roundSeconds * 1000;
 
   const currentBid = auction.price > 0 ? String(auction.price) : '--';
@@ -97,28 +94,6 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
                 {amount}
               </button>
             ))}
-          </div>
-          <div className="row" style={{ marginTop: 8, flexWrap: 'nowrap' }}>
-            <input
-              aria-label="Custom bid"
-              type="number"
-              inputMode="numeric"
-              min={minBid}
-              value={custom}
-              placeholder={`min ${minBid}`}
-              onChange={(e) => setCustom(e.target.value)}
-              style={{ flex: 1 }}
-            />
-            <button
-              className="primary big"
-              disabled={!canBid || !Number.isInteger(customAmount) || customAmount < minBid || customAmount > coins}
-              onClick={() => {
-                onBid(customAmount);
-                setCustom('');
-              }}
-            >
-              Bid
-            </button>
           </div>
         </section>
       </div>

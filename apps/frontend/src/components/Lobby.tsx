@@ -13,6 +13,7 @@ const FIELDS = [
   { key: 'startingCoins', label: 'Starting coins' },
   { key: 'rounds', label: 'Rounds' },
   { key: 'roundSeconds', label: 'Seconds per round' },
+  { key: 'powerVariance', label: 'Random power ±' },
 ] as const;
 
 export function Lobby({ room, actions }: Props) {
@@ -20,12 +21,12 @@ export function Lobby({ room, actions }: Props) {
   const [draft, setDraft] = useState<Record<string, string>>(() => toDraft(room.settings));
   const [dirty, setDirty] = useState(false);
   const [copied, setCopied] = useState(false);
-  const { maxPlayers, startingCoins, rounds, roundSeconds } = room.settings;
+  const { maxPlayers, startingCoins, rounds, roundSeconds, powerVariance } = room.settings;
 
   // Resync from the server unless the user has pending edits.
   useEffect(() => {
-    if (!dirty) setDraft(toDraft({ maxPlayers, startingCoins, rounds, roundSeconds }));
-  }, [dirty, maxPlayers, startingCoins, rounds, roundSeconds, room.hostId, isHost]);
+    if (!dirty) setDraft(toDraft({ maxPlayers, startingCoins, rounds, roundSeconds, powerVariance }));
+  }, [dirty, maxPlayers, startingCoins, rounds, roundSeconds, powerVariance, room.hostId, isHost]);
 
   const draftValid = FIELDS.every(({ key }) => draft[key] !== '' && Number.isInteger(Number(draft[key])));
 
