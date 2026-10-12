@@ -222,3 +222,203 @@ Character artwork belongs to its respective rights holders; this project is a no
 | yujiro-hanma.jpg | Yujiro Hanma | Baki | https://anilist.co/character/10499 | https://s4.anilist.co/file/anilistcdn/character/large/b10499-yqTyqgrkbZfO.jpg |
 | doraemon.jpg | Doraemon | Doraemon | https://anilist.co/character/4304 | https://s4.anilist.co/file/anilistcdn/character/large/b4304-4eXX8C1O4Pda.png |
 | pikachu.jpg | Pikachu | Pokemon | https://anilist.co/character/3891 | https://s4.anilist.co/file/anilistcdn/character/large/b3891-edgrZOgCJ9do.jpg |
+| aoi-todo.jpg | Aoi Todo | Jujutsu Kaisen | https://anilist.co/character/137975 | https://s4.anilist.co/file/anilistcdn/character/large/b137975-6TH7PiLWJaqy.png |
+| mahito.jpg | Mahito | Jujutsu Kaisen | https://anilist.co/character/133702 | https://s4.anilist.co/file/anilistcdn/character/large/b133702-Y7JRG5vAvjIL.png |
+| choso.jpg | Choso | Jujutsu Kaisen | https://anilist.co/character/157116 | https://s4.anilist.co/file/anilistcdn/character/large/b157116-2jYQf3y8NeTZ.png |
+| kenjaku.jpg | Kenjaku | Jujutsu Kaisen | https://anilist.co/character/289584 | https://s4.anilist.co/file/anilistcdn/character/large/b289584-KndGudJZm5Ik.jpg |
+| obito-uchiha.jpg | Obito Uchiha | Naruto | https://anilist.co/character/3149 | https://s4.anilist.co/file/anilistcdn/character/large/b3149-j6cl8A9yup51.png |
+| neji-hyuga.jpg | Neji Hyuga | Naruto | https://anilist.co/character/1694 | https://s4.anilist.co/file/anilistcdn/character/large/b1694-TL4obouDwJ7k.jpg |
+| might-guy.jpg | Might Guy | Naruto | https://anilist.co/character/307 | https://s4.anilist.co/file/anilistcdn/character/large/b307-xieUEdhdTVwQ.png |
+| orochimaru.jpg | Orochimaru | Naruto | https://anilist.co/character/2455 | https://s4.anilist.co/file/anilistcdn/character/large/n2455-V9tLMS3TIgJW.png |
+| kisame-hoshigaki.jpg | Kisame Hoshigaki | Naruto | https://anilist.co/character/2672 | https://s4.anilist.co/file/anilistcdn/character/large/2672-oxbHx8n3N7WY.jpg |
+| hashirama-senju.jpg | Hashirama Senju | Naruto | https://anilist.co/character/12464 | https://s4.anilist.co/file/anilistcdn/character/large/n12464-fcgqkCPZoREw.png |
+| tsunade.jpg | Tsunade | Naruto | https://anilist.co/character/2767 | https://s4.anilist.co/file/anilistcdn/character/large/b2767-r61Cj9v8I0wl.png |
+| killer-bee.jpg | Killer Bee | Naruto | https://anilist.co/character/18473 | https://s4.anilist.co/file/anilistcdn/character/large/b18473-AiI3mk28a1Nm.png |
+| kaido.jpg | Kaido | One Piece | https://anilist.co/character/46109 | https://s4.anilist.co/file/anilistcdn/character/large/b46109-MT7Hm4Bk93In.png |
+| charlotte-linlin.jpg | Charlotte Linlin | One Piece | https://anilist.co/character/54495 | https://s4.anilist.co/file/anilistcdn/character/large/b54495-3x1TzSzPEOLd.jpg |
+| marshall-d-teach.jpg | Marshall D. Teach | One Piece | https://anilist.co/character/3331 | https://s4.anilist.co/file/anilistcdn/character/large/b3331-7ZJDc4BNv9Yp.jpg |
+| sakazuki.jpg | Sakazuki | One Piece | https://anilist.co/character/22687 | https://s4.anilist.co/file/anilistcdn/character/large/b22687-tCQVpj6wZhRk.jpg |
+| dracule-mihawk.jpg | Dracule Mihawk | One Piece | https://anilist.co/character/2064 | https://s4.anilist.co/file/anilistcdn/character/large/n2064-OpnF4nLi6bvL.png |
+| kuzan.jpg | Kuzan | One Piece | https://anilist.co/character/2752 | https://s4.anilist.co/file/anilistcdn/character/large/b2752-0ENS2a39muDz.png |
+| borsalino.jpg | Borsalino | One Piece | https://anilist.co/character/21093 | https://s4.anilist.co/file/anilistcdn/character/large/b21093-Pc4kOjUn3ZkZ.png |
+| jinbe.jpg | Jinbe | One Piece | https://anilist.co/character/18938 | https://s4.anilist.co/file/anilistcdn/character/large/b18938-yZANEfjsVhW4.png |
+| rob-lucci.jpg | Rob Lucci | One Piece | https://anilist.co/character/5677 | https://s4.anilist.co/file/anilistcdn/character/large/b5677-ZrZunVe7Kq5P.png |
+| gol-d-roger.jpg | Gol D. Roger | One Piece | https://anilist.co/character/4883 | https://s4.anilist.co/file/anilistcdn/character/large/b4883-0t76xH00sehO.png |
+| yhwach.jpg | Yhwach | Bleach | https://anilist.co/character/68537 | https://s4.anilist.co/file/anilistcdn/character/large/b68537-1bRB5OdseCp0.jpg |
+| genryusai-yamamoto.jpg | Genryusai Yamamoto | Bleach | https://anilist.co/character/5726 | https://s4.anilist.co/file/anilistcdn/character/large/b5726-mO7kc8Abka9J.jpg |
+| shunsui-kyoraku.jpg | Shunsui Kyoraku | Bleach | https://anilist.co/character/1088 | https://s4.anilist.co/file/anilistcdn/character/large/b1088-6oO10CmxZ1lP.jpg |
+| renji-abarai.jpg | Renji Abarai | Bleach | https://anilist.co/character/906 | https://s4.anilist.co/file/anilistcdn/character/large/b906-ImRjx5HFM8X6.png |
+| coyote-starrk.jpg | Coyote Starrk | Bleach | https://anilist.co/character/3212 | https://s4.anilist.co/file/anilistcdn/character/large/b3212-F5qZe4NWlZq9.png |
+| tier-harribel.jpg | Tier Harribel | Bleach | https://anilist.co/character/3217 | https://s4.anilist.co/file/anilistcdn/character/large/b3217-WahxtOqdRxJq.png |
+| uryu-ishida.jpg | Uryu Ishida | Bleach | https://anilist.co/character/564 | https://s4.anilist.co/file/anilistcdn/character/large/b564-a6LJitrjSfKC.jpg |
+| broly.jpg | Broly | Dragon Ball | https://anilist.co/character/4945 | https://s4.anilist.co/file/anilistcdn/character/large/b4945-iE59qIP7TxPu.png |
+| majin-buu.jpg | Majin Buu | Dragon Ball | https://anilist.co/character/1012 | https://s4.anilist.co/file/anilistcdn/character/large/1012.jpg |
+| whis.jpg | Whis | Dragon Ball | https://anilist.co/character/76346 | https://s4.anilist.co/file/anilistcdn/character/large/b76346-BNh2DE5Rh2IW.jpg |
+| jiren.jpg | Jiren | Dragon Ball | https://anilist.co/character/126257 | https://s4.anilist.co/file/anilistcdn/character/large/b126257-nGjgbsnxZkUB.png |
+| goku-black.jpg | Goku Black | Dragon Ball | https://anilist.co/character/126199 | https://s4.anilist.co/file/anilistcdn/character/large/b126199-SKYF7o73fQtX.jpg |
+| cooler.jpg | Cooler | Dragon Ball | https://anilist.co/character/6304 | https://s4.anilist.co/file/anilistcdn/character/large/b6304-KolzUtGZ7uF7.png |
+| krillin.jpg | Krillin | Dragon Ball | https://anilist.co/character/2159 | https://s4.anilist.co/file/anilistcdn/character/large/b2159-qtEuMYyOUkwY.jpg |
+| kokushibo.jpg | Kokushibo | Demon Slayer | https://anilist.co/character/141918 | https://s4.anilist.co/file/anilistcdn/character/large/b141918-Bfgq88XJFOPz.png |
+| douma.jpg | Douma | Demon Slayer | https://anilist.co/character/144591 | https://s4.anilist.co/file/anilistcdn/character/large/b144591-v2yrXtHorZFS.png |
+| tengen-uzui.jpg | Tengen Uzui | Demon Slayer | https://anilist.co/character/136071 | https://s4.anilist.co/file/anilistcdn/character/large/b136071-99Kexnnn2PiV.png |
+| sanemi-shinazugawa.jpg | Sanemi Shinazugawa | Demon Slayer | https://anilist.co/character/137774 | https://s4.anilist.co/file/anilistcdn/character/large/b137774-O1iYrnGLB71l.png |
+| gyomei-himejima.jpg | Gyomei Himejima | Demon Slayer | https://anilist.co/character/137778 | https://s4.anilist.co/file/anilistcdn/character/large/b137778-H4Uzb9cSCvZ6.jpg |
+| mitsuri-kanroji.jpg | Mitsuri Kanroji | Demon Slayer | https://anilist.co/character/136072 | https://s4.anilist.co/file/anilistcdn/character/large/b136072-xVwyRUKdpybi.png |
+| jean-kirstein.jpg | Jean Kirstein | Attack on Titan | https://anilist.co/character/46498 | https://s4.anilist.co/file/anilistcdn/character/large/b46498-ritqAj9FW6jX.png |
+| bertolt-hoover.jpg | Bertolt Hoover | Attack on Titan | https://anilist.co/character/46488 | https://s4.anilist.co/file/anilistcdn/character/large/b46488-wm6HvkdkHoZu.jpg |
+| endeavor.jpg | Endeavor | My Hero Academia | https://anilist.co/character/126158 | https://s4.anilist.co/file/anilistcdn/character/large/b126158-Wix9rh7unTDQ.png |
+| overhaul.jpg | Overhaul | My Hero Academia | https://anilist.co/character/126357 | https://s4.anilist.co/file/anilistcdn/character/large/126357-d5wTLYqKchRv.jpg |
+| stain.jpg | Stain | My Hero Academia | https://anilist.co/character/126067 | https://s4.anilist.co/file/anilistcdn/character/large/b126067-ZL6sRFyaqX9c.png |
+| ochaco-uraraka.jpg | Ochaco Uraraka | My Hero Academia | https://anilist.co/character/89221 | https://s4.anilist.co/file/anilistcdn/character/large/b89221-gSF2a4gPbG4m.png |
+| himiko-toga.jpg | Himiko Toga | My Hero Academia | https://anilist.co/character/125619 | https://s4.anilist.co/file/anilistcdn/character/large/b125619-iQxQoGHJvjRJ.png |
+| cu-chulainn.jpg | Cu Chulainn | Fate | https://anilist.co/character/499 | https://s4.anilist.co/file/anilistcdn/character/large/b499-gS5RAdupSKWQ.png |
+| heracles.jpg | Heracles | Fate | https://anilist.co/character/504 | https://s4.anilist.co/file/anilistcdn/character/large/b504-2k7LldrHYSAP.png |
+| medusa.jpg | Medusa | Fate | https://anilist.co/character/502 | https://s4.anilist.co/file/anilistcdn/character/large/b502-Nc5U3ghTR7Gy.png |
+| jeanne-d-arc.jpg | Jeanne d'Arc | Fate | https://anilist.co/character/67769 | https://s4.anilist.co/file/anilistcdn/character/large/b67769-6TSfn8kz4KVf.jpg |
+| illumi-zoldyck.jpg | Illumi Zoldyck | Hunter x Hunter | https://anilist.co/character/57 | https://s4.anilist.co/file/anilistcdn/character/large/b57-pTFguojSOQZW.png |
+| feitan-portor.jpg | Feitan Portor | Hunter x Hunter | https://anilist.co/character/3195 | https://s4.anilist.co/file/anilistcdn/character/large/3195.jpg |
+| neferpitou.jpg | Neferpitou | Hunter x Hunter | https://anilist.co/character/12300 | https://s4.anilist.co/file/anilistcdn/character/large/b12300-kYzopQUTLa9A.png |
+| zeno-zoldyck.jpg | Zeno Zoldyck | Hunter x Hunter | https://anilist.co/character/59 | https://s4.anilist.co/file/anilistcdn/character/large/n59-6mnrlhnGe2mw.png |
+| scar.jpg | Scar | Fullmetal Alchemist | https://anilist.co/character/66 | https://s4.anilist.co/file/anilistcdn/character/large/b66-bLbGWXrmDqfV.png |
+| king-bradley.jpg | King Bradley | Fullmetal Alchemist | https://anilist.co/character/5103 | https://s4.anilist.co/file/anilistcdn/character/large/b5103-jnflrjKevO3z.png |
+| olivier-armstrong.jpg | Olivier Armstrong | Fullmetal Alchemist | https://anilist.co/character/3934 | https://s4.anilist.co/file/anilistcdn/character/large/n3934-MKTV6tQeP8T3.png |
+| greed.jpg | Greed | Fullmetal Alchemist | https://anilist.co/character/351 | https://s4.anilist.co/file/anilistcdn/character/large/b351-XMQzTuMy2Xtn.jpg |
+| van-hohenheim.jpg | Van Hohenheim | Fullmetal Alchemist | https://anilist.co/character/9792 | https://s4.anilist.co/file/anilistcdn/character/large/b9792-YA8kiO4NjmGL.jpg |
+| silver-fang.jpg | Silver Fang | One Punch Man | https://anilist.co/character/81141 | https://s4.anilist.co/file/anilistcdn/character/large/n81141-1ml7Q6X2B508.png |
+| blast.jpg | Blast | One Punch Man | https://anilist.co/character/206581 | https://s4.anilist.co/file/anilistcdn/character/large/b206581-ZM04yuuteENl.png |
+| metal-bat.jpg | Metal Bat | One Punch Man | https://anilist.co/character/89156 | https://s4.anilist.co/file/anilistcdn/character/large/b89156-kGKJyhWnCTHy.png |
+| flashy-flash.jpg | Flashy Flash | One Punch Man | https://anilist.co/character/138981 | https://s4.anilist.co/file/anilistcdn/character/large/b138981-74nPW2rXVews.png |
+| speed-o-sound-sonic.jpg | Speed-o'-Sound Sonic | One Punch Man | https://anilist.co/character/74167 | https://s4.anilist.co/file/anilistcdn/character/large/b74167-FE8EtGtHUM77.png |
+| boros.jpg | Boros | One Punch Man | https://anilist.co/character/89263 | https://s4.anilist.co/file/anilistcdn/character/large/n89263-GPItRQ64F27D.png |
+| dimple.jpg | Dimple | Mob Psycho 100 | https://anilist.co/character/89617 | https://s4.anilist.co/file/anilistcdn/character/large/b89617-HHZ1kziYxc0q.png |
+| teruki-hanazawa.jpg | Teruki Hanazawa | Mob Psycho 100 | https://anilist.co/character/89621 | https://s4.anilist.co/file/anilistcdn/character/large/b89621-3uLnmhFOGYFv.png |
+| kishibe.jpg | Kishibe | Chainsaw Man | https://anilist.co/character/144593 | https://s4.anilist.co/file/anilistcdn/character/large/b144593-hdCTT9t54z0s.png |
+| quanxi.jpg | Quanxi | Chainsaw Man | https://anilist.co/character/162123 | https://s4.anilist.co/file/anilistcdn/character/large/b162123-GmQLb9p2iWxQ.jpg |
+| himeno.jpg | Himeno | Chainsaw Man | https://anilist.co/character/144596 | https://s4.anilist.co/file/anilistcdn/character/large/b144596-kvL6SD2litJu.png |
+| angel-devil.jpg | Angel Devil | Chainsaw Man | https://anilist.co/character/152231 | https://s4.anilist.co/file/anilistcdn/character/large/b152231-jiMRx9je7H6y.png |
+| julius-novachrono.jpg | Julius Novachrono | Black Clover | https://anilist.co/character/124435 | https://s4.anilist.co/file/anilistcdn/character/large/b124435-gXFVXWrCcieK.jpg |
+| mereoleona-vermillion.jpg | Mereoleona Vermillion | Black Clover | https://anilist.co/character/124522 | https://s4.anilist.co/file/anilistcdn/character/large/b124522-lJK4Hy6Aokie.png |
+| luck-voltia.jpg | Luck Voltia | Black Clover | https://anilist.co/character/124449 | https://s4.anilist.co/file/anilistcdn/character/large/124449-M67Ex2GcxmYM.jpg |
+| zora-ideale.jpg | Zora Ideale | Black Clover | https://anilist.co/character/124459 | https://s4.anilist.co/file/anilistcdn/character/large/b124459-UggsjRUfNtko.png |
+| diane.jpg | Diane | The Seven Deadly Sins | https://anilist.co/character/74653 | https://s4.anilist.co/file/anilistcdn/character/large/b74653-XpMcsLVZBnkZ.jpg |
+| merlin.jpg | Merlin | The Seven Deadly Sins | https://anilist.co/character/89180 | https://s4.anilist.co/file/anilistcdn/character/large/b89180-rN6OVPki8h3V.png |
+| estarossa.jpg | Estarossa | The Seven Deadly Sins | https://anilist.co/character/126851 | https://s4.anilist.co/file/anilistcdn/character/large/b126851-m1Vyj4V0IHNo.jpg |
+| zeldris.jpg | Zeldris | The Seven Deadly Sins | https://anilist.co/character/131559 | https://s4.anilist.co/file/anilistcdn/character/large/b131559-MmROAidOkGqL.jpg |
+| gajeel-redfox.jpg | Gajeel Redfox | Fairy Tail | https://anilist.co/character/16893 | https://s4.anilist.co/file/anilistcdn/character/large/b16893-l9HhHQ8j09H5.jpg |
+| laxus-dreyar.jpg | Laxus Dreyar | Fairy Tail | https://anilist.co/character/8294 | https://s4.anilist.co/file/anilistcdn/character/large/b8294-24LS3f4VMrfs.jpg |
+| gildarts-clive.jpg | Gildarts Clive | Fairy Tail | https://anilist.co/character/29502 | https://s4.anilist.co/file/anilistcdn/character/large/b29502-znlVXVdXEQqg.png |
+| mirajane-strauss.jpg | Mirajane Strauss | Fairy Tail | https://anilist.co/character/5190 | https://s4.anilist.co/file/anilistcdn/character/large/b5190-Xql1rGKUv1ql.png |
+| jellal-fernandes.jpg | Jellal Fernandes | Fairy Tail | https://anilist.co/character/22751 | https://s4.anilist.co/file/anilistcdn/character/large/b22751-ITQZWdiz8Ym7.png |
+| zeref-dragneel.jpg | Zeref Dragneel | Fairy Tail | https://anilist.co/character/37720 | https://s4.anilist.co/file/anilistcdn/character/large/37720-WfpaYoeW2OkV.jpg |
+| acnologia.jpg | Acnologia | Fairy Tail | https://anilist.co/character/49003 | https://s4.anilist.co/file/anilistcdn/character/large/n49003-EGHCfhVFatPw.png |
+| reinhard-van-astrea.jpg | Reinhard van Astrea | Re:Zero | https://anilist.co/character/88577 | https://s4.anilist.co/file/anilistcdn/character/large/b88577-nrwzPBVwqAfO.png |
+| roswaal-l-mathers.jpg | Roswaal L Mathers | Re:Zero | https://anilist.co/character/90182 | https://s4.anilist.co/file/anilistcdn/character/large/b90182-Ho0NS06tc6NL.png |
+| echidna.jpg | Echidna | Re:Zero | https://anilist.co/character/129330 | https://s4.anilist.co/file/anilistcdn/character/large/b129330-ZUtYw4n7N0uH.png |
+| shalltear-bloodfallen.jpg | Shalltear Bloodfallen | Overlord | https://anilist.co/character/89121 | https://s4.anilist.co/file/anilistcdn/character/large/b89121-N8hzLH4nfWna.png |
+| demiurge.jpg | Demiurge | Overlord | https://anilist.co/character/89125 | https://s4.anilist.co/file/anilistcdn/character/large/b89125-pnLki4r5UyV5.png |
+| cocytus.jpg | Cocytus | Overlord | https://anilist.co/character/89138 | https://s4.anilist.co/file/anilistcdn/character/large/b89138-HUcvLWduh6Mc.png |
+| veldora-tempest.jpg | Veldora Tempest | That Time I Got Reincarnated as a Slime | https://anilist.co/character/128034 | https://s4.anilist.co/file/anilistcdn/character/large/b128034-Gg5MrpTFNSv8.png |
+| diablo.jpg | Diablo | That Time I Got Reincarnated as a Slime | https://anilist.co/character/131033 | https://s4.anilist.co/file/anilistcdn/character/large/b131033-0LguIALHCBEH.jpg |
+| shion.jpg | Shion | That Time I Got Reincarnated as a Slime | https://anilist.co/character/128033 | https://s4.anilist.co/file/anilistcdn/character/large/b128033-fLbTgW4M2yj3.png |
+| hinata-sakaguchi.jpg | Hinata Sakaguchi | That Time I Got Reincarnated as a Slime | https://anilist.co/character/131042 | https://s4.anilist.co/file/anilistcdn/character/large/b131042-ve0zpRm1ZzCp.png |
+| guy-crimson.jpg | Guy Crimson | That Time I Got Reincarnated as a Slime | https://anilist.co/character/131048 | https://s4.anilist.co/file/anilistcdn/character/large/b131048-uC7YdMAMSyzg.jpg |
+| orsted.jpg | Orsted | Mushoku Tensei | https://anilist.co/character/187382 | https://s4.anilist.co/file/anilistcdn/character/large/b187382-NBP6I5OKXHH9.png |
+| ruijerd-superdia.jpg | Ruijerd Superdia | Mushoku Tensei | https://anilist.co/character/88351 | https://s4.anilist.co/file/anilistcdn/character/large/b88351-grqY44xz6bvP.png |
+| akihiko-kayaba.jpg | Akihiko Kayaba | Sword Art Online | https://anilist.co/character/36829 | https://s4.anilist.co/file/anilistcdn/character/large/b36829-X5zITNEQ7xij.png |
+| sinon.jpg | Sinon | Sword Art Online | https://anilist.co/character/55147 | https://s4.anilist.co/file/anilistcdn/character/large/b55147-1fCU8lONEuZQ.png |
+| serie.jpg | Serie | Frieren | https://anilist.co/character/219734 | https://s4.anilist.co/file/anilistcdn/character/large/b219734-aS4UMAb16DGd.jpg |
+| aura.jpg | Aura | Frieren | https://anilist.co/character/219110 | https://s4.anilist.co/file/anilistcdn/character/large/b219110-LEB5T4oG0gel.png |
+| eisen.jpg | Eisen | Frieren | https://anilist.co/character/184312 | https://s4.anilist.co/file/anilistcdn/character/large/b184312-kxd5H6iOHIq4.png |
+| thors.jpg | Thors | Vinland Saga | https://anilist.co/character/10138 | https://s4.anilist.co/file/anilistcdn/character/large/b10138-zOPrka0ddZOR.png |
+| canute.jpg | Canute | Vinland Saga | https://anilist.co/character/17438 | https://s4.anilist.co/file/anilistcdn/character/large/b17438-NwyOSMxycmck.png |
+| zodd.jpg | Zodd | Berserk | https://anilist.co/character/600 | https://s4.anilist.co/file/anilistcdn/character/large/b600-nLLiWsK0GcVI.png |
+| casca.jpg | Casca | Berserk | https://anilist.co/character/423 | https://s4.anilist.co/file/anilistcdn/character/large/b423-AmVFCaJJOBsc.png |
+| skull-knight.jpg | Skull Knight | Berserk | https://anilist.co/character/7881 | https://s4.anilist.co/file/anilistcdn/character/large/b7881-I6JM88ItFsnS.png |
+| kishou-arima.jpg | Kishou Arima | Tokyo Ghoul | https://anilist.co/character/88946 | https://s4.anilist.co/file/anilistcdn/character/large/b88946-YbTQAGJAdpoH.jpg |
+| eto-yoshimura.jpg | Eto Yoshimura | Tokyo Ghoul | https://anilist.co/character/90231 | https://s4.anilist.co/file/anilistcdn/character/large/b90231-7ZeFK1DbrAxw.jpg |
+| ayato-kirishima.jpg | Ayato Kirishima | Tokyo Ghoul | https://anilist.co/character/88411 | https://s4.anilist.co/file/anilistcdn/character/large/b88411-dI6vqLy4pvHK.png |
+| takemichi-hanagaki.jpg | Takemichi Hanagaki | Tokyo Revengers | https://anilist.co/character/145342 | https://s4.anilist.co/file/anilistcdn/character/large/b145342-GSUutL83jGgI.png |
+| izana-kurokawa.jpg | Izana Kurokawa | Tokyo Revengers | https://anilist.co/character/170484 | https://s4.anilist.co/file/anilistcdn/character/large/b170484-HZEUSM7UrtKN.jpg |
+| shinichiro-sano.jpg | Shinichiro Sano | Tokyo Revengers | https://anilist.co/character/221297 | https://s4.anilist.co/file/anilistcdn/character/large/b221297-FgeGP9aN60Re.png |
+| alexander-anderson.jpg | Alexander Anderson | Hellsing | https://anilist.co/character/606 | https://s4.anilist.co/file/anilistcdn/character/large/b606-uox8devG45Zp.png |
+| seras-victoria.jpg | Seras Victoria | Hellsing | https://anilist.co/character/624 | https://s4.anilist.co/file/anilistcdn/character/large/b624-qdFGCDB5Zhco.png |
+| lordgenome.jpg | Lordgenome | Gurren Lagann | https://anilist.co/character/5118 | https://s4.anilist.co/file/anilistcdn/character/large/5118.jpg |
+| viral.jpg | Viral | Gurren Lagann | https://anilist.co/character/2378 | https://s4.anilist.co/file/anilistcdn/character/large/n2378-UcNU2Pm8MlB9.png |
+| ragyo-kiryuin.jpg | Ragyo Kiryuin | Kill la Kill | https://anilist.co/character/126061 | https://s4.anilist.co/file/anilistcdn/character/large/b126061-lWC6xeiD4KxZ.png |
+| nui-harime.jpg | Nui Harime | Kill la Kill | https://anilist.co/character/88475 | https://s4.anilist.co/file/anilistcdn/character/large/b88475-gZiGkkhyOuDM.jpg |
+| tatsumi.jpg | Tatsumi | Akame ga Kill | https://anilist.co/character/64749 | https://s4.anilist.co/file/anilistcdn/character/large/64749-a2ZdRWW1D5TR.jpg |
+| leone.jpg | Leone | Akame ga Kill | https://anilist.co/character/65227 | https://s4.anilist.co/file/anilistcdn/character/large/b65227-PWmfiEVJbCwQ.png |
+| wave.jpg | Wave | Akame ga Kill | https://anilist.co/character/65555 | https://s4.anilist.co/file/anilistcdn/character/large/n65555-3JyIFJNbFrZn.png |
+| maki-oze.jpg | Maki Oze | Fire Force | https://anilist.co/character/130713 | https://s4.anilist.co/file/anilistcdn/character/large/b130713-TgLx8rgtGpXV.png |
+| iris.jpg | Iris | Fire Force | https://anilist.co/character/130716 | https://s4.anilist.co/file/anilistcdn/character/large/n130716-5564jUgQxK9a.png |
+| shinsuke-takasugi.jpg | Shinsuke Takasugi | Gintama | https://anilist.co/character/2948 | https://s4.anilist.co/file/anilistcdn/character/large/b2948-Er1xnL05k1oU.png |
+| sougo-okita.jpg | Sougo Okita | Gintama | https://anilist.co/character/2282 | https://s4.anilist.co/file/anilistcdn/character/large/b2282-X0uYqwmwxiPo.png |
+| kaworu-nagisa.jpg | Kaworu Nagisa | Neon Genesis Evangelion | https://anilist.co/character/1261 | https://s4.anilist.co/file/anilistcdn/character/large/b1261-HYRv3HpsSL92.jpg |
+| misato-katsuragi.jpg | Misato Katsuragi | Neon Genesis Evangelion | https://anilist.co/character/1259 | https://s4.anilist.co/file/anilistcdn/character/large/b1259-afTQkZ5SVMOn.png |
+| vicious.jpg | Vicious | Cowboy Bebop | https://anilist.co/character/2734 | https://s4.anilist.co/file/anilistcdn/character/large/b2734-aglO8RKNVxnn.jpg |
+| nicholas-d-wolfwood.jpg | Nicholas D. Wolfwood | Trigun | https://anilist.co/character/722 | https://s4.anilist.co/file/anilistcdn/character/large/b722-Ernx5wHAXugB.jpg |
+| legato-bluesummers.jpg | Legato Bluesummers | Trigun | https://anilist.co/character/715 | https://s4.anilist.co/file/anilistcdn/character/large/715.jpg |
+| millions-knives.jpg | Millions Knives | Trigun | https://anilist.co/character/1599 | https://s4.anilist.co/file/anilistcdn/character/large/b1599-yYKeldpUZCEc.jpg |
+| balalaika.jpg | Balalaika | Black Lagoon | https://anilist.co/character/461 | https://s4.anilist.co/file/anilistcdn/character/large/b461-1hBKMLSpTY0e.png |
+| roberta.jpg | Roberta | Black Lagoon | https://anilist.co/character/2762 | https://s4.anilist.co/file/anilistcdn/character/large/2762-j8CEA7sYiDP6.png |
+| hiei.jpg | Hiei | Yu Yu Hakusho | https://anilist.co/character/732 | https://s4.anilist.co/file/anilistcdn/character/large/b732-rg4H7yyv3LRo.png |
+| kurama.jpg | Kurama | Yu Yu Hakusho | https://anilist.co/character/731 | https://s4.anilist.co/file/anilistcdn/character/large/b731-cv0jfjVrD09V.jpg |
+| kazuma-kuwabara.jpg | Kazuma Kuwabara | Yu Yu Hakusho | https://anilist.co/character/730 | https://s4.anilist.co/file/anilistcdn/character/large/n730-H6SRWfoiFjBR.jpg |
+| younger-toguro.jpg | Younger Toguro | Yu Yu Hakusho | https://anilist.co/character/7176 | https://s4.anilist.co/file/anilistcdn/character/large/7176.jpg |
+| shinobu-sensui.jpg | Shinobu Sensui | Yu Yu Hakusho | https://anilist.co/character/3106 | https://s4.anilist.co/file/anilistcdn/character/large/b3106-boGJvvIaEfKW.png |
+| karma-akabane.jpg | Karma Akabane | Assassination Classroom | https://anilist.co/character/71933 | https://s4.anilist.co/file/anilistcdn/character/large/b71933-HQ1TSjlrJ8Hv.jpg |
+| tadaomi-karasuma.jpg | Tadaomi Karasuma | Assassination Classroom | https://anilist.co/character/73881 | https://s4.anilist.co/file/anilistcdn/character/large/73881-Ukr6cBzK8dsi.png |
+| itona-horibe.jpg | Itona Horibe | Assassination Classroom | https://anilist.co/character/85293 | https://s4.anilist.co/file/anilistcdn/character/large/b85293-VJJa4wciJTcl.jpg |
+| ciel-phantomhive.jpg | Ciel Phantomhive | Black Butler | https://anilist.co/character/12531 | https://s4.anilist.co/file/anilistcdn/character/large/b12531-joBTjTP3fonc.png |
+| undertaker.jpg | Undertaker | Black Butler | https://anilist.co/character/14957 | https://s4.anilist.co/file/anilistcdn/character/large/b14957-OUduj1a2m4eC.png |
+| tsukasa-shishio.jpg | Tsukasa Shishio | Dr. Stone | https://anilist.co/character/124144 | https://s4.anilist.co/file/anilistcdn/character/large/b124144-KOjcmhunbvYn.png |
+| arisu-sakayanagi.jpg | Arisu Sakayanagi | Classroom of the Elite | https://anilist.co/character/124691 | https://s4.anilist.co/file/anilistcdn/character/large/b124691-S9GyfwMAkkJ9.jpg |
+| kakeru-ryuen.jpg | Kakeru Ryuen | Classroom of the Elite | https://anilist.co/character/159627 | https://s4.anilist.co/file/anilistcdn/character/large/b159627-kWwSUA1XR1Kx.png |
+| beru.jpg | Beru | Solo Leveling | https://anilist.co/character/159849 | https://s4.anilist.co/file/anilistcdn/character/large/b159849-p0Szb7KzD2DD.png |
+| igris.jpg | Igris | Solo Leveling | https://anilist.co/character/145722 | https://s4.anilist.co/file/anilistcdn/character/large/b145722-qSJ71S6vpeeM.png |
+| thomas-andre.jpg | Thomas Andre | Solo Leveling | https://anilist.co/character/184540 | https://s4.anilist.co/file/anilistcdn/character/large/b184540-JNscGAnjHExA.png |
+| lucy.jpg | Lucy | Cyberpunk: Edgerunners | https://anilist.co/character/284157 | https://s4.anilist.co/file/anilistcdn/character/large/b284157-cqYawN7XCNJx.jpg |
+| adam-smasher.jpg | Adam Smasher | Cyberpunk: Edgerunners | https://anilist.co/character/287490 | https://s4.anilist.co/file/anilistcdn/character/large/b287490-Q8gZBPizCCGp.jpg |
+| bishamon.jpg | Bishamon | Noragami | https://anilist.co/character/88239 | https://s4.anilist.co/file/anilistcdn/character/large/b88239-aiUFUPNjmAh7.jpg |
+| mephisto-pheles.jpg | Mephisto Pheles | Blue Exorcist | https://anilist.co/character/30432 | https://s4.anilist.co/file/anilistcdn/character/large/b30432-I4KwsegOrzfq.png |
+| yukio-okumura.jpg | Yukio Okumura | Blue Exorcist | https://anilist.co/character/24734 | https://s4.anilist.co/file/anilistcdn/character/large/b24734-GgVZoNAPnxoc.png |
+| maka-albarn.jpg | Maka Albarn | Soul Eater | https://anilist.co/character/8439 | https://s4.anilist.co/file/anilistcdn/character/large/b8439-5TIyWlfClnMs.png |
+| black-star.jpg | Black Star | Soul Eater | https://anilist.co/character/8464 | https://s4.anilist.co/file/anilistcdn/character/large/b8464-oKu98OyJ3eZt.png |
+| asura.jpg | Asura | Soul Eater | https://anilist.co/character/15840 | https://s4.anilist.co/file/anilistcdn/character/large/b15840-ueu3I4BIs3av.png |
+| jonathan-joestar.jpg | Jonathan Joestar | JoJo's Bizarre Adventure | https://anilist.co/character/8087 | https://s4.anilist.co/file/anilistcdn/character/large/b8087-GTrObHQvujB5.png |
+| caesar-zeppeli.jpg | Caesar Zeppeli | JoJo's Bizarre Adventure | https://anilist.co/character/21959 | https://s4.anilist.co/file/anilistcdn/character/large/b21959-Cm9Rlh0EFAQw.png |
+| kars.jpg | Kars | JoJo's Bizarre Adventure | https://anilist.co/character/21966 | https://s4.anilist.co/file/anilistcdn/character/large/n21966-ZvYmd1Dwp613.png |
+| enrico-pucci.jpg | Enrico Pucci | JoJo's Bizarre Adventure | https://anilist.co/character/17676 | https://s4.anilist.co/file/anilistcdn/character/large/b17676-6m5VaQl0SR20.jpg |
+| diavolo.jpg | Diavolo | JoJo's Bizarre Adventure | https://anilist.co/character/27155 | https://s4.anilist.co/file/anilistcdn/character/large/b27155-ZqYlVLxAZjzV.png |
+| funny-valentine.jpg | Funny Valentine | JoJo's Bizarre Adventure | https://anilist.co/character/20147 | https://s4.anilist.co/file/anilistcdn/character/large/b20147-paS2fNaB3yOv.png |
+| bruno-bucciarati.jpg | Bruno Bucciarati | JoJo's Bizarre Adventure | https://anilist.co/character/13045 | https://s4.anilist.co/file/anilistcdn/character/large/b13045-TIpIF82cMkG9.png |
+| suzaku-kururugi.jpg | Suzaku Kururugi | Code Geass | https://anilist.co/character/559 | https://s4.anilist.co/file/anilistcdn/character/large/b559-KRvTdc6zdCuU.jpg |
+| charles-zi-britannia.jpg | Charles zi Britannia | Code Geass | https://anilist.co/character/5610 | https://s4.anilist.co/file/anilistcdn/character/large/b5610-TuH7RZiCqQBd.png |
+| yuzuriha.jpg | Yuzuriha | Hell's Paradise | https://anilist.co/character/137270 | https://s4.anilist.co/file/anilistcdn/character/large/b137270-PTFen9fxyo4H.png |
+| lance-crown.jpg | Lance Crown | Mashle | https://anilist.co/character/172075 | https://s4.anilist.co/file/anilistcdn/character/large/b172075-aOsZuM7D0bcW.jpg |
+| dot-barrett.jpg | Dot Barrett | Mashle | https://anilist.co/character/174369 | https://s4.anilist.co/file/anilistcdn/character/large/b174369-VjKvYJbXLO5I.jpg |
+| accelerator.jpg | Accelerator | A Certain Magical Index | https://anilist.co/character/13917 | https://s4.anilist.co/file/anilistcdn/character/large/b13917-160NVNDNgywA.png |
+| touma-kamijou.jpg | Touma Kamijou | A Certain Magical Index | https://anilist.co/character/13700 | https://s4.anilist.co/file/anilistcdn/character/large/b13700-UidPPlVkGJLP.jpg |
+| tohka-yatogami.jpg | Tohka Yatogami | Date A Live | https://anilist.co/character/65259 | https://s4.anilist.co/file/anilistcdn/character/large/b65259-rKR5JNNWyRC0.jpg |
+| mamoru-takamura.jpg | Mamoru Takamura | Hajime no Ippo | https://anilist.co/character/845 | https://s4.anilist.co/file/anilistcdn/character/large/b845-yzHSqt8WpnO5.png |
+| biscuit-oliva.jpg | Biscuit Oliva | Baki | https://anilist.co/character/35484 | https://s4.anilist.co/file/anilistcdn/character/large/b35484-T0yowGuxYXS0.png |
+| kaoru-hanayama.jpg | Kaoru Hanayama | Baki | https://anilist.co/character/10501 | https://s4.anilist.co/file/anilistcdn/character/large/b10501-YXNA2kF1bi5X.png |
+| retsu-kaioh.jpg | Retsu Kaioh | Baki | https://anilist.co/character/80249 | https://s4.anilist.co/file/anilistcdn/character/large/b80249-YffPZTKKGdko.png |
+| kafka-hibino.jpg | Kafka Hibino | Kaiju No. 8 | https://anilist.co/character/180692 | https://s4.anilist.co/file/anilistcdn/character/large/b180692-rPGXuxhcKw5N.png |
+| mina-ashiro.jpg | Mina Ashiro | Kaiju No. 8 | https://anilist.co/character/180693 | https://s4.anilist.co/file/anilistcdn/character/large/b180693-i9RZuHTDwXov.png |
+| taro-sakamoto.jpg | Taro Sakamoto | Sakamoto Days | https://anilist.co/character/196522 | https://s4.anilist.co/file/anilistcdn/character/large/b196522-phOzXgufOs7R.png |
+| himura-kenshin.jpg | Himura Kenshin | Rurouni Kenshin | https://anilist.co/character/147 | https://s4.anilist.co/file/anilistcdn/character/large/b147-miunGYp6fkzb.png |
+| makoto-shishio.jpg | Makoto Shishio | Rurouni Kenshin | https://anilist.co/character/3683 | https://s4.anilist.co/file/anilistcdn/character/large/b3683-ELbMaQnGGqyU.jpg |
+| aladdin.jpg | Aladdin | Magi | https://anilist.co/character/41949 | https://s4.anilist.co/file/anilistcdn/character/large/b41949-LaoaHJ2tJxBw.png |
+| kenshiro.jpg | Kenshiro | Fist of the North Star | https://anilist.co/character/2511 | https://s4.anilist.co/file/anilistcdn/character/large/b2511-I5ff3jioC5Ze.jpg |
+| raoh.jpg | Raoh | Fist of the North Star | https://anilist.co/character/8738 | https://s4.anilist.co/file/anilistcdn/character/large/b8738-0Ig51QXoeLBW.png |
+| inuyasha.jpg | Inuyasha | Inuyasha | https://anilist.co/character/1353 | https://s4.anilist.co/file/anilistcdn/character/large/b1353-xsZhvfi7IFzT.png |
+| sesshomaru.jpg | Sesshomaru | Inuyasha | https://anilist.co/character/1358 | https://s4.anilist.co/file/anilistcdn/character/large/b1358-oR7bIGfc5pnX.png |
+| ash-ketchum.jpg | Ash Ketchum | Pokemon | https://anilist.co/character/2473 | https://s4.anilist.co/file/anilistcdn/character/large/b2473-JDoo3I82Km4l.png |
+| charizard.jpg | Charizard | Pokemon | https://anilist.co/character/180037 | https://s4.anilist.co/file/anilistcdn/character/large/b180037-u3b2oiaWdfAm.png |
+| mewtwo.jpg | Mewtwo | Pokemon | https://anilist.co/character/5113 | https://s4.anilist.co/file/anilistcdn/character/large/b5113-hDiwLUwrbz6q.png |
+| ohma-tokita.jpg | Ohma Tokita | Kengan Ashura | https://anilist.co/character/137446 | https://s4.anilist.co/file/anilistcdn/character/large/b137446-umIgsem3URij.png |
+| amuro-ray.jpg | Amuro Ray | Mobile Suit Gundam | https://anilist.co/character/1335 | https://s4.anilist.co/file/anilistcdn/character/large/b1335-uzT1UsLOu3nE.png |
+| usagi-tsukino.jpg | Usagi Tsukino | Sailor Moon | https://anilist.co/character/2030 | https://s4.anilist.co/file/anilistcdn/character/large/b2030-GQvVYPEYkXCy.jpg |
+| popp.jpg | Popp | Dragon Quest: Dai no Daibouken | https://anilist.co/character/7542 | https://s4.anilist.co/file/anilistcdn/character/large/b7542-QvNgMdr4hCEe.png |
+| tenshinhan.jpg | Tien Shinhan | Dragon Ball | https://anilist.co/character/5499 | https://s4.anilist.co/file/anilistcdn/character/large/b5499-Cn9kTD2J9dU5.png |
