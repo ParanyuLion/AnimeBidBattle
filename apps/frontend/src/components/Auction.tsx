@@ -41,9 +41,10 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
     return () => window.removeEventListener('keydown', onKeyDown, true);
   }, [canBid, minBid, onBid]);
 
-  const quick = [...new Set([minBid, auction.price + 5, auction.price + 10])].filter(
-    (amount) => amount >= minBid && amount <= coins,
-  );
+  const quick = [
+    ...[1, 5, 10, 25, 50, 100].map((step) => ({ label: `+${step}`, amount: auction.price + step })),
+    { label: 'All in', amount: coins },
+  ];
   const nameOf = (playerId: string) => {
     const player = room.players.find((p) => p.id === playerId);
     return player ? `${player.nickname}${player.id === room.youId ? ' (you)' : ''}` : 'Someone';
@@ -115,9 +116,15 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
           </div>
           <p className="muted enter-hint">Press Enter to bid {minBid}</p>
           <div className="row quick-keys">
-            {quick.map((amount) => (
-              <button key={amount} disabled={!canBid} onClick={() => onBid(amount)}>
-                {amount}
+            {quick.map(({ label, amount }) => (
+              <button
+                key={label}
+                disabled={!canBid || amount < minBid || amount > coins}
+                onClick={() => onBid(amount)}
+                aria-label={`${label}, bid ${amount}`}
+                title={`Bid ${amount}`}
+              >
+                {label}
               </button>
             ))}
           </div>

@@ -266,7 +266,10 @@ input:disabled { opacity: 0.6; }
   .dock-bid { display: none !important; } /* !important: the row sets display:flex inline */
 }
 .stage-status { margin-top: 10px; font-size: 1.05rem; }
-.bid-dock .quick-keys button { min-height: 52px; min-width: 64px; font-size: 1.05rem; }
+/* Seven quick-bid keys: two rows of four on phones, one row of seven on desktop. */
+.bid-dock .quick-keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.bid-dock .quick-keys button { min-height: 46px; min-width: 0; padding: 0 4px; font-size: 1rem; }
+@media (min-width: 900px) { .bid-dock .quick-keys { grid-template-columns: repeat(7, 1fr); } .bid-dock .quick-keys button { min-height: 52px; } }
 
 .rank { font-family: var(--font-display, system-ui), var(--font-thai, system-ui), sans-serif; font-size: 1.4rem; font-weight: 800; min-width: 2.6rem; text-align: center; white-space: nowrap; flex: none; }
 .winner-plate { background: linear-gradient(180deg, #f7d774, #b8891d); color: #2a1c00; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
