@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { comboPercent, type AuctionView, type ComboView, type RoomView } from '@abb/shared';
 import { useCountdown } from '../hooks/useCountdown';
 import { CharacterCard } from './CharacterCard';
@@ -25,6 +26,20 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
   const isLeader = auction.leaderId === room.youId;
   const canBid = open && !isLeader && coins >= minBid;
   const leader = room.players.find((p) => p.id === auction.leaderId);
+
+  // Enter bids the minimum (+1 over the current price, or 1 if nobody has bid).
+  useEffect(() => {
+    if (!canBid) return;
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== 'Enter' || event.repeat || event.ctrlKey || event.metaKey || event.altKey) return;
+      const target = event.target as HTMLElement | null;
+      if (target && ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
+      event.preventDefault(); // also stops Enter from re-clicking a focused quick-bid button
+      onBid(minBid);
+    }
+    window.addEventListener('keydown', onKeyDown, true);
+    return () => window.removeEventListener('keydown', onKeyDown, true);
+  }, [canBid, minBid, onBid]);
 
   const quick = [...new Set([minBid, auction.price + 5, auction.price + 10])].filter(
     (amount) => amount >= minBid && amount <= coins,
@@ -98,6 +113,7 @@ export function Auction({ room, auction, clockOffset, onBid }: Props) {
               <div className="muted">Your coins: {coins}</div>
             </div>
           </div>
+          <p className="muted enter-hint">Press Enter to bid {minBid}</p>
           <div className="row quick-keys">
             {quick.map((amount) => (
               <button key={amount} disabled={!canBid} onClick={() => onBid(amount)}>

@@ -281,3 +281,5 @@ input:disabled { opacity: 0.6; }
 .combo-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 10px; }
 .combo-chip { padding: 4px 10px; border-radius: 999px; font-size: 0.82rem; background: rgba(139, 92, 246, 0.16); box-shadow: inset 0 0 0 1px rgba(139, 92, 246, 0.5); }
 .combo-chip b { color: var(--gold, #fbbf24); }
+.enter-hint { margin: 0 0 8px; font-size: 0.8rem; }
+@media (max-width: 899px) { .enter-hint { display: none; } }
