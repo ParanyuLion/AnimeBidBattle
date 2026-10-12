@@ -11,7 +11,7 @@ export const DEFAULT_SETTINGS: RoomSettings = {
 };
 
 export const SETTINGS_BOUNDS: SettingsBounds = {
-  maxPlayers: { min: 2, max: 8 },
+  maxPlayers: { min: 2, max: 15 },
   startingCoins: { min: 100, max: 10000 },
   rounds: { min: 1, max: 30 },
   roundSeconds: { min: 10, max: 60 },
